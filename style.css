@@ -90,7 +90,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: #03a9f4; */
+  /* background: #abdef5; */
   mix-blend-mode: overlay;
 }
 .text
@@ -155,11 +155,11 @@
 .social li
 {
   list-style: none;
-}
+  }
 .social li a
 {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 2px;
   filter: invert(1);
   transform: scale(0.5);
   transition: 0.5s;
