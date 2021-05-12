@@ -49,6 +49,7 @@
 }
 .logo {
   text-transform:uppercase ;
+  padding-left: 25px;
   cursor: pointer;
 }
 .toggle
