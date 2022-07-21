@@ -1,28 +1,19 @@
-const menuToggle = document.querySelector('.toggle');
-const showcase = document.querySelector('.showcase');
-
-const inputs = document.querySelectorAll(".input");
-
-
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  showcase.classList.toggle('active');
-})
-
-function focusFunc() {
-    let parent = this.parentNode;
-    parent.classList.add("focus");
-  }
-  
-  function blurFunc() {
-    let parent = this.parentNode;
-    if (this.value == "") {
-      parent.classList.remove("focus");
+const navbar = document.querySelector('.menu');
+const hoverLinks = document.querySelector('.hover-links');
+navbar.addEventListener('click',() => {
+    hoverLinks.classList.toggle('show');
+});
+navbar.addEventListener('click',()=> {
+    if(navbar.classList.contains('fa-bars'))
+    {
+        navbar.classList.remove("fa-bars");
+        navbar.classList.add("fa-xmark");
     }
-  }
-  
-  inputs.forEach((input) => {
-    input.addEventListener("focus", focusFunc);
-    input.addEventListener("blur", blurFunc);
-  });
-  
+    else {
+        navbar.classList.remove("fa-xmark");
+        navbar.classList.add("fa-bars");
+    }
+    
+})
+window.addEventListener('size',()=> {
+})

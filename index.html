@@ -1,56 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css" />
     <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-    crossorigin="anonymous"
-  />
-    <title>NetSepio Hompage</title>
-</head>
-<body>
-  <section class="showcase">
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
     <header>
-      <h2 class="logo"><img src="/gallery/icon.png"> NetSepio</h2>
-      <div class="toggle"></div>
+      <nav class="navbar">
+        <div class="nav-container">
+          <i class="fa-solid fa-bars menu"></i>
+          <h1 class="logo">NetSepio</h1>
+          <ul class="links">
+             <li><a href="#Features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li class="btn btn-desktop"><a href="https://chrome.google.com/webstore/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd">Explore</a></li>
+          </ul>
+          <ul class="hover-links">
+            <li><a href="#Features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li class="btn"><a href="https://chrome.google.com/webstore/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd" target="_blank">Explore</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Banner -->
+      <div class="banner">
+        <h1 data-aos="fade-left">Browser Extention The New Norm</h1>
+        <h2 data-aos="fade-right">
+          See What Makes Us Different
+        </h2>
+        <div class="wrapper" data-aos="fade-down">
+          <iframe src="https://www.youtube.com/embed/iUkPQpXwF54" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- End Of Banner -->
     </header>
-    <video src="gallery/galaxy.mp4" muted loop autoplay></video>
-    <div class="overlay"></div>
+    <section id="Features" class="features">
+      <div class="features-container">
+        <div data-aos="fade-up" class="features-inf">
+          <h1>Netsepio Features</h1>
+          <p class="features-p">
+            NetSepio browser extension allows users to vote for a website/domain categorizing it into various categories and get rewards. The user can be aware of the threats like Tracking, Malware, Drive-By Downloads, Adware, Phishing, Cryptojacking, etc. and also can report the website for having unsafe content.
+          </p>
+        </div>
 
-    <div class="text">
-      <h2>Browser Extension </h2> 
-      <h3>The new norm</h3>
-      <h3>See what makes us different</h3>
-      <p>NetSepio browser extension allows users to vote for a website/domain categorizing it into various categories and 
-        get rewards. The user can be aware of the threats like Tracking, Malware, Drive-By Downloads, Adware, Phishing,
-        Cryptojacking, etc. and also can report the website for having unsafe content.</p>
-      <a href="/explore/explore.html">Explore</a>
+        <div class="card-container">
+          <div data-aos="fade-up" data-aos-duration:"5000">
+            <div class="single-card">
+            <span class="icon">
+              <i class="fa-solid fa-shield-halved ico"></i>
+            </span>
+            <h2>CyberSecutity meets Web3</h2>
+            <p>
+              Now get the best of both worlds in 1. NetSepio gives you the best internet protection from scams and malwares leveraging the power of Blockchain.
+            </p>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration:"5000" data-aos-delay="100">
+            <div class="single-card">
+            <span class="icon">
+              <i class="fa-solid fa-gift ico"></i>
+            </span>
+            <h2>Review as NFT</h2>
+            <p>
+              Creating review about a website rewards you with a NFT without having to spend any gas or transaction fee.
+            </p>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration:"5000" data-aos-delay="200">
+            <div class="single-card">
+            <span class="icon">
+              <i class="fa-solid fa-box-archive ico"></i>
+            </span>
+            <h2>Web3 Archive</h2>
+            <p>
+              Each Review results in the archive of the websites into IPFS so you can always view your favorite content even if they are deleted!
+            </p>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration:"5000">
+            <div class="single-card">
+            <span class="icon">
+              <i class="fa-solid fa-people-group ico"></i>
+            </span>
+            <h2>DAO driven Governance</h2>
+            <p>
+              Community driven decision making for creating lists of websites for scams, malware, phishing etc.
+            </p>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration:"5000" data-aos-delay="100">
+            <div class="single-card">
+            <span class="icon">
+              <i class="fa-solid fa-wallet ico"></i>
+              
+              
+              
+            </span>
+            <h2>Crypto Wallet</h2>
+            <p>
+              Secure multi-chain supported crypto wallet allowing you to send and receive coins and ERC20 tokens
+            </p>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration:"5000" data-aos-delay="200">
+            <div class="single-card">
+            <span class="icon">
+              <i class="fa-solid fa-key ico"></i>
+            </span>
+            <h2>Auth, Access and More</h2>
+            <p>
+              Get access to various platform features like VPN, Storage, SSI etc. and more.
+            </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <!-- Extention -->
+    <section class="extention">
+      <div class="extention-container container">
+        <div class="extention-info" data-aos="fade-right" data-aos-duration:"7000">
+          <h1>NetSepio Extention</h1>
+          <p>
+            Netsepio, a decentralized review management system allowing the user to post review for a specific domain on the polygon network with an additional feature of crypto wallet which can be used to manage digital assets. 
+          </p>
+          <button class="btn started-btn management-btn">
+            <a href="" target="_blank">Add to Chrome <i class="fa-brands fa-chrome"></i></a>
+          </button>
+        </div>
+        <img src="./img/webstore.png" class="webstore" alt="" data-aos="fade-left" data-aos-duration:"7000" data-aos-delay="400"/>
+      </div>
+    </section>
+    <!-- Section -->
+    <div class="product">
+      <div class="container product-container">
+        <img src="./img/netsepio.png" class="product-img" alt="" data-aos="fade-right" data-aos-duration:"7000" data-aos-delay="400">
+        <div class="product-info">
+          <h1>CyberSecutity meets Web3</h1>
+          <p class="info-text">NetSepio gives you the best internet protection from scams and malwares leveraging the power of Blockchain</p>
+          <div data-aos="fade-left" data-aos-duration:"7000" data-aos-delay="600">
+            <div class="comment">
+            <div class="line"></div>
+            <div class="profile">
+              <img src="./img/om.jpg" alt="">
+              <div class="profile-info">
+                <h1>OM More</h1>
+                <p>Maintainer, Lazarus Network</p>
+              </div>
+            </div>
+            <p id="my">Extension which we can use to give at take reviews of any domain
+                        Like for example if you find phishing site you can report it
+                          Different from others since this records the review in decentralized way using blockchain.
+                          People can report in various categories like spam, hate, genuine, safe"</p>
+          </div>
+          </div>
+          
+        </div>
+        
+        
+        
+      </div>
+      </div>
     </div>
-    <ul class="social">
-      <li><a href="https://www.facebook.com/NetSepio/"><i class="fab fa-facebook"></i></a></li>
-      <li><a href="https://github.com/NetSepio"><i class="fab fa-github"></i></a></li>
-      <li><a href="https://twitter.com/NetSepio"><i class="fab fa-twitter"></i></a></li>
-
-      <li><a href="./contact/contactForm.html">Contact Form</a></li>
-     
-      <p class="website__rights">© NetSepio 2021. All rights reserved || by<li><a href="https://lazarus.network/">Lazarus Network</a></li></p>
-
-    </ul>
-  </section>
-  <div class="menu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="/about/about.html">About</a></li>
-      <li><a href="/features/feature.html">Features</a></li>
-      <li><a href="/specification/specification.html">Specifications</a></li>
-    </ul>
-  </div>
-
-  <script src="app.js"></script>
-</body>
+    <!-- End Of Section -->
+    <!-- Section -->
+    <!-- <div class="product">
+      <div class="container product-container">
+        <div class="product-info second-product-info">
+          <h1>Be more productive with Conferfly</h1>
+          <p class="info-text">Conferfly will increase productivity by showing meetings (status & details), users' status, and tools that are one click away.</p>
+          <div class="comment" data-aos="fade-right" data-aos-duration:"7000" data-aos-delay="600">
+            <div class="line"></div>
+            <div class="profile">
+              <img src="./img/profile.jpg" alt="">
+              <div class="profile-info">
+                <h1>Don Simpson</h1>
+                <p>Co-Founder, Lazarus Network</p>
+              </div>
+            </div>
+            <p id="my">Simple, Easy to navigate for a non-tech person like me. I tried so many apps, and this is the best combination of great features for any shop."</p>
+          </div>
+        </div>
+        <img src="./img/product.jpg" class="product-img second-img" alt="" data-aos="fade-left" data-aos-duration:"7000" data-aos-delay="600">
+      </div>
+      </div>
+    </div> -->
+    <!-- End Of Section -->
+    <!-- Section -->
+    <section id="about" class="product welcome">
+      <div class="container product-container">
+        <img src="./img/netsepio2.webp" class="product-img" alt="" data-aos="fade-right" data-aos-duration:"7000" data-aos-delay="600">
+        <div class="product-info">
+          <h1>Welcome to Netsepio</h1>
+          <p class="info-text">NetSepio is a Decentralized Review Management System that allows you to post review for a particular domain on the Polygon Network. It also comes with a Crypto Wallet that can be used to manage digital assets. You can download the extension directly from GitHub or Web Store and start using it to stay safe from browser based attacks.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Section -->
+    <!-- footer -->
+    <footer id="Contact" class="footer">
+      <div class="social-icons">
+        <a href="https://twitter.com/NetSepio" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://discord.gg/5uaFhNpRF6" target="_blank"><i class="fa-brands fa-discord"></i></a>
+      </div>
+      <p class="copyright">&#169; Netsepio. 2022 All rights reserved .</p>
+    </footer>
+    <!-- end of footer -->
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
