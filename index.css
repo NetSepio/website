@@ -439,3 +439,7 @@ a{
 a:visited {
   color: var(--clr-blue-1);
 }
+
+.adjust {
+  width: auto;
+}
