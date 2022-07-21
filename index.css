@@ -308,10 +308,7 @@ img {
   padding: 15px 30px 15px 30px;
   font-size: 16px;
   font-weight: 600;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   border: none;
   margin-left: auto;
   margin-right: auto;
@@ -434,11 +431,11 @@ img {
   font-weight: 600;
 }
 a{
-  color: var(--clr-blue-1);
+  color: inherit;
 }
-a:visited {
+/* a:visited {
   color: var(--clr-blue-1);
-}
+} */
 
 .adjust {
   width: auto;
