@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,800;1,400&display=swap');
+
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+;
+
+.btn {
+    @apply rounded-none;
+}
+
+.btn-primary {
+    @apply rounded-none px-4 py-3 text-xl flex justify-center border border-black
+}
+
+.btn-secondary {
+    @apply rounded-none px-4 py-3 text-xl flex justify-center
+}
+
+.btn-right-icon {
+    @apply ml-[11px]
+}
+
+.btn-left-icon {
+    @apply mr-[11px]
+}
+
+.card {
+    @apply py-[40px] px-[35px] max-w-fit rounded-[20px];
+    background: radial-gradient(50% 108.59% at 108.16% 59.4%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #6DCC81;
+}
+
+.card-secondary {
+    @apply py-[40px] px-[35px] max-w-fit rounded-[20px];
+    background: linear-gradient(180deg, #6DCC81 0%, #46B1C9 100%);
+}
+
+.tabs-primary {
+    @apply p-[23px] max-w-fit rounded-[20px];
+    background: linear-gradient(180deg, #6DCC81 0%, rgba(255, 255, 255, 0) 100%);
+    border: 5px solid #6DCC81;
+}
