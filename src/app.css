@@ -45,3 +45,18 @@
     background: linear-gradient(180deg, #6DCC81 0%, rgba(255, 255, 255, 0) 100%);
     border: 5px solid #6DCC81;
 }
+
+.text-h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 88px;
+}
+
+.text-p {
+    font-family: 'Optima';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 28px;
+}
