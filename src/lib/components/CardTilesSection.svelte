@@ -8,7 +8,7 @@
 	<div class="flex px-10">
 		<div class="card-secondary !p-0 m-4">
 			<div class="bg-shine h-full w-full flex flex-col justify-center items-center p-16">
-				<h2 class="text-h2">The Easiest Way to Check a Website's Safety</h2>
+				<h2 class="text-h2 text-center">The Easiest Way to Check a Website's Safety</h2>
 				<img src={Dashboard} alt="NetSepio Dashboard" />
 			</div>
 		</div>
@@ -16,7 +16,7 @@
 			<div
 				class="bg-shine shine-reverse h-full w-full flex flex-col justify-center items-center p-16"
 			>
-				<h2 class="text-h2">Connect Your Wallet with just One Click</h2>
+				<h2 class="text-h2 text-center">Connect Your Wallet with just One Click</h2>
 				<img src={Wallet} alt="Crypto Wallet in NetSepio" />
 			</div>
 		</div>
@@ -24,7 +24,7 @@
 	<div class="overflow-hidden px-14 mt-4">
 		<div class="card-secondary flex justify-center items-center h-full w-full !pb-0">
 			<img src={Profile} alt="NetSepio Profile" />
-			<h1 class="text-h2">Let's start a better communication</h1>
+			<h1 class="text-h2 text-center">Let's start a better communication</h1>
 		</div>
 	</div>
 </div>
