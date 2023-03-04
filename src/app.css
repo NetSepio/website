@@ -31,12 +31,12 @@
 }
 
 .card {
-    @apply py-[40px] px-[35px] max-w-fit rounded-[20px];
+    @apply py-[40px] px-[35px] rounded-[20px];
     background: radial-gradient(50% 108.59% at 108.16% 59.4%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #6DCC81;
 }
 
 .card-secondary {
-    @apply py-[40px] px-[35px] max-w-fit rounded-[20px];
+    @apply py-[40px] px-[35px] rounded-[20px];
     background: linear-gradient(180deg, #6DCC81 0%, #46B1C9 100%);
 }
 
@@ -51,6 +51,15 @@
     font-weight: 700;
     font-size: 65px;
     line-height: 88px;
+}
+
+.text-h2 {
+    font-family: 'Palatino Linotype';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 61px;
+    text-align: center;
 }
 
 .text-p {

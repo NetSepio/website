@@ -11,7 +11,7 @@
 			Blockchain.
 		</p>
 		<div class="flex items-center">
-			<button class="btn-secondary"
+			<button class="btn-secondary mr-10"
 				>Download for <span class="btn-right-icon"><img src={ChromeLogo} alt="chrome-logo" /></span
 				></button
 			>
