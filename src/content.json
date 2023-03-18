@@ -1,0 +1,79 @@
+{
+    "whyUs":{
+        "title":"With Deta, you can:",
+        "pointers":{
+            "p-1": {
+                "p-title":":",
+                "p-desc":"Find time to focus on growing your business."
+            },
+            "p-2": {
+                "p-title":":",
+                "p-desc":"Access the right information to make key decisions."
+            },
+            "p-3": {
+                "p-title":":",
+                "p-desc":"Build and maintain closer customer relationships."
+            },
+            "p-4": {
+                "p-title":":",
+                "p-desc":"Minimize duplicate data entries, errors, and delays."
+            },
+            "p-5": {
+                "p-title":":",
+                "p-desc":"Optimize cash flow for business needs."
+            },
+            "p-6": {
+                "p-title":":",
+                "p-desc":"Our software is easy-to-use, requiring minimal employee training, and can be easily integrated with other industry-specific applications."
+            },
+            "p-7": {
+                "p-title":":",
+                "p-desc":"With Deta, you can be sure that your business is running efficiently and effectively."
+            }
+        }
+    },
+
+    "CTA": "Don't just take our word for it, see for yourself. Sign up for our free demo today and see how Deta can benefit your business.",
+
+    "features":{
+        "title":"Our ERP solution, Deta, offers a wide range of features including:",
+        "pointers":{
+            "p-1": {
+                "p-title":"Accounting and financials:",
+                "p-desc":"Manage your general ledger, journals, budgets, and accounts receivable and payable."
+            },
+            "p-2": {
+                "p-title":"Sales and customer relationship management:",
+                "p-desc":"Manage and maintain closer customer contacts and relationships."
+            },
+            "p-3": {
+                "p-title":":",
+                "p-desc":"Minimize duplicate data entries, errors, and delays."
+            },
+            "p-4": {
+                "p-title":":",
+                "p-desc":"Optimize cash flow for business needs."
+            },
+            "p-5": {
+                "p-title":":",
+                "p-desc":"Deta requires minimal employee training, and can be easily integrated with other industry-specific applications.."
+            }
+        }
+    },
+
+    "Testimonials":{
+        "clients":{
+            "client":[
+                ["clientName-1","clientTestimonial-1"],
+                ["clientName-2","clientTestimonial-2"],
+                ["clientName-3","clientTestimonial-3"],
+                ["clientName-4","clientTestimonial-4"],
+                ["clientName-5","clientTestimonial-5"],
+                ["clientName-6","clientTestimonial-6"]
+            ]
+        }
+
+    },
+
+    "contactUs": "Don't wait any longer, take the first step towards streamlining your business operations and increasing profitability with Detasys and Deta today!"
+}

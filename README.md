@@ -1,38 +1,33 @@
-# create-svelte
+<script>
+    import Hero from "$lib/components/Home/Hero.svelte";
+    import Benifits from "$lib/components/Home/Benifits.svelte";
+    import Features from "$lib/components/Home/Features.svelte";
+	import Testimonial from '$lib/components/Home/Testimonial.svelte';
+    import CTA from '$lib/components/Home/CTA.svelte';
+    import FAQs from '$lib/components/Home/FAQs.svelte';
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+</script>
 
-## Creating a project
+<div>
+    <Hero/>
+    <Benifits/>
+    <Features/>
+    <Testimonial/>
+    <CTA/>
+    <FAQs/>
+</div>
 
-If you're seeing this, you've probably already done this step. Congrats!
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+<script>
+    import "../app.css";
+    import Header from '$lib/components/Common/Header.svelte';
+    import Footer from "$lib/components/Common/Footer.svelte";
+    import ContactUs from "$lib/components/Common/ContactUs.svelte";
+</script>
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+<div class="p-5 bg-gray-900">
+  <Header />
+  <slot />
+  <ContactUs/>
+  <Footer />
+</div>
