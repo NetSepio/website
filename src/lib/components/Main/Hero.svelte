@@ -1,4 +1,6 @@
-<!-- HERO SECTIONS -->
+<script>
+    import net from "$lib/images/net2.png"
+</script>
 <section class="pt-24 mb-10">
     <div class="px-5 mx-auto max-w-7xl">
         <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
@@ -15,6 +17,13 @@
                 <a href="#_" class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg bg-gray-100 rounded-2xl sm:w-auto sm:mb-0">
                     Go to Web App
                 </a>
+            </div>
+        </div>
+        <div class="w-full mx-auto mt-20 text-center md:w-10/12">
+            <div class="relative z-0 w-full mt-8">
+                <div class="relative overflow-hidden shadow-2xl border border-green-200 rounded-3xl">
+                    <img src={net} alt="Netsepio">
+                </div>
             </div>
         </div>
     </div>
