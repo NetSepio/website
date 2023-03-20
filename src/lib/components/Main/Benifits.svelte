@@ -2,10 +2,6 @@
   .rounded-lg {
     border-radius: 0.5rem;
   }
-
-  .border-4 {
-    border-width: 0.4rem;
-  }
 </style>
 
 <section class="text-white">

@@ -13,7 +13,7 @@
           <button class="inline-block rounded bg-indigo-500 px-8 py-2 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Send</button>
         </form>
   
-        <p class="text-center text-xs text-gray-400">By signing up to our newsletter you agree to our <a href="#" class="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600">Term of Service</a> and <a href="#" class="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600">Privacy Policy</a>.</p>
+        <p class="text-center text-xs text-gray-400">By signing up to our newsletter you agree to our <a href="/" class="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600">Term of Service</a> and <a  class="underline transition duration-100 hover:text-indigo-500 active:text-indigo-600">Privacy Policy</a>.</p>
       </div>
     </div>
   </div>

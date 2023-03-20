@@ -16,13 +16,13 @@
 
       <div class="flex flex-col items-center justify-between md:flex-row">
           <div>
-              <a href="#" class="text-2xl font-bold text-transparent bg-clip-text leading-12 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-teal-200 to-lime-200">Netsepio</a>
+              <a href="/" class="text-2xl font-bold text-transparent bg-clip-text leading-12 text-transparent bg-clip-text leading-12 bg-gradient-to-r from-teal-200 to-lime-200">Netsepio</a>
           </div>
 
           <div class="flex mt-4 md:m-0">
               <div class="-mx-4">
-                  <a href="#" class="px-4 text-sm text-gray-300 transition-colors duration-300 hover:text-blue-300">Extension</a>
-                  <a href="#" class="px-4 text-sm text-gray-300 transition-colors duration-300 hover:text-blue-300">Web App</a>
+                  <a href="/" class="px-4 text-sm text-gray-300 transition-colors duration-300 hover:text-blue-300">Extension</a>
+                  <a href="/" class="px-4 text-sm text-gray-300 transition-colors duration-300 hover:text-blue-300">Web App</a>
               </div>
           </div>
       </div>
