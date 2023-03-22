@@ -22,8 +22,8 @@
     "type": "git",
     "url": "git+https://github.com/NetSepio/website.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["NetSepio"],
+  "author": "Aditya Mishra",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/NetSepio/website/issues"
