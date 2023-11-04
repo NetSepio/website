@@ -119,12 +119,18 @@
                 <img src="images/netsepio_logo_light.png" class="w-14 h-14" alt="NetSepio">
                 <img src="images/productname.png" class="w-26 h-8" alt="NetSepio">
               </a>  
-              <div class="inline-block p-1 rounded-full"
+              <!-- <div class="inline-block p-1 rounded-full"
         style="background: linear-gradient(0.25turn, #006c67, #11d9c5, #006c67)">
         <button class="text-white py-2 px-6 m41:px-16 m41:text-lg font-medium rounded-full">
-          <a href="signup.html">Early Access</a>
+          <a href="signup.html">Apply for whitelist</a>
         </button>
-      </div>     
+      </div>      -->
+      <div class="inline-block p-1 rounded-lg"
+        style="background-color: #11D9C5;">
+        <button class="text-black py-2 px-6 m41:px-16 m41:text-lg font-medium rounded-lg">
+          <a href="signup.html">Apply for whitelist</a>
+        </button>
+      </div> 
             </header>
           </div>
         </div>
@@ -134,26 +140,27 @@
                 <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 py-20">
                     <h1 class="mb-8 text-4xl font-bold leading-none tracking-normal text-gray-100 md:text-3xl md:tracking-tight">
                         <span class="text-white">
-                            Fill Your Details for Early Access
+                            Apply for Early Access
                             </span>
                     </h1>
 
-                        <form class="rounded pt-14">
+                        <form id="myForm" class="rounded pt-14">
                           <div class="mb-4">
                             <label class="block text-white text-lg font-bold mb-2" for="email" type="email">
                               Email
                             </label>
                             <input 
                             style="background-color: #12C7BC4D;"
-                            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Enter your email address">
+                            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email address" required>
+                          <!-- <div class="text-red-500">This field is required. Please write your Email address.</div> -->
                           </div>
                           <div class="mb-4">
-                            <label class="block text-white text-lg font-bold mb-2" for="account" type="text">
+                            <label class="block text-white text-lg font-bold mb-2" for="account" type="url">
                               Twitter
                             </label>
                             <input 
                             style="background-color: #12C7BC4D;"
-                            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Twitter Account link">
+                            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="account" type="url" placeholder="Twitter Account link">
                           </div>
                           <div class="mb-6">
                             <label class="block text-white text-lg font-bold mb-2" for="wallet" type="text">
@@ -161,18 +168,21 @@
                             </label>
                             <input 
                             style="background-color: #12C7BC4D;"
-                            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Aptos wallet address">
+                            class="shadow appearance-none rounded w-full py-2 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="wallet" type="text" placeholder="Aptos wallet address">
                           </div>
                           <div class="text-center pt-10">
                             <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
                                 <button href="https://chrome.google.com/webstore/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd" 
                                 style="background-color: #11D9C5;"
+                                type="submit" value="submit"
                                 class="inline-flex items-center justify-center w-full px-14 py-3 mb-2 text-lg text-black font-semibold rounded-lg sm:w-auto sm:mb-0 hover:bg-green-200 focus:ring focus:ring-green-300 focus:ring-opacity-80">
                                     Sign Up
                             </button>              
                             </div>
                         </div>
                         </form>
+
+                        <p id="submissionMessage" class="text-blue-500"></p>
                 </div>
             </div>
         </section>
@@ -184,11 +194,11 @@
         <div class="flex flex-col items-center border-t pt-6">
           <!-- nav - start -->
           <nav class="mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
-            <a href="/" class="text-2xl font-bold text-transparent bg-clip-text leading-12 bg-gradient-to-r from-green-200 to-green-400">NetSepio</a>
+            <a href="/" class="text-2xl font-bold leading-12" style="color: #11D9C5;">NetSepio</a>
           </nav>
           <nav class="mb-4 flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-start md:gap-6">
-            <a href="https://chrome.google.com/webstore/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd" class="text-green-200 transition duration-100 hover:text-teal-800 active:text-teal-700">Extension</a>
-            <a href="https://github.com/NetSepio" class="text-green-200 transition duration-100 hover:text-teal-800 active:text-teal-700">Collaborate</a>
+            <a href="https://chrome.google.com/webstore/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd" class="transition duration-100 hover:text-teal-800 active:text-teal-700" style="color: #11D9C5;">Extension</a>
+            <a href="https://github.com/NetSepio" class="transition duration-100 hover:text-teal-800 active:text-teal-700" style="color: #11D9C5;">Collaborate</a>
           </nav>
           <!-- nav - end -->
     
@@ -218,9 +228,34 @@
           <!-- social - end -->
         </div>
     
-        <div class="py-5 text-center text-sm text-green-200">© 2023 - NetSepio. All rights reserved.</div>
+        <div class="py-5 text-center text-sm" style="color: #11D9C5;">© 2023 - NetSepio. All rights reserved.</div>
       </footer>
     </div>
+
+
+    <script>
+      document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Retrieve form data
+      const formData = {
+        emailid: document.getElementById("email").value,
+        twitter: document.getElementById("account").value,
+        wallet: document.getElementById("wallet").value
+      };
+
+      // Clear the form fields
+    document.getElementById("email").value = "";
+    document.getElementById("account").value = "";
+    document.getElementById("wallet").value = "";
+
+    // Display the submission message
+    const submissionMessage = document.getElementById("submissionMessage");
+    submissionMessage.textContent = "Your form has been submitted.";
+
+        console.log(formData);
+      });
+      </script>
 
 </body>
 </html>
