@@ -160,7 +160,7 @@
                             </label> -->
                             <input 
                             style="background-color: #323850;"
-                            class="shadow border appearance-none rounded w-full py-4 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="account" type="url" placeholder="Twitter Account link">
+                            class="shadow border appearance-none rounded w-full py-4 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="account" type="text" placeholder="@twitter_username (optional)">
                           </div>
                           <div class="mb-10">
                             <!-- <label class="block text-white text-lg font-bold mb-2" for="wallet" type="text">
@@ -239,21 +239,36 @@
         
         // Retrieve form data
       const formData = {
-        emailid: document.getElementById("email").value,
-        twitter: document.getElementById("account").value,
-        wallet: document.getElementById("wallet").value
+        emailId: document.getElementById("email").value,
+        walletAddress: document.getElementById("wallet").value,
+        twitter: document.getElementById("account").value
       };
 
-      // Clear the form fields
-    document.getElementById("email").value = "";
-    document.getElementById("account").value = "";
-    document.getElementById("wallet").value = "";
+        console.log(formData);
 
-    // Display the submission message
+        // Send POST request using Fetch API
+      fetch("https://aptos.gateway.netsepio.com/api/v1.0/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        
+        // Display the submission message
     const submissionMessage = document.getElementById("submissionMessage");
     submissionMessage.textContent = "Your form has been submitted.";
-
-        console.log(formData);
+        // Reset form
+        document.getElementById("myForm").reset();
+      })
+      .catch(error => {
+        console.error(error);
+        alert("An error occurred while submitting the data.");
+      });
+      
       });
       </script>
 
