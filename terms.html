@@ -135,57 +135,42 @@
           </div>
         </div>
 
-         <section class="pt-4 pb-10">
-            <div class="px-5 mx-auto max-w-2xl rounded-xl" style="background-color: #323850">
-                <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 py-20">
-                    <h1 class="mb-8 text-4xl font-bold leading-none tracking-normal text-gray-100 md:text-3xl md:tracking-tight">
-                        <span class="text-white">
-                            Apply for Early Access
-                            </span>
-                    </h1>
-
-                        <form id="myForm" class="rounded pt-14">
-                          <div class="mb-16">
-                            <!-- <label class="block text-white text-lg font-bold mb-2" for="email" type="email">
-                              Email
-                            </label> -->
-                            <input 
-                            style="background-color: #323850;"
-                            class="shadow border appearance-none rounded w-full py-4 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email address" required>
-                          <!-- <div class="text-red-500">This field is required. Please write your Email address.</div> -->
-                          </div>
-                          <div class="mb-16">
-                            <!-- <label class="block text-white text-lg font-bold mb-2" for="account" type="url">
-                              Twitter
-                            </label> -->
-                            <input 
-                            style="background-color: #323850;"
-                            class="shadow border appearance-none rounded w-full py-4 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="account" type="text" placeholder="@twitter_username (optional)">
-                          </div>
-                          <div class="mb-10">
-                            <!-- <label class="block text-white text-lg font-bold mb-2" for="wallet" type="text">
-                                Aptos wallet address
-                            </label> -->
-                            <input 
-                            style="background-color: #323850;"
-                            class="shadow border appearance-none rounded w-full py-4 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="wallet" type="text" placeholder="Aptos wallet address (optional)">
-                          </div>
-                          <div class="text-center pt-10">
-                            <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
-                                <button href="https://chrome.google.com/webstore/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd" 
-                                style="background-color: #11D9C5;"
-                                type="submit" value="submit"
-                                class="px-14 py-3 mb-2 text-lg text-black font-semibold rounded-lg w-full sm:mb-0 hover:bg-green-200 focus:ring focus:ring-green-300 focus:ring-opacity-80">
-                                    Apply
-                            </button>              
-                            </div>
-                        </div>
-                        </form>
-
-                        <p id="submissionMessage" class="text-blue-500"></p>
-                </div>
-            </div>
-        </section>
+        <section class="pt-4 pb-10">
+          <div class="px-5 mx-auto max-w-5xl rounded-xl" style="background-color: #323850">
+              <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 py-20">
+                  <h1 class="mb-8 text-4xl font-bold leading-none tracking-normal text-gray-100 md:text-3xl md:tracking-tight">
+                      <span style="color: #11D9C5">
+                          Terms and Conditions
+                          </span>
+                  </h1>
+<div class="text-white">
+  Welcome to NetSepio!
+</br></br>
+  These terms and conditions outline the rules and regulations for the use of NetSepio's Website, located at https://netsepio.com/.
+</br></br>
+  By accessing this website we assume you accept these terms and conditions. Do not continue to use NetSepio if you do not agree to take all of the terms and conditions stated on this page.
+</br></br>
+  The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company's terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client's needs in respect of provision of the Company's stated services, in accordance with and subject to, prevailing law of in. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+</div>
+</br>
+<div class="text-white">
+  Unless otherwise stated, NetSepio and/or its licensors own the intellectual property rights for all material on NetSepio. All intellectual property rights are reserved. You may access this from NetSepio for your own personal use subjected to restrictions set in these terms and conditions.
+</br></br>
+  You must not:
+</br></br>
+  Republish material from NetSepio
+</br>
+  Sell, rent or sub-license material from NetSepio
+</br>
+  Reproduce, duplicate or copy material from NetSepio
+</br>
+  Redistribute content from NetSepio
+</br></br>
+  NetSepio reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.
+</div>
+              </div>
+          </div>
+      </section>
 
     </div>
 
@@ -257,7 +242,7 @@
         console.log(formData);
 
         // Send POST request using Fetch API
-      fetch("https://gateway.netsepio.com/api/v1.0/waitlist", {
+      fetch("https://aptos.gateway.netsepio.com/api/v1.0/waitlist", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

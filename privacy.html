@@ -136,53 +136,38 @@
         </div>
 
          <section class="pt-4 pb-10">
-            <div class="px-5 mx-auto max-w-2xl rounded-xl" style="background-color: #323850">
+            <div class="px-5 mx-auto max-w-5xl rounded-xl" style="background-color: #323850">
                 <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 py-20">
                     <h1 class="mb-8 text-4xl font-bold leading-none tracking-normal text-gray-100 md:text-3xl md:tracking-tight">
-                        <span class="text-white">
-                            Apply for Early Access
+                        <span style="color: #11D9C5">
+                            Privacy Policy
                             </span>
                     </h1>
+<div class="text-white">
+  This Privacy Policy describes our policies and procedures on the collection, use and disclosure of your information when you use the Service and tells you about your privacy rights and how the law protects You.
 
-                        <form id="myForm" class="rounded pt-14">
-                          <div class="mb-16">
-                            <!-- <label class="block text-white text-lg font-bold mb-2" for="email" type="email">
-                              Email
-                            </label> -->
-                            <input 
-                            style="background-color: #323850;"
-                            class="shadow border appearance-none rounded w-full py-4 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email address" required>
-                          <!-- <div class="text-red-500">This field is required. Please write your Email address.</div> -->
-                          </div>
-                          <div class="mb-16">
-                            <!-- <label class="block text-white text-lg font-bold mb-2" for="account" type="url">
-                              Twitter
-                            </label> -->
-                            <input 
-                            style="background-color: #323850;"
-                            class="shadow border appearance-none rounded w-full py-4 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="account" type="text" placeholder="@twitter_username (optional)">
-                          </div>
-                          <div class="mb-10">
-                            <!-- <label class="block text-white text-lg font-bold mb-2" for="wallet" type="text">
-                                Aptos wallet address
-                            </label> -->
-                            <input 
-                            style="background-color: #323850;"
-                            class="shadow border appearance-none rounded w-full py-4 px-3 text-gray-200 leading-tight focus:outline-none focus:shadow-outline" id="wallet" type="text" placeholder="Aptos wallet address (optional)">
-                          </div>
-                          <div class="text-center pt-10">
-                            <div class="mb-4 space-x-0 md:space-x-2 md:mb-8">
-                                <button href="https://chrome.google.com/webstore/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd" 
-                                style="background-color: #11D9C5;"
-                                type="submit" value="submit"
-                                class="px-14 py-3 mb-2 text-lg text-black font-semibold rounded-lg w-full sm:mb-0 hover:bg-green-200 focus:ring focus:ring-green-300 focus:ring-opacity-80">
-                                    Apply
-                            </button>              
-                            </div>
-                        </div>
-                        </form>
+We use your Personal data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this Privacy Policy.
+While using Our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include, but is not limited to:
+<!-- </br> -->
+Email address,
+<!-- </br> -->
+First name and last name, 
+Twitter and Discord account, 
+<!-- </br> -->
+Usage Data
+<!-- </br> -->
+Usage Data is collected automatically when using the Service.
 
-                        <p id="submissionMessage" class="text-blue-500"></p>
+Usage Data may include information such as your Device's Internet Protocol address (e.g. IP address), browser type, browser version, etc.
+  </div>
+</br>
+  <div class="text-white">
+    We use Cookies and similar tracking technologies to track the activity on our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service. The technologies we use may include:
+
+    Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on your personal computer or mobile device when you go offline, while Session Cookies are deleted as soon as you close your web browser.</br>
+    Cookies or Browser Cookies: A cookie is a small file placed on your Device. You can instruct your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if you do not accept Cookies, you may not be able to use some parts of our Service. Unless you have adjusted your browser setting so that it will refuse Cookies, our Service may use Cookies.
+Web Beacons: Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).
+  </div>
                 </div>
             </div>
         </section>
@@ -257,7 +242,7 @@
         console.log(formData);
 
         // Send POST request using Fetch API
-      fetch("https://gateway.netsepio.com/api/v1.0/waitlist", {
+      fetch("https://aptos.gateway.netsepio.com/api/v1.0/waitlist", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
