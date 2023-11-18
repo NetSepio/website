@@ -69,6 +69,24 @@ body {
 		'Segoe UI Emoji';
 }
 
+.webappbg {
+  background: none;
+}
+
+.bgcolor {
+  background: linear-gradient(0.25turn, #11D9C5, #053933);
+}
+
+@media screen and (min-width: 768px) {
+  .webappbg {
+    background-image: url('images/green_back.png'); 
+    background-size: cover;
+  }
+  .bgcolor {
+    background: linear-gradient(0.25turn, rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.39));
+  }
+}
+
 /*
 Grouping content
 ================
