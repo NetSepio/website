@@ -73,6 +73,10 @@ body {
   background: none;
 }
 
+.align {
+  text-align: center;
+}
+
 .bgcolor {
   background: linear-gradient(0.25turn, #11D9C5, #053933);
 }
@@ -84,6 +88,9 @@ body {
   }
   .bgcolor {
     background: linear-gradient(0.25turn, rgba(255, 255, 255, 0.21), rgba(255, 255, 255, 0.39));
+  }
+  .align {
+    text-align: left;
   }
 }
 
