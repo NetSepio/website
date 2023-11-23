@@ -182,8 +182,8 @@
                         </div>
                         </form>
 
-                        <!-- <p id="submissionMessage" class="text-blue-500"></p>
-                        <p id="submissionMessagediscord" class="text-blue-500"></p> -->
+                        <p id="submissionMessage" class="text-blue-500"></p>
+                        <!-- <p id="submissionMessagediscord" class="text-blue-500"></p> -->
 
 <!-- Button to toggle the modal -->
 <!-- <button 
@@ -316,12 +316,18 @@ style="background-color: #222944;">
         },
         body: JSON.stringify(formData)
       })
-      .then(response => response.json())
+      .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error('Server response was not OK');
+        }
+    })
       .then(data => {
         console.log(data);
         
-//     const submissionMessage = document.getElementById("submissionMessage");
-//     submissionMessage.textContent = "Your form has been submitted.";
+    // const submissionMessage = document.getElementById("submissionMessage");
+    // submissionMessage.textContent = "Your form has been submitted.";
       
 //     const submissionMessageDiscord = document.getElementById("submissionMessagediscord");
 //     submissionMessageDiscord.textContent = "Meanwhile join our discord community to keep up with latest information."
@@ -343,7 +349,9 @@ style="background-color: #222944;">
       })
       .catch(error => {
         console.error(error);
-        alert("An error occurred while submitting the data.");
+        const submissionMessage = document.getElementById("submissionMessage");
+        submissionMessage.textContent = "Already in whitelist";
+        // alert("An error occurred while submitting the data.");
       });
       
       });
