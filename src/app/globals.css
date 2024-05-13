@@ -18,16 +18,31 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.elemet {
+  background-image: radial-gradient(ellipse at center, yellow 20%, orange 50%, red 80%);
+}
+.element {
+    background: radial-gradient(480px 400px at 100% 58%,#11d9c5, #b7980d7f,#040a206e);
+}
+.element2 {
+    background: radial-gradient(400px 400px at bottom left,#b7980dc8 20%,#11d9c545 50%,transparent 100%);
 }
