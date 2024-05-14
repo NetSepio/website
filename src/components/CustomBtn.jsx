@@ -6,7 +6,7 @@ const CustomBtn = ({ title, width = "w-[170px]" }) => {
   return (
     <button
       style={inter.style}
-      className={`rounded-lg  ${width} text-[16px] font-medium active:scale-95 duration-100 hover:bg-opacity-70    bg-cta h-[55px]`}
+      className={`rounded-lg  ${width} text-[16px] text-black font-medium active:scale-95 duration-100 hover:bg-opacity-70    bg-cta h-[55px]`}
     >
       {title}
     </button>
