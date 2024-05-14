@@ -34,27 +34,27 @@ world with confidence.</div>
           <div class="lg:flex md:flex mt-10 gap-8">
           <div class="lg:w-1/3 md:w-1/3 w-full rounded-xl">
               <div class="p-10">
-              <img src="/about2.png" alt="netsepio logo"/>
-              {/* <div class="text-white font-bold text-lg">Prevent Scams</div>
-              <div class="text-gray-300">Combining AI, community insights, and 
-                  transparent reviews to proactively prevent 
-                  scams</div> */}
+              <div style={{ position: 'relative' }}>
+              <img src="/about2.png" alt="netsepio logo"  style={{ zIndex: 1 }} className='absolute right-2 bottom-2'/>
+                <img src="/white_frame.png" alt="netsepio logo" style={{ zIndex: 0 }} />
+            </div>
+            </div>
+
+          </div>
+          <div class="lg:w-1/3 md:w-1/3 w-full rounded-xl lg:mt-0 md:mt-0 mt-4">
+              <div class="p-10">
+              <div style={{ position: 'relative' }}>
+              <img src="/about2.png" alt="netsepio logo"  style={{ zIndex: 1 }} className='absolute right-2 bottom-2'/>
+                <img src="/white_frame.png" alt="netsepio logo" style={{ zIndex: 0 }} />
+            </div>
               </div>
           </div>
           <div class="lg:w-1/3 md:w-1/3 w-full rounded-xl lg:mt-0 md:mt-0 mt-4">
               <div class="p-10">
-              <img src="about3.png" alt="netsepio logo"/>
-              {/* <div class="text-white font-bold text-lg">DYOR before invest</div>
-              <div class="text-gray-300">Empower your investments with informed 
-                  decisions</div> */}
-              </div>
-          </div>
-          <div class="lg:w-1/3 md:w-1/3 w-full rounded-xl lg:mt-0 md:mt-0 mt-4">
-              <div class="p-10">
-              <img src="about4.png" alt="netsepio logo"/>
-              {/* <div class="text-white font-bold text-lg">Protect crypto assets</div>
-              <div class="text-gray-300">Elevate Your Crypto Asset Security with 
-                  VPN and Firewall Services</div> */}
+              <div style={{ position: 'relative' }}>
+              <img src="/about2.png" alt="netsepio logo"  style={{ zIndex: 1 }} className='absolute right-2 bottom-2'/>
+                <img src="/white_frame.png" alt="netsepio logo" style={{ zIndex: 0 }} />
+            </div>
               </div>
           </div>
       </div>
