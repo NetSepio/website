@@ -18,7 +18,7 @@ const FAQs = ({ item }) => {
         height: "74px",
         transition: { duration: 0, type: "spring" },
       });
-  }, [showAnswer]);
+  }, [showAnswer, animation]);
   return (
     <motion.div
       animate={animation}
