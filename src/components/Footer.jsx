@@ -47,7 +47,7 @@ const Footer = () => {
             <div className='flex relative right-[6px] gap-1'>
               <Link
                 className='hover:scale-110 duration-150'
-                href={"https://web.telegram.org/a/#-1001271907191"}
+                href={"https://t.me/NetSepio?boost "}
               >
                 <Image
                   src={"/images/tele_green.svg"}
