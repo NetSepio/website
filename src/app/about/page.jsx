@@ -29,13 +29,13 @@ const page = () => {
             </div>
           </div>
 
-          <div class='p-20 bg-white'>
+          <div class='p-20 '>
             <div class=''>
-              <div class='text-[62px] text-black  font-semibold py-10 text-center'>
+              <div class='text-[62px] text-white  font-semibold py-10 text-center'>
                 How We Help
               </div>
-              <div class='text-md text-primary/80 w-2/5 mx-auto text-center'>
-                Our plateform supports your journey in the crypto world, from
+              <div class='text-md text-white w-2/5 mx-auto text-center'>
+                Our platform supports your journey in the crypto world, from
                 scam prevention to informed investing and asset protection.
               </div>
             </div>

@@ -9,15 +9,15 @@ const WinSection = () => {
   return (
     <div
       style={roboto.style}
-      className='p-20 flex w-full  my-[5%] flex-col items-start '
+      className='p-2 lg:p-20 flex w-full  my-[5%] flex-col items-start '
     >
       <h3
-        className='text-[52px] mb-[90px] w-full text-start
+        className=' text-3xl lg:text-[52px] mb-[90px] w-full text-start
         text-white'
       >
         A Win-Win for Everyone
       </h3>
-      <div className='w-full flex h-max justify-between'>
+      <div className='w-full flex flex-col lg:flex-row h-max justify-between'>
         {cardDetails2.map((item, index) => {
           return (
             <div

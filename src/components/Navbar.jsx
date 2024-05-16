@@ -17,8 +17,8 @@ const Navbar = () => {
         />
       </Link>
       <div className='flex gap-[14px]'>
-        <DarkBtn title={"Sotreus"} />
-        <CustomBtn title={"Erebrus"} />
+        <DarkBtn link={"https://sotreus.com"} title={"Sotreus"} />
+        <CustomBtn link='https://erebrus.io' title={"Erebrus"} />
       </div>
     </div>
   );

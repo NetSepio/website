@@ -15,7 +15,7 @@ export default function Home() {
     <main className='flex min-h-screen bg-primary flex-col items-center justify-between'>
       <Hero />
       <Mission />
-      <div className='bg-white justify-center gap-[.25%] w-full flex flex-wrap'>
+      <div className='bg-white justify-center gap-[.25%] w-full flex flex-col lg:flex-row flex-wrap'>
         {cardDetails.map((item, index) => {
           return <Card key={index.toString()} item={item} />;
         })}

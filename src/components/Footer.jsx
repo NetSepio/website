@@ -18,7 +18,7 @@ const Footer = () => {
       } items-end`}
     >
       <div className=' h-[507px] w-full pt-[102px]  rounded-t-[50px]  bg-primary '>
-        <footer className='w-[85%] relative mx-auto border-b border-cta border-opacity-30 pb-[30px]  justify-between  flex'>
+        <footer className='w-[85%] relative mx-auto border-b border-cta border-opacity-30 pb-[30px]  justify-between flex-col  flex lg:flex-row'>
           <div className='flex w-max relative bottom-3 flex-col'>
             <Link href={"/"} className='flex items-center'>
               <Image
@@ -42,7 +42,7 @@ const Footer = () => {
           {footerContents.map((item, index) => {
             return <FooterItem key={index.toString()} item={item} />;
           })}
-          <div className='flex flex-col'>
+          <div className='flex ml-4 flex-col'>
             <h4 className=' text-white text-[22px] mb-[49px]'>{"Others"}</h4>
             <div className='flex relative right-[6px] gap-1'>
               <Link className='hover:scale-110 duration-150' href={"/"}>

@@ -55,11 +55,11 @@ const Mission = () => {
             <motion.div
               animate={animation3}
               transition={{ duration: 1.5 }}
-              className='flex-col w-[45%]  ml-[89px]  h-[80%] justify-between flex'
+              className='flex-col lg:w-[45%]  ml-[89px]  h-[80%] justify-between flex'
             >
               <h3
                 style={roboto.style}
-                className='text-white max-w-[420px] leading-none font-medium text-[72px]'
+                className='text-white max-w-[420px] leading-none font-medium text-3xl lg:text-[72px]'
               >
                 Empowering Connectivity
               </h3>
@@ -74,9 +74,9 @@ const Mission = () => {
                 global digital ecosystems, ensuring secure and unrestricted
                 connectivity for all.
               </p>
-              <CustomBtn title={"Our Mission"} />
+              <CustomBtn link='/about' title={"Our Mission"} />
             </motion.div>
-            <div className='w-[45%] flex overflow-hidden justify-between h-[80%]'>
+            <div className='w-[45%] lg:flex overflow-hidden hidden justify-between h-[80%]'>
               <motion.div
                 animate={animation}
                 transition={{ type: "tween", duration: 1 }}

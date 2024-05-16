@@ -11,16 +11,19 @@ const Hero = () => {
   return (
     <div
       style={roboto.style}
-      className='w-full  overflow-hidden my-[2%] flex relative pt-[4%] justify-between items-center bg-tranparent h-screen'
+      className='w-full  overflow-hidden my-[2%]  flex relative pt-[4%] justify-between items-center bg-tranparent h-screen'
     >
       <div className='absolute top-0 bottom-0 w-full h-full element opacity-40 '></div>
-      <div className='z-20  mx-[80px]'>
-        <h3 className='text-[58px] max-w-[65%] leading-tight text-white'>
+      <div className='z-20 absolute lg:relative bottom-10 lg:bottom-0 mx-[80px]'>
+        <h3 className=' text-2xl lg:text-[58px] max-w-[100%] lg:max-w-[65%] leading-tight text-white'>
           Securing and Decentralizing the Internet Layer
         </h3>
         <div className='flex items-center mt-[35px] gap-[26px]'>
-          <CustomBtn title={"Explore Webapp"} />
-          <DarkBtn title={"Join Discord"} />
+          <CustomBtn link='https://app.netsepio.com' title={"Explore Webapp"} />
+          <DarkBtn
+            link='https://discordapp.com/invite/5uaFhNpRF6'
+            title={"Join Discord"}
+          />
         </div>
       </div>
       <motion.div
@@ -33,12 +36,13 @@ const Hero = () => {
         }}
         className='z-10 absolute   -right-[5%]'
       >
+        <div className='relative w-[250px] h-[230px] lg:w-[450px] lg:h-[402.8px]'></div>
         <Image
           src={"/images/ball.png"}
           className=''
-          width={450}
-          height={440.8}
           alt='hero_image'
+          fill
+          priority
         />
       </motion.div>
     </div>

@@ -6,7 +6,7 @@ import useFonts from "@/hooks/useFonts";
 const Reviews = () => {
   const { roboto } = useFonts();
   return (
-    <div className='relative flex items-center justify-around w-full h-[672px]'>
+    <div className='relative flex flex-col lg:flex-row items-center justify-around w-full h-[672px]'>
       <Image
         src={"/images/link.png"}
         className='absolute object-cover'
@@ -16,14 +16,14 @@ const Reviews = () => {
       />
       <div className='z-20 flex flex-col items-start  gap-10'>
         <p style={roboto.style} className='flex flex-col gap-1'>
-          <span className='text-white text-5xl font-medium'>
+          <span className='text-white text-3xl lg:text-5xl font-medium'>
             Trusted Reviews,
           </span>
-          <span className='text-white text-5xl font-medium'>
+          <span className='text-white text-3xl lg:text-5xl font-medium'>
             Boosting Your Online Security
           </span>
         </p>
-        <CustomBtn title={"Get Started"} />
+        <CustomBtn link='https://app.netsepio.com' title={"Get Started"} />
       </div>
       <div className='z-20 flex flex-col gap-[27px] justify-center  items-center'>
         <div className=' w-[373px] h-[98px]  flex justify-start gap-[14px]  rounded-2xl  border border-white/10 items-center relative  bg-white/10 '>
