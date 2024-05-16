@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+const Privacy = () => {
   return (
     <div>
     
@@ -40,4 +40,4 @@ Web Beacons: Certain sections of our Service and our emails may contain small el
   )
 }
 
-export default page
+export default Privacy;

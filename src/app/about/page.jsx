@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+const About = () => {
   return (
     <div>
         <section class="pt-4">
@@ -78,4 +78,4 @@ world with confidence.</div>
   )
 }
 
-export default page
+export default About;

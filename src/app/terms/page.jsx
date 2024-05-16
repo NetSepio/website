@@ -1,6 +1,6 @@
 import React from 'react'
 
-const page = () => {
+const Terms = () => {
   return (
     <div>
         <section class="pt-28 pb-10">
@@ -43,4 +43,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Terms;
