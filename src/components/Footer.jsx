@@ -45,7 +45,10 @@ const Footer = () => {
           <div className='flex ml-4 flex-col'>
             <h4 className=' text-white text-[22px] mb-[49px]'>{"Others"}</h4>
             <div className='flex relative right-[6px] gap-1'>
-              <Link className='hover:scale-110 duration-150' href={"/"}>
+              <Link
+                className='hover:scale-110 duration-150'
+                href={"https://web.telegram.org/a/#-1001271907191"}
+              >
                 <Image
                   src={"/images/tele_green.svg"}
                   width={50}
