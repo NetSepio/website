@@ -46,7 +46,7 @@ const Mission = () => {
         opacity: 1,
       });
     }
-  }, [inView, animation, animation2]);
+  }, [inView, animation, animation2, animation3]);
   return (
     <div ref={ref} className='h-screen  w-full flex my-[2%]  items-center'>
       <div className='w-[95%] rounded-[50px] relative h-[85%] bg-gradient-to-t p-[0.6px] from-primary to-cta/50 mx-auto'>

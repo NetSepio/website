@@ -22,8 +22,8 @@ const Page = () => {
               is not limited to: Email address, First name and last name,
               Twitter and Discord account, Usage Data Usage Data is collected
               automatically when using the Service. Usage Data may include
-              information such as your Device's Internet Protocol address (e.g.
-              IP address), browser type, browser version, etc.
+              information such as your Device&apos;s Internet Protocol address
+              (e.g. IP address), browser type, browser version, etc.
             </div>
             <br />
             <div class='text-white'>
@@ -31,10 +31,11 @@ const Page = () => {
               activity on our Service and store certain information. Tracking
               technologies used are beacons, tags, and scripts to collect and
               track information and to improve and analyze our Service. The
-              technologies we use may include: Cookies can be "Persistent" or
-              "Session" Cookies. Persistent Cookies remain on your personal
-              computer or mobile device when you go offline, while Session
-              Cookies are deleted as soon as you close your web browser.
+              technologies we use may include: Cookies can be
+              &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent
+              Cookies remain on your personal computer or mobile device when you
+              go offline, while Session Cookies are deleted as soon as you close
+              your web browser.
               <br />
               Cookies or Browser Cookies: A cookie is a small file placed on
               your Device. You can instruct your browser to refuse all Cookies
