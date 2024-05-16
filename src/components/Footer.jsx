@@ -4,13 +4,18 @@ import { footerContents } from "@/utils/data";
 import FooterItem from "./FooterItem";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const { roboto } = useFonts();
+  const path = usePathname();
+  console.log("path", path);
   return (
     <div
       style={roboto.style}
-      className='h-[615px] w-full flex bg-cta items-end'
+      className={`h-[615px] w-full flex ${
+        path === "/" ? "bg-cta" : "bg-white"
+      } items-end`}
     >
       <div className=' h-[507px] w-full pt-[102px]  rounded-t-[50px]  bg-primary '>
         <footer className='w-[85%] relative mx-auto border-b border-cta border-opacity-30 pb-[30px]  justify-between  flex'>

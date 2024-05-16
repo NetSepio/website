@@ -76,11 +76,11 @@ const Mission = () => {
               </p>
               <CustomBtn title={"Our Mission"} />
             </motion.div>
-            <div className='w-[52%] flex overflow-hidden justify-between h-[80%]'>
+            <div className='w-[45%] flex overflow-hidden justify-between h-[80%]'>
               <motion.div
                 animate={animation}
                 transition={{ type: "tween", duration: 1 }}
-                className='w-[47%] self-start h-[60%] flex flex-col relative'
+                className='w-[45%] self-start h-[65%] flex flex-col relative'
               >
                 <Image
                   className='object-cover rounded-[10px]'
@@ -99,7 +99,7 @@ const Mission = () => {
               <motion.div
                 animate={animation2}
                 transition={{ type: "tween", duration: 1 }}
-                className='w-[47%] self-end h-[60%] flex flex-col relative'
+                className='w-[45%] self-end mr-[4%] h-[65%] flex flex-col relative'
               >
                 <Image
                   className='object-cover rounded-[10px]'

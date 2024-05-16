@@ -36,8 +36,8 @@ const Hero = () => {
         <Image
           src={"/images/ball.png"}
           className=''
-          width={405}
-          height={402.8}
+          width={450}
+          height={440.8}
           alt='hero_image'
         />
       </motion.div>
