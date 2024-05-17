@@ -28,6 +28,7 @@ const Hero = () => {
       </div>
       <motion.div
         animate={{ rotate: 360 }}
+        whileHover={{ rotate: 0 }}
         transition={{
           repeat: Infinity,
           repeatDelay: 0,
@@ -36,14 +37,15 @@ const Hero = () => {
         }}
         className='z-10 absolute   -right-[5%]'
       >
-        <div className='relative w-[250px] h-[230px] lg:w-[450px] lg:h-[402.8px]'></div>
-        <Image
-          src={"/images/ball.png"}
-          className=''
-          alt='hero_image'
-          fill
-          priority
-        />
+        <div className='relative w-[250px] h-[230px] lg:w-[450px] lg:h-[402.8px]'>
+          <Image
+            src={"/images/ball.png"}
+            className=''
+            alt='hero_image'
+            fill
+            priority
+          />
+        </div>
       </motion.div>
     </div>
   );

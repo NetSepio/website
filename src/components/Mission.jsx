@@ -53,7 +53,6 @@ const Mission = () => {
         <div className='w-full h-full z-20 rounded-[50px] bg-primary'>
           <div className='w-full h-full z-20 rounded-[50px] flex items-center justify-between  bg-gradient-to-tl from-primary2/20 to-primary2/20'>
             <motion.div
-              animate={animation3}
               transition={{ duration: 1.5 }}
               className='flex-col lg:w-[45%]  ml-[89px]  h-[80%] justify-between flex'
             >

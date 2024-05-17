@@ -5,11 +5,11 @@ import React from "react";
 const Page = () => {
   return (
     <div className='min-h-screen flex flex-col pt-[25vh] pb-[10vh] justify-center items-center'>
-      <div className='flex flex-col items-center'>
+      <div className='flex flex-col gap-5 items-center'>
         <h2 className=' text-2xl lg:text-[55px] text-white font-semibold'>
           FAQs
         </h2>
-        <p className=' text-lg lg:text-[30px] font-light text-cta'>
+        <p className=' text-lg lg:text-[26px] font-light text-cta'>
           Frequently asked questions
         </p>
       </div>
