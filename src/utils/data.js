@@ -105,3 +105,21 @@ export const faq = [
     a: "The NetSepio Crypto Wallet is a secure, multi-chain-supported crypto wallet that lets you send and receive coins and ERC20 tokens. With our Crypto Wallet, you can manage all your digital assets in one secure location, making it easy and convenient to trade and invest in cryptocurrencies. Additionally, the NetSepio Crypto Wallet supports multiple chains, ensuring that all your digital assets are safe and secure.",
   },
 ];
+
+export const how_we_help = [
+  {
+    img: "bg_1.png",
+    title: "Prevent Scams",
+    desc: "Combining AI, community insights, and transparent reviews to proactively prevent scams",
+  },
+  {
+    img: "bg_2.png",
+    title: "DYOR Before Investing",
+    desc: "Empower your investments with informed decisions",
+  },
+  {
+    img: "bg_3.png",
+    title: "Protect Crypto Assets",
+    desc: "Elevate Your Crypto Asset Security with VPN and Firewall Services",
+  },
+];

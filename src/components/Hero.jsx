@@ -35,7 +35,7 @@ const Hero = () => {
           repeatType: "loop",
           duration: 10,
         }}
-        className='z-10 absolute   -right-[5%]'
+        className='z-10 absolute -right-[5%]'
       >
         <div className='relative w-[250px] h-[230px] lg:w-[450px] lg:h-[402.8px]'>
           <Image

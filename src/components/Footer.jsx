@@ -46,6 +46,7 @@ const Footer = () => {
             <h4 className=' text-white text-[22px] mb-[49px]'>{"Others"}</h4>
             <div className='flex relative right-[6px] gap-1'>
               <Link
+                target='_blank'
                 className='hover:scale-110 duration-150'
                 href={"https://t.me/NetSepio?boost "}
               >
@@ -58,6 +59,7 @@ const Footer = () => {
                 />
               </Link>
               <Link
+                target='_blank'
                 className='hover:scale-110 duration-150'
                 href={"https://github.com/Netsepio"}
               >

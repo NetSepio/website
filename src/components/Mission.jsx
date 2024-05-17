@@ -97,7 +97,7 @@ const Mission = () => {
               </motion.div>
               <motion.div
                 animate={animation2}
-                transition={{ type: "tween", duration: 1 }}
+                transition={{ type: "tween", duration: 2 }}
                 className='w-[45%] self-end mr-[4%] h-[65%] flex flex-col relative'
               >
                 <Image

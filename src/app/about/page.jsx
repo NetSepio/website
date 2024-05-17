@@ -1,3 +1,5 @@
+import { how_we_help } from "@/utils/data";
+import Image from "next/image";
 import React from "react";
 
 const Page = () => {
@@ -39,58 +41,31 @@ const Page = () => {
                 scam prevention to informed investing and asset protection.
               </div>
             </div>
-            <div class='lg:flex md:flex mt-10 gap-8'>
-              <div class='lg:w-1/3 md:w-1/3 w-full rounded-xl'>
-                <div class='p-10'>
-                  <div style={{ position: "relative" }}>
-                    <img
-                      src='/about2.png'
-                      alt='netsepio logo'
-                      style={{ zIndex: 1 }}
-                      className='absolute right-2 bottom-2'
+            <div className='flex mt-[111px] mb-[200px]  justify-between'>
+              {how_we_help.map((item, index) => {
+                return (
+                  <div
+                    key={index.toString()}
+                    className='bg-white flex items-start pt-[6%] justify-center w-[387px] h-[435px] relative rounded-[20px]'
+                  >
+                    <Image
+                      src={`/images/${item.img}`}
+                      alt='bg'
+                      width={387}
+                      className='absolute -top-1 -left-1'
+                      height={435}
                     />
-                    <img
-                      src='/white_frame.png'
-                      alt='netsepio logo'
-                      style={{ zIndex: 0 }}
-                    />
+                    <div className='z-20  pl-[33px] pr-[12px]'>
+                      <h4 className='text-[28px] font-semibold mb-[35px] text-white'>
+                        {item.title}
+                      </h4>
+                      <p className='text-lg capitalize text-white font-light'>
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class='lg:w-1/3 md:w-1/3 w-full rounded-xl lg:mt-0 md:mt-0 mt-4'>
-                <div class='p-10'>
-                  <div style={{ position: "relative" }}>
-                    <img
-                      src='/about2.png'
-                      alt='netsepio logo'
-                      style={{ zIndex: 1 }}
-                      className='absolute right-2 bottom-2'
-                    />
-                    <img
-                      src='/white_frame.png'
-                      alt='netsepio logo'
-                      style={{ zIndex: 0 }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class='lg:w-1/3 md:w-1/3 w-full rounded-xl lg:mt-0 md:mt-0 mt-4'>
-                <div class='p-10'>
-                  <div style={{ position: "relative" }}>
-                    <img
-                      src='/about2.png'
-                      alt='netsepio logo'
-                      style={{ zIndex: 1 }}
-                      className='absolute right-2 bottom-2'
-                    />
-                    <img
-                      src='/white_frame.png'
-                      alt='netsepio logo'
-                      style={{ zIndex: 0 }}
-                    />
-                  </div>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
 
@@ -104,7 +79,7 @@ const Page = () => {
               innovative project owners
             </div>
             <div className='text-4xl flex text-white mt-20 font-semibold'>
-              <li className='w-1/2'>Project Owners</li>
+              <li className='w-1/2'>Enterprises</li>
               <li className='w-1/2'>Community members</li>
             </div>
           </div>

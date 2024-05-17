@@ -20,8 +20,9 @@ const FAQs = ({ item }) => {
       });
   }, [showAnswer, animation]);
   return (
-    <motion.div
+    <motion.button
       animate={animation}
+      onClick={() => setShowAnswer(!showAnswer)}
       className='w-[90%] lg:w-[85%] flex flex-col  relative  duration-1000 h-auto my-4 items-center justify-center'
     >
       <div className='w-full flex items-center justify-between px-4 top-0 rounded-[12px] absolute left-0 right-0 bg-[#222944] min-h-[74px]'>
@@ -31,8 +32,8 @@ const FAQs = ({ item }) => {
             <Image
               src={"/images/plus.svg"}
               className=''
-              width={15}
-              height={15}
+              width={24}
+              height={24}
               alt='add'
             />
           ) : (
@@ -58,7 +59,7 @@ const FAQs = ({ item }) => {
           </motion.p>
         )}
       </AnimatePresence>
-    </motion.div>
+    </motion.button>
   );
 };
 

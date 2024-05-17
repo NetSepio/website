@@ -9,8 +9,10 @@ const roboto = Roboto({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://netsepio.com"),
   title: "NetSepio",
-  description: "Protect your online presence with NetSepio, the decentralized cybersecurity platform. Say goodbye to malware and scams with our innovative features, including Web3 archive and DAO-driven governance. Download now for free.",
+  description:
+    "Protect your online presence with NetSepio, the decentralized cybersecurity platform. Say goodbye to malware and scams with our innovative features, including Web3 archive and DAO-driven governance. Download now for free.",
 };
 
 export default function RootLayout({ children }) {
