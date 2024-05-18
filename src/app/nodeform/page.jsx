@@ -84,7 +84,7 @@ const Page = () => {
           </div>
 
           <form onSubmit={handleSubmit}>
-            <div className="mt-10 text-xl">Name</div>
+            <div className="mt-10 text-xl">Name *</div>
             <input
               type="text"
               // placeholder="Game name"
@@ -96,7 +96,7 @@ const Page = () => {
             />
             <div className="flex justify-between gap-4">
               <div className="w-1/2">
-                <div className="mt-10 text-xl">Email</div>
+                <div className="mt-10 text-xl">Email *</div>
                 <input
                   type="email"
                   // placeholder="Game name"
