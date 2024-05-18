@@ -13,6 +13,8 @@ const Page = () => {
   const [twitter, settwitter] = useState("");
   const [wallet, setwallet] = useState("");
 
+  const [showPopup, setShowPopup] = useState(false);
+
   // Handler functions for checkbox click events
   const handleYesChange = () => {
     setChecked("yes");
@@ -60,6 +62,26 @@ const Page = () => {
       const result = await response.json();
       console.log("Form submitted successfully:", result);
       // You can add any success message or redirection here
+
+      // Reset form fields
+      setname('');
+      setemail('');
+      settelegram('');
+      setprojectname('');
+      setprojecturl('');
+      setregion('');
+      settwitter('');
+      setChecked(null);
+      setwallet('');
+
+      // Show success popup
+      setShowPopup(true);
+
+      // Hide success popup after 3 seconds
+      setTimeout(() => {
+        setShowPopup(false);
+      }, 3000);
+
     } catch (error) {
       console.error("Error submitting form:", error);
       // You can add error handling here
@@ -208,6 +230,16 @@ const Page = () => {
           </form>
         </div>
       </section>
+
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 text-black">
+          <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+            <h2 className="text-2xl font-bold mb-4">Success!</h2>
+            <p>Your form has been submitted successfully.</p>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };
