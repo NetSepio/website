@@ -12,6 +12,7 @@ const Page = () => {
   const [checked, setChecked] = useState(null);
   const [twitter, settwitter] = useState("");
   const [wallet, setwallet] = useState("");
+  const [chain, setchain] = useState('');
 
   const [showPopup, setShowPopup] = useState(false);
 
@@ -36,6 +37,7 @@ const Page = () => {
       project_name: projectname,
       project_id: projecturl,
       region,
+      // chain,
       twitter_id: twitter,
       ran_node_before: checked === "yes",
       wallet_address: wallet
@@ -73,6 +75,7 @@ const Page = () => {
       settwitter('');
       setChecked(null);
       setwallet('');
+      setchain('');
 
       // Show success popup
       setShowPopup(true);
@@ -188,10 +191,11 @@ const Page = () => {
 
             <div className="flex justify-between gap-4">
               <div className="w-1/2">
-                <div className="mt-10 text-xl">Node Region</div>
+                <div className="mt-10 text-xl">Node Region *</div>
                 <input
                   type="text"
                   // placeholder="Game name"
+                  required
                   value={region}
                   onChange={(e) => setregion(e.target.value)}
                   className="mt-2 shadow border appearance-none rounded-xl w-full py-4 px-6 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
@@ -211,15 +215,36 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="mt-10 text-xl">Wallet Address</div>
+<div className="flex justify-between gap-4">
+  <div className="w-1/2">
+  <div className="mt-10 text-xl">Choose chain *</div>
+            <select
+              value={chain}
+              onChange={(e) => setchain(e.target.value)}
+              className="mt-2 shadow border appearance-none rounded-xl w-full py-4 px-6 text-black leading-tight focus:outline-none focus:shadow-outline"
+              style={{ color: 'black', backgroundColor: '#0B6A604D' }}
+            >
+              <option value="" disabled>Select chain</option>
+              <option value="aptos">Aptos</option>
+              <option value="ethereum">Ethereum</option>
+              <option value="sui">Sui</option>
+              <option value="solana">Solana</option>
+            </select>
+
+                </div>
+<div className="w-1/2">
+<div className="mt-10 text-xl">Wallet Address *</div>
                 <input
                   type="text"
                   // placeholder="Game name"
+                  required
                   value={wallet}
                   onChange={(e) => setwallet(e.target.value)}
                   className="mt-2 shadow border appearance-none rounded-xl w-full py-4 px-6 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
                   style={{ color: "black", backgroundColor: "#0B6A604D" }}
                 />
+                </div>
+                </div>
 
             <button
               style={{ backgroundColor: "#263238" }}
