@@ -15,7 +15,7 @@ export default function Home() {
   const banner = {
     backgroundImage:
       "radial-gradient(circle, #B7990D59 50%, #050B21B2, #050B21B2)",
-    width: "100vw",
+    width: "95vw",
   };
 
   return (
