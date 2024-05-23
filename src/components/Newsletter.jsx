@@ -10,22 +10,23 @@ const Newsletter = () => {
       style={roboto.style}
       className='w-full h-[694px] mt-[5%] flex flex-row-reverse  justify-between items-center gap-10'
     >
-      <div className='flex pl-[5%] flex-col  w-[50%]'>
+      <div className='flex pl-[0%] sm:pl-[5%] flex-col  w-[50%]'>
         <h4 className=' text-2xl lg:text-[42px] flex mb-[36px] flex-col leading-tight text-white'>
           <span>Join the community,</span>
           <span>Keep the internet safe for all</span>
         </h4>
         <CustomBtn
           link='https://netsepio.substack.com/'
-          width='lg:w-[224px]'
+          width='lg:w-[224px] mr-2 sm:mr-0'
           title={"Subscribe Our Newsletter"}
         />
       </div>
-      <div className='flex flex-col relative h-full  w-[50%]'>
+      <div className='flex flex-col relative h-[70%] sm:h-full  w-[50%]'>
         <Image
           src={"/images/newsletter.svg"}
           className='object-cover'
           fill
+          priority
           alt='phone'
         />
       </div>

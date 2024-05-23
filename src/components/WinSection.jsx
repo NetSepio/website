@@ -17,7 +17,7 @@ const WinSection = () => {
       >
         A Win-Win for Everyone
       </h3>
-      <div className='w-full flex flex-col lg:flex-row h-max justify-between'>
+      <div className='w-full flex flex-col gap-12 sm:gap-0 lg:flex-row h-max justify-between'>
         {cardDetails2.map((item, index) => {
           return (
             <div
@@ -27,7 +27,7 @@ const WinSection = () => {
               <Image
                 src={`/images/${item.image}.svg`}
                 alt='pic'
-                className='mb-[54px]   object-cover overflow-clip'
+                className='mb-4 sm:mb-[54px]   object-cover overflow-clip'
                 width={400}
                 height={320}
               />

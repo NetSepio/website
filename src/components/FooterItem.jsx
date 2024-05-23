@@ -7,7 +7,9 @@ const FooterItem = ({ item }) => {
   const { roboto } = useFonts();
   return (
     <div style={roboto.style} className='w-[200px] px-[20px]'>
-      <h4 className=' text-white text-[22px] mb-[49px]'>{item.title}</h4>
+      <h4 className=' text-white text-[22px] mb-[20px ] sm:mb-[49px]'>
+        {item.title}
+      </h4>
       {item.content.map((content, index) => {
         return (
           <Link

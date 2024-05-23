@@ -62,7 +62,7 @@ const Mission = () => {
               >
                 Empowering Connectivity
               </h3>
-              <p className='text-[18px]  text-white font-thin'>
+              <p className='text-base sm:text-[18px]  text-white font-thin'>
                 Netsepio introduces our groundbreaking decentralized internet
                 solution, designed to advance the adoption of decentralized
                 networks. Featuring superior capabilities, robust performance,

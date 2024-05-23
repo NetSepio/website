@@ -13,12 +13,12 @@ const Footer = () => {
   return (
     <div
       style={roboto.style}
-      className={`h-[615px] w-full flex ${
+      className={`h-max pt-[170px]  w-full flex ${
         path === "/" ? "bg-cta" : "bg-white"
       } items-end`}
     >
-      <div className=' h-[507px] w-full pt-[102px]  rounded-t-[50px]  bg-primary '>
-        <footer className='w-[85%] relative mx-auto border-b border-cta border-opacity-30 pb-[30px]  justify-between flex-col  flex lg:flex-row'>
+      <div className=' h-[507px]   w-full pt-[102px] rounded-t-[12px]  sm:rounded-t-[50px]  bg-primary '>
+        <footer className='w-[85%] relative mx-auto border-b border-cta border-opacity-30 pb-[30px]  justify-between flex-col gap-8 sm:gap-0  flex lg:flex-row'>
           <div className='flex w-max relative bottom-3 flex-col'>
             <Link href={"/"} className='flex items-center'>
               <Image
@@ -34,7 +34,7 @@ const Footer = () => {
                 alt='Netsepio'
               />
             </Link>
-            <p className='text-[20px] mt-[55px] text-white w-[280px] font-light'>
+            <p className='text-[20px] mt-[22px] sm:mt-[55px] text-white w-[280px] font-light'>
               AI DePIN CyberSecurity which Protects Online Presence
             </p>
           </div>

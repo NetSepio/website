@@ -27,10 +27,10 @@ const Socials = () => {
       <div className='w-[60px] lg:w-[120px] hover:-translate-y-4 duration-300 cursor-pointer  h-[60px] lg:h-[120px] flex justify-center items-center  bg-transparent rounded-[20px]'>
         <Link
           target='_blank'
-          href={"https://github.com/netsepio"}
+          href={"https://www.linkedin.com/company/netsepio/"}
           className='w-[60px] lg:w-[120px] h-[60px] lg:h-[120px] relative'
         >
-          <Image src={"/images/git.svg"} fill alt='git' />
+          <Image src={"/images/linkedin.png"} fill alt='linkedin' />
         </Link>
       </div>
     </div>
