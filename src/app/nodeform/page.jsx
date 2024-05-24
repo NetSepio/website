@@ -16,13 +16,17 @@ const Page = () => {
 
   const [showPopup, setShowPopup] = useState(false);
 
+  const [showothers, setshowothers] = useState(false);
+
   // Handler functions for checkbox click events
   const handleYesChange = () => {
     setChecked("yes");
+    setshowothers(true);
   };
 
   const handleNoChange = () => {
     setChecked("no");
+    setshowothers(false);
   };
 
   // Handler function for form submission
@@ -169,6 +173,9 @@ const Page = () => {
               </label>
             </div>
 
+            {
+              showothers && (
+                <>
             <div className="mt-10 text-xl">Tell us your project name</div>
             <input
               type="text"
@@ -188,8 +195,13 @@ const Page = () => {
               className="mt-2 shadow border appearance-none rounded-xl w-full py-4 px-6 text-gray-200 leading-tight focus:outline-none focus:shadow-outline"
               style={{ color: "black", backgroundColor: "#0B6A604D" }}
             />
+</>
+          )
+        }
 
             <div className="flex justify-between gap-4">
+              {
+                showothers && (
               <div className="w-1/2">
                 <div className="mt-10 text-xl">Node Region *</div>
                 <input
@@ -202,6 +214,8 @@ const Page = () => {
                   style={{ color: "black", backgroundColor: "#0B6A604D" }}
                 />
               </div>
+                              )
+                            }
               <div className="w-1/2">
                 <div className="mt-10 text-xl">Twitter ID</div>
                 <input
