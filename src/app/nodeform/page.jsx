@@ -41,7 +41,7 @@ const Page = () => {
       project_name: projectname,
       project_id: projecturl,
       region,
-      // chain,
+      chain,
       twitter_id: twitter,
       ran_node_before: checked === "yes",
       wallet_address: wallet
