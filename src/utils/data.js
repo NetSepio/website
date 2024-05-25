@@ -17,7 +17,7 @@ export const cardDetails = [
   {
     image: "pix_4",
     title: "DVPN",
-    desc: "Netsepio's browser extension combines a Web 3 crypto wallet with AI, ensuring secure reviews and easy navigation for safer online decisions.",
+    desc: "Decentralized VPN Service based on the WireGuard VPN Protocol.It is designed to enhance users' privacy, anonymity, and security when using Public VPNs.",
   },
   {
     image: "pix_5",
