@@ -2,6 +2,7 @@ export const cardDetails = [
   {
     image: "pix",
     title: "Browser Extension",
+    link: "extension",
     desc: "Netsepio's browser extension combines a Web 3 crypto wallet with AI, ensuring secure reviews and easy navigation for safer online decisions.",
   },
   {
@@ -12,12 +13,13 @@ export const cardDetails = [
   {
     image: "pix_3",
     title: "Privacy Firewall",
+    link: "sotreus",
     desc: "Fast and easy-to-use VPN service that protects internet activities from cyber threats and surveillance.",
   },
   {
     image: "pix_4",
     title: "DVPN",
-    desc: "Decentralized VPN Service based on the WireGuard VPN Protocol.It is designed to enhance users' privacy, anonymity, and security when using Public VPNs.",
+    desc: "Decentralized VPN Service based on the WireGuard VPN Protocol.It is designed to enhance user privacy, anonymity, and security when using Public VPNs.",
   },
   {
     image: "pix_5",
@@ -27,7 +29,7 @@ export const cardDetails = [
   {
     image: "pix_6",
     title: "Reliable Uptime",
-    desc: "Optimal performance with high-speed connectivity across its decentralized network, minimizing latency and maximizing efficiency.",
+    desc: "Maintaining consistent and reliable access to the internet and services, even in high-demand scenarios.",
   },
 ];
 export const cardDetails2 = [
@@ -45,6 +47,50 @@ export const cardDetails2 = [
     image: "pic_3",
     title: "No Lock-in",
     desc: "Freedom to choose their VPN usage, supports open internet access, and builds trust by prioritizing choice and flexibility.",
+  },
+];
+export const privacyData = [
+  {
+    image: "filter.svg",
+    title: "DNS Filtering",
+    desc: "Both AdGuard Home and Pi-Hole offer robust DNS filtering that blocks ads, tracking cookies, and malicious links across the entire network.",
+  },
+  {
+    image: "customize.svg",
+    title: "Customizeable Control",
+    desc: "Administrators can tailor filtering rules, including blacklists and whitelists, to meet specific security and browsing needs.",
+  },
+  {
+    image: "network.svg",
+    title: "Network Level Protection",
+    desc: "Ensures all devices connected to the network are protected from unwanted content and cyber threats, regardless of their operating system or hardware.",
+  },
+  {
+    image: "enhance.svg",
+    title: "Enhanced Network Performance",
+    desc: "Tools block intrusive ads and harmful domains, reducing page load times and saving bandwidth for a smoother, faster browsing experience..",
+  },
+];
+export const sotreusFeatures = [
+  {
+    image: "functionality.svg",
+    title: "Comprehensive Functionality",
+    desc: "It offers APIs that make it easier to set up, configure, and manage your WireGuard VPN, including distributing client files to users. The APIs abstract away much of the complexity of VPN operations.",
+  },
+  {
+    image: "integration.svg",
+    title: "Easy Integration",
+    desc: "Work seamlessly with WireGuard VPN services, allowing users to integrate and manage their VPN networks with ease.",
+  },
+  {
+    image: "deployment.svg",
+    title: "Easy Deployment",
+    desc: "Seamless adaptation to various environments, enabling easy scaling and customization to meet specific needs without disrupting operations.",
+  },
+  {
+    image: "private.svg",
+    title: "Secure and Private",
+    desc: "Built on the secure and privacy-focused WireGuard VPN protocol, ensuring your VPN network remains safe.",
   },
 ];
 export const footerContents = [
@@ -121,5 +167,26 @@ export const how_we_help = [
     img: "bg_3.png",
     title: "Protect Crypto Assets",
     desc: "Elevate Your Crypto Asset Security with VPN and Firewall Services",
+  },
+];
+
+export const ExtFeatures = [
+  {
+    id: 1,
+    img: "ai.png",
+    title: "AI Security Insights,",
+    desc: "Our AI analyzes each website you visit, providing you with real-time security assessments.",
+  },
+  {
+    id: 2,
+    img: "privacy.png",
+    title: "Enhanced User Privacy",
+    desc: "Ensures your browsing privacy by shielding your online activities from trackers and potential data breaches.",
+  },
+  {
+    id: 3,
+    img: "support.png",
+    title: "Decision Support",
+    desc: "Receive concise insights into website reputations and history, enabling you to determine a site's trustworthiness before sharing any personal information.",
   },
 ];

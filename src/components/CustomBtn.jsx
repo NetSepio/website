@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const CustomBtn = ({
-  title = "Button",
+  title = "Explore",
   width = "w-[80px] lg:w-[170px]",
   link = "/",
 }) => {

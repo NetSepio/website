@@ -14,7 +14,9 @@ const Footer = () => {
     <div
       style={roboto.style}
       className={`h-max pt-[170px]  w-full flex ${
-        path === "/" ? "bg-cta" : "bg-white"
+        path === "/" || path === "/extension" || path === "/sotreus"
+          ? "bg-cta"
+          : "bg-white"
       } items-end`}
     >
       <div className=' h-[507px]   w-full pt-[102px] rounded-t-[12px]  sm:rounded-t-[50px]  bg-primary '>
