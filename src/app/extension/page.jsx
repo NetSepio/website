@@ -22,7 +22,7 @@ const Index = () => {
           NetSepio Browser Extension
         </h2>
         <p className='bg-gradient-to-r from-primary to-[#3185FC] from-0% via-90% to-100% via-[#91A6FF] bg-clip-text text-transparent font- text-lg lg:text-3xl'>
-          Don't just browse the web—browse it better.
+          Don&apos;t just browse the web—browse it better.
         </p>
         <CustomBtn
           title='Install now'

@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <div className='w-full h-full'>
       <section className='h-screen relative w-full flex flex-col items-center bg-cover gap-5 md:gap-10 md:pt-[20vh] justify-center bg[url(/images/sotreus/privacy.png)]'>
-        <h1 className='uppercase text-3xl  font-[100] md:text-8xl text-white'>
+        <h1 className='uppercase text-3xl  font-medium md:text-8xl text-white'>
           Privacy Firewall
         </h1>
         <p className='text-sm md:text-2xl md:w-[40%] text-center font-extralight text-white/80'>
