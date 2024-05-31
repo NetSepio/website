@@ -26,7 +26,6 @@ const Page = () => {
             alt='hero'
           />
         </div>
-        ;
       </section>
       <section className='w-full px-[6vw] pt-[8vh] md:pt-[10vh] bg-primary h-max'>
         <h2 className='text-white font-medium mb-[8vh] md:mb-[15vh] text-2xl md:text-6xl'>
