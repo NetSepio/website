@@ -17,6 +17,9 @@ module.exports = {
         primary2: "#141E4333",
         cta: "#11D9C5",
       },
+      fontFamily: {
+        galgo: ["var(--font-galgo)"],
+      },
     },
   },
   plugins: [],

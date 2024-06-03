@@ -14,7 +14,7 @@ const Card = ({ item }) => {
         <p className='text-white w-[90%] font-light mt-[35px] mb-[25px] text-sm lg:text-lg'>
           {item.desc}
         </p>
-        <CustomBtn link={item.link} title={item.btn} />
+        {item.link && <CustomBtn link={item.link} title={item.button} />}
       </div>
       <Image
         src={`/images/${item.image}.png`}

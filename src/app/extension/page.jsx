@@ -25,6 +25,7 @@ const Index = () => {
           Don&apos;t just browse the web—browse it better.
         </p>
         <CustomBtn
+          link='https://chromewebstore.google.com/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd'
           title='Install now'
           width='w-[140px] bg-white lg:w-[191px]'
         />

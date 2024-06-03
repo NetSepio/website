@@ -22,7 +22,11 @@ const Hero = () => {
         <p className='text-white font-thin text-xl lg:text-3xl  pt-[5%] md:pt-[10%] mb-[10%] lg:mb-[20%]'>
           AI-Powered secure browsing
         </p>
-        <CustomBtn title='Download now' width='w-[140px] lg:w-[191px]' />
+        <CustomBtn
+          link='https://chromewebstore.google.com/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd'
+          title='Download now'
+          width='w-[140px] lg:w-[191px]'
+        />
       </div>
     </div>
   );

@@ -3,22 +3,31 @@ export const cardDetails = [
     image: "pix",
     title: "Browser Extension",
     link: "extension",
+    button: "Discover",
     desc: "Netsepio's browser extension combines a Web 3 crypto wallet with AI, ensuring secure reviews and easy navigation for safer online decisions.",
   },
   {
     image: "pix_2",
     title: "Web App",
+    link: "webapp",
+    button: "Discover",
+
     desc: "Contribute to verified reviews, manage projects, secure internet access, all while earning rewards and enhancing security with a built-in VPN.",
   },
   {
     image: "pix_3",
     title: "Privacy Firewall",
     link: "sotreus",
+    button: "Create Client",
+
     desc: "Fast and easy-to-use VPN service that protects internet activities from cyber threats and surveillance.",
   },
   {
     image: "pix_4",
     title: "DVPN",
+    link: "erebrus",
+    button: "Create Client",
+
     desc: "Decentralized VPN Service based on the WireGuard VPN Protocol.It is designed to enhance user privacy, anonymity, and security when using Public VPNs.",
   },
   {
@@ -29,6 +38,8 @@ export const cardDetails = [
   {
     image: "pix_6",
     title: "Reliable Uptime",
+    link: "/",
+    button: "Explore",
     desc: "Maintaining consistent and reliable access to the internet and services, even in high-demand scenarios.",
   },
 ];
@@ -71,6 +82,28 @@ export const privacyData = [
     desc: "Tools block intrusive ads and harmful domains, reducing page load times and saving bandwidth for a smoother, faster browsing experience..",
   },
 ];
+export const erebrusData = [
+  {
+    image: "unblocking.svg",
+    title: "Geo-Unblocking",
+    desc: "Erebrus VPN connects you to Indian servers, unlocking local content seamlessly, regardless of your location.",
+  },
+  {
+    image: "security.svg",
+    title: "Robust Security",
+    desc: "Advanced encryption safeguards your data from cyber threats, ensuring your privacy worldwide.",
+  },
+  {
+    image: "optimized.svg",
+    title: "Optimized Connectivity",
+    desc: "Enjoy fast, reliable internet with enhanced streaming and browsing on global servers.",
+  },
+  {
+    image: "ease.svg",
+    title: "Ease of Use",
+    desc: "Quickly access Indian services with a few simple taps, no complex setup needed.",
+  },
+];
 export const sotreusFeatures = [
   {
     image: "functionality.svg",
@@ -91,6 +124,47 @@ export const sotreusFeatures = [
     image: "private.svg",
     title: "Secure and Private",
     desc: "Built on the secure and privacy-focused WireGuard VPN protocol, ensuring your VPN network remains safe.",
+  },
+];
+export const erebrusFeatures = [
+  {
+    image: "community.svg",
+    title: "Community-Driven Network",
+    desc: "Erebrus enables anyone to become a node operator, enhancing the robustness of its decentralized network and earning rewards, thus promoting a transparent and collaborative VPN environment.",
+
+    button: "Run a node",
+    link: "https://erebrus.io/",
+  },
+  {
+    image: "transparency.svg",
+    title: "Open-Source Transparency",
+    desc: "An open-source VPN, promotes transparency by allowing users to review its source code, boosting confidence in its security and privacy standards.",
+    button: "Explore More",
+    link: "https://erebrus.io/",
+  },
+];
+export const webapp = [
+  {
+    image: "discover.svg",
+    title: "Gateway to trusted insights",
+    desc: "Access the latest submitted reviews, each verified for reliability and relevance,Filter reviews by recency, helpfulness, or rating to discover the most relevant content, Influence review scores by upvoting helpful insights and downvoting less useful ones.",
+
+    button: "Search Now",
+    link: "",
+  },
+  {
+    image: "projects.svg",
+    title: "Explore Projects",
+    desc: "Comprehensive list of all projects registered on the Webapp, Engage with project creators directly through the platform to ask questions or offer feedback.",
+    button: "Explore",
+    link: "",
+  },
+  {
+    image: "trending.svg",
+    title: "Trending projects/reviews",
+    desc: "See at a glance which topics are trending in the community and explore content that is resonating with right now, Participate in discussions and polls related to trending topics to voice your opinions and contribute to the community pulse.",
+    button: "Check Now",
+    link: "",
   },
 ];
 export const footerContents = [

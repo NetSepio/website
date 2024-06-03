@@ -13,8 +13,10 @@ const Page = () => {
         <h1 className='uppercase text-3xl  font-medium md:text-8xl text-white'>
           Privacy Firewall
         </h1>
-        <p className='text-sm md:text-2xl md:w-[40%] text-center font-extralight text-white/80'>
-          <span>Sotreus,</span>
+        <p className='text-sm md:text-xl leading-tight w-[80%]  md:w-[30%] text-center font-extralight text-white'>
+          <span className='font-galgo text-xl md:text-4xl uppercase tracking-wider leading-loose'>
+            Sotreus,{" "}
+          </span>
           fast and easy-to-use VPN service protects internet activities from
           cyber threats and surveillance
         </p>
@@ -88,13 +90,17 @@ const Page = () => {
         </div>
       </section>
       <section className='w-full mt-[5%] lg:mt-[10%] space-y-[5vh] lg:space-y-[10vh] flex flex-col items-center justify-center h-[542px] bg-cover bg-[url(/images/sotreus/base.svg)] bg-no-repeat lg:h-screen'>
-        <h2 style={galgo.style} className='text-white  text-4xl md:text-8xl  '>
+        <h2 className='text-white font-galgo  text-4xl md:text-[95px] tracking-wider  '>
           SOTREUS
         </h2>
-        <p className='text-white uppercase w-[70%] text-3xl lg:text-6xl text-center'>
+        <p className='text-white uppercase font-medium w-[80%] md:w-[70%] text-3xl lg:text-[85px] leading-tight text-center'>
           Set up your Dedicated vpn today
         </p>
-        <CustomBtn title='Try Now' width='w-[140px] bg-white lg:w-[191px]' />
+        <CustomBtn
+          title='Try Now'
+          link='https://sotreus.com/'
+          width='w-[140px] bg-white lg:w-[191px]'
+        />
       </section>
     </div>
   );

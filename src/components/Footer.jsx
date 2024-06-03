@@ -14,7 +14,11 @@ const Footer = () => {
     <div
       style={roboto.style}
       className={`h-max pt-[170px]  w-full flex ${
-        path === "/" || path === "/extension" || path === "/sotreus"
+        path === "/" ||
+        path === "/extension" ||
+        path === "/sotreus" ||
+        path === "/erebrus" ||
+        path === "/webapp"
           ? "bg-cta"
           : "bg-white"
       } items-end`}

@@ -10,11 +10,10 @@ const CustomBtn = ({
   const { inter } = useFonts();
   return (
     <button
-      style={inter.style}
       className={`rounded-lg  ${width} text-primary text-xs lg:text-[16px] z-50 font-medium active:scale-95 duration-100 hover:bg-opacity-7 hover:-translate-y-1    bg-cta h-[55px]`}
     >
       <Link
-        target={title.toLowerCase().includes("mission") ? "_self" : "_blank"}
+        target={!title.toLowerCase().includes("https") ? "_self" : "_blank"}
         href={link}
       >
         {title}
