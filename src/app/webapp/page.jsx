@@ -6,7 +6,7 @@ import React from "react";
 const Index = () => {
   return (
     <div className='bg-primary w-full   flex flex-col items-center h-auto'>
-      <section className=' h-screen md:h-[967px] w-full space-y-5 md:space-y-10 md:pt-[10vh] bg-cover flex flex-col justify-center px-[10vw] bg-[url(/images/webapp/hero.svg)] bg-no-repeat'>
+      <section className=' h-screen md:h-[967px] w-full space-y-5 md:space-y-10 md:pt-[10vh] bg-cover flex flex-col justify-center px-[3.5%] bg-[url(/images/webapp/hero.svg)] bg-no-repeat'>
         <h3 className='uppercase text-white text-3xl md:text-[95px] leading-none font-semibold flex flex-col'>
           <span>Netsepio</span>
           <span>Webapp</span>
@@ -16,7 +16,7 @@ const Index = () => {
         </p>
         <CustomBtn link='https://app.netsepio.com' title='Explore Webapp' />
       </section>
-      <section className='w-[95%] border-none md:border  rounded-[20px] md:pt-[150px] my-[150px] pl-[3vw] flex flex-col items-center'>
+      <section className='w-[95%] border-[0px] md:border-2  md:border-white rounded-[20px] md:pt-[150px] my-[150px] pl-[3vw] flex flex-col items-center'>
         {webapp.map((item, i) => {
           return (
             <div

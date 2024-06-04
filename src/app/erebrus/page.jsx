@@ -8,14 +8,14 @@ const Index = () => {
     <div className='bg-primary w-full pt-[17vh] md:pt-[20vh] flex flex-col items-center h-auto'>
       <section className='flex flex-col items-center justify-between pt-[4%] pb-[4%] bg-[#9BA7DF] rounded-[20px] w-[95%] h-[900px] md:h-[1200px]'>
         <div className='flex flex-col md:flex-row justify-between gap-[10vw] items-start  px-[2%] '>
-          <h2 className='uppercase mt-3 md:w-[49%] text-center md:text-left text-white font-extrabold text-xl md:text-[46px] md:leading-normal'>
+          <h2 className='uppercase mt-3 md:w-[49%] text-center md:text-left text-white font-extrabold text-xl md:text-4xl md:leading-normal'>
             Secure, Decentralized VPN Service for Enhanced Privacy and Anonymity
           </h2>
           <div className='flex flex-1 gap-[39px] flex-col'>
-            <h3 className='font-medium hidden md:flex  text-white text-2xl md:text-[40px] md:leading-normal '>
+            <h3 className='font-medium hidden md:flex  text-white text-xl md:text-3xl md:leading-normal '>
               ABOUT
             </h3>
-            <p className='md:text-[34px] leading-tight text-xl text-white'>
+            <p className='md:text-2xl leading-tight text-xl text-white'>
               Erebrus is a shared decentralized VPN Service based on the
               wireguard Protocol. It is designed to enhance user privacy,
               anonymity, and security when using Public VPNs.{" "}

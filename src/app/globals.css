@@ -45,4 +45,8 @@ body {
 }
 .element2 {
     background: radial-gradient(400px 400px at bottom left,#b7980dc8 20%,#11d9c545 50%,transparent 100%);
+  }
+  .features-card {
+    background: radial-gradient(600px 400px at 70% 58%,#11d9c526,transparent 100%);
+;
 }

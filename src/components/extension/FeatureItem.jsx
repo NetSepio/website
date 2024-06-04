@@ -3,7 +3,7 @@ import React from "react";
 
 const FeatureItem = ({ item }) => {
   return (
-    <div className='w-[90%] lg:w-[80%] my-[5vh] rounded-lg px-[2%] h-[289px] lg:h-[546px] flex lg:justify-between items-center border-opacity-40 border-white border-2 relative '>
+    <div className='w-[90%] features-card hover:border-cta duration-150  lg:w-[80%] my-[5vh] rounded-lg px-[2%] h-[289px] lg:h-[546px] flex lg:justify-between items-center border-opacity-40 border-white border-2 relative '>
       <p className='absolute top-[4%] left-[2%] text-white font-thin text-sm  lg:text-lg'>
         {`0${item?.id}`}
       </p>

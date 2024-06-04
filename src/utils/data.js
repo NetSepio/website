@@ -3,14 +3,14 @@ export const cardDetails = [
     image: "pix",
     title: "Browser Extension",
     link: "extension",
-    button: "Discover",
+    button: "Discover more",
     desc: "Netsepio's browser extension combines a Web 3 crypto wallet with AI, ensuring secure reviews and easy navigation for safer online decisions.",
   },
   {
     image: "pix_2",
     title: "Web App",
     link: "webapp",
-    button: "Discover",
+    button: "Discover more",
 
     desc: "Contribute to verified reviews, manage projects, secure internet access, all while earning rewards and enhancing security with a built-in VPN.",
   },
@@ -18,7 +18,7 @@ export const cardDetails = [
     image: "pix_3",
     title: "Privacy Firewall",
     link: "sotreus",
-    button: "Create Client",
+    button: "Learn more",
 
     desc: "Fast and easy-to-use VPN service that protects internet activities from cyber threats and surveillance.",
   },
@@ -26,21 +26,21 @@ export const cardDetails = [
     image: "pix_4",
     title: "DVPN",
     link: "erebrus",
-    button: "Create Client",
+    button: "Learn more",
 
     desc: "Decentralized VPN Service based on the WireGuard VPN Protocol.It is designed to enhance user privacy, anonymity, and security when using Public VPNs.",
-  },
-  {
-    image: "pix_5",
-    title: "Fast Connectivity",
-    desc: "Optimal performance with high-speed connectivity across its decentralized network, minimizing latency and maximizing efficiency",
   },
   {
     image: "pix_6",
     title: "Reliable Uptime",
     link: "/",
-    button: "Explore",
+    button: "Learn more",
     desc: "Maintaining consistent and reliable access to the internet and services, even in high-demand scenarios.",
+  },
+  {
+    image: "pix_5",
+    title: "Fast Connectivity",
+    desc: "Optimal performance with high-speed connectivity across its decentralized network, minimizing latency and maximizing efficiency",
   },
 ];
 export const cardDetails2 = [
