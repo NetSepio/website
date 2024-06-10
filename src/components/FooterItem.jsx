@@ -15,9 +15,9 @@ const FooterItem = ({ item }) => {
           <Link
             key={index.toString()}
             href={content.link}
-            className='text-white flex hover:text-cta duration-200 gap-2 hover:gap-3 my-2 font-thin'
+            className='text-white flex hover:text-cta duration-200 gap-2 hover:gap-3 my-2 '
           >
-            <p>{content.name}</p>
+            <p className='font-thin'>{content.name}</p>
             <Image
               src={"images/arrow.svg"}
               width={12}

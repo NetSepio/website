@@ -12,7 +12,7 @@ const galgo = localFont({
 });
 
 const roboto = Roboto({
-  subsets: ["greek"],
+  subsets: ["greek", "greek-ext", "cyrillic"],
   weight: ["100", "300", "400", "500", "700"],
 });
 

@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import CustomBtn from "@/components/CustomBtn";
 import DownloadNow from "@/components/DownloadNow";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -51,6 +52,20 @@ export default function Home() {
         </div>
         <Reviews />
         <WinSection />
+        <section className='w-full  space-y-[5vh] pt-[7%]  flex flex-col items-center  justify-center h-[694px] bg-contain bg-center bg-[url(/images/upcoming.png)] bg-repeat'>
+          <h2 className='text-primary font-semibold text-4xl md:text-[52px] leading-none tracking-wider  '>
+            DWifi Revolutionizing Wireless Access
+          </h2>
+          <p className='text-primary font-medium w-[80%] md:w-[40%] text-xl lg:text-[28px] leading-tight text-center'>
+            Share unused bandwidth, turning each participant into both a
+            provider and consumer.
+          </p>
+          <CustomBtn
+            title='Upcoming'
+            link='https://sotreus.com/'
+            width='w-[140px] bg-primary text-white lg:w-[191px]'
+          />
+        </section>
         <DownloadNow />
         <Socials />
         <Newsletter />
