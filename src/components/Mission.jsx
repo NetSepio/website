@@ -83,16 +83,16 @@ const Mission = () => {
               >
                 <Image
                   className='object-cover rounded-[10px]'
-                  src={"/images/access.svg"}
+                  src={"/images/poster.png"}
                   fill
                   alt='access'
                 />
                 <h6
                   style={roboto.style}
-                  className='font-medium absolute text-4xl leading-tight self-center bottom-4 z-20 text-white w-[234px]'
+                  className='font-semibold absolute text-4xl leading-tight self-center bottom-4 z-20 text-black w-[234px]'
                 >
                   {" "}
-                  Uninterrupted Access
+                  DVPN
                 </h6>
               </motion.div>
               <motion.div
@@ -102,7 +102,7 @@ const Mission = () => {
               >
                 <Image
                   className='object-cover rounded-[10px]'
-                  src={"/images/security.svg"}
+                  src={"/images/laptop.png"}
                   fill
                   alt='access'
                 />
@@ -111,7 +111,7 @@ const Mission = () => {
                   className='font-medium absolute text-4xl leading-tight self-center bottom-4 z-20 text-white w-[234px]'
                 >
                   {" "}
-                  Enhanced Security
+                  {/* Review System */}
                 </h6>
               </motion.div>
             </div>

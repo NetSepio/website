@@ -2,9 +2,17 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import localFont from "next/font/local";
+
+// Font files can be colocated inside of `app`
+const galgo = localFont({
+  src: "../../public/fonts/galgo/Galgo.ttf",
+  display: "swap",
+  variable: "--font-galgo",
+});
 
 const roboto = Roboto({
-  subsets: ["latin"],
+  subsets: ["greek", "greek-ext", "cyrillic"],
   weight: ["100", "300", "400", "500", "700"],
 });
 
@@ -18,7 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${roboto.className} w-full  bg-primary flex flex-col`}>
+      <body
+        className={`${roboto.className} ${galgo.variable} w-full  bg-primary flex flex-col`}
+      >
         <Navbar />
         {children}
         <Footer />

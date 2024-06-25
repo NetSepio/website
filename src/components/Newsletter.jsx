@@ -17,8 +17,8 @@ const Newsletter = () => {
         </h4>
         <CustomBtn
           link='https://netsepio.substack.com/'
-          width='lg:w-[224px] mr-2 sm:mr-0'
-          title={"Subscribe Our Newsletter"}
+          width='lg:w-[234px] mr-2 sm:mr-0'
+          title={"Subscribe To Our Newsletter"}
         />
       </div>
       <div className='flex flex-col relative h-[70%] sm:h-full  w-[50%]'>
