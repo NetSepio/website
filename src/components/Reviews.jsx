@@ -37,7 +37,7 @@ const Reviews = () => {
             <Image src={"/images/play.svg"} width={44} height={46} alt='play' />
           </div>
           <div className='flex flex-col justify-center items-start gap-2'>
-            <h6 className='text-white text-2xl '>Sumbit Review</h6>
+            <h6 className='text-white text-2xl '>Submit Review</h6>
             <h6 className='text-[#A7A5A5] text-sm'>
               Enhance your online security
             </h6>
