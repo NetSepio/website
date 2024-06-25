@@ -57,7 +57,7 @@ export const cardDetails2 = [
   {
     image: "pic_3",
     title: "No Lock-in",
-    desc: "Freedom to choose their VPN usage, supports open internet access, and builds trust by prioritizing choice and flexibility.",
+    desc: "Freedom to choose your VPN usage, supports open internet access, and builds trust by prioritizing choice and flexibility.",
   },
 ];
 export const privacyData = [
