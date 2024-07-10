@@ -52,18 +52,18 @@ export default function Home() {
         </div>
         <Reviews />
         <WinSection />
-        <section className='w-full  space-y-[5vh] pt-[7%]  flex flex-col items-center  justify-center h-[694px] bg-contain bg-center bg-[url(/images/upcoming.png)] bg-repeat'>
+        <section className='w-full  space-y-[5vh] pt-[7%]  flex flex-col items-center   h-[800px] bg-contain bg-center bg-[url(/images/upcoming.jpg)] bg-repeat'>
           <h2 className='text-primary font-semibold text-4xl md:text-[52px] leading-none tracking-wider  '>
-            dWiFi Revolutionizing Wireless Access
+            DWiFi Revolutionizing Wireless Access
           </h2>
-          <p className='text-primary font-medium w-[80%] md:w-[40%] text-xl lg:text-[28px] leading-tight text-center'>
-            Share unused bandwidth, turning each participant into both a
+          <p className='text-primary font-medium w-[80%] md:w-[50%] text-xl lg:text-[28px] leading-tight text-center'>
+            Share unused bandwidth, turning each participant <br/>into both a
             provider and consumer.
           </p>
           <CustomBtn
             title='Upcoming'
             link='https://sotreus.com/'
-            width='w-[140px] bg-primary text-white lg:w-[191px]'
+            width='w-[140px] bg-[#11D9C5] text-white lg:w-[191px]'
           />
         </section>
         <DownloadNow />

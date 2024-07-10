@@ -83,13 +83,13 @@ const Mission = () => {
               >
                 <Image
                   className='object-cover rounded-[10px]'
-                  src={"/images/poster.png"}
+                  src={"/images/vault.jpg"}
                   fill
                   alt='access'
                 />
                 <h6
                   style={roboto.style}
-                  className='font-semibold absolute text-4xl leading-tight self-center bottom-4 z-20 text-black w-[234px]'
+                  className='font-semibold absolute text-4xl leading-tight self-center bottom-4 z-20 text-white w-[234px]'
                 >
                   {" "}
                   DVPN
@@ -102,16 +102,16 @@ const Mission = () => {
               >
                 <Image
                   className='object-cover rounded-[10px]'
-                  src={"/images/laptop.png"}
+                  src={"/images/computer.jpg"}
                   fill
                   alt='access'
                 />
                 <h6
                   style={roboto.style}
-                  className='font-medium absolute text-4xl leading-tight self-center bottom-4 z-20 text-white w-[234px]'
+                  className='font-medium absolute text-4xl leading-tight self-center bottom-4 z-20 text-white w-[250px]'
                 >
                   {" "}
-                  {/* Review System */}
+                  Review System
                 </h6>
               </motion.div>
             </div>

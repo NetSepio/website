@@ -23,7 +23,7 @@ const Newsletter = () => {
       </div>
       <div className='flex flex-col relative h-[70%] sm:h-full  w-[50%]'>
         <Image
-          src={"/images/newsletter.svg"}
+          src={"/images/newsletter.jpg"}
           className='object-cover'
           fill
           priority
