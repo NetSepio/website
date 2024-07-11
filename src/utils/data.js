@@ -24,7 +24,7 @@ export const cardDetails = [
   },
   {
     image: "pix_4",
-    title: "DVPN",
+    title: "ÐVPN",
     link: "erebrus",
     button: "Learn more",
 
@@ -45,17 +45,17 @@ export const cardDetails = [
 ];
 export const cardDetails2 = [
   {
-    image: "pic_1",
+    image: "win1",
     title: "Subsidized VPN Access",
     desc: "Enhances security with encrypted access to essential services, reduces cyber threats.",
   },
   {
-    image: "pic_2",
+    image: "win2",
     title: "Improved User Experience",
     desc: "Providing encrypted, smooth, and uninterrupted browsing.",
   },
   {
-    image: "pic_3",
+    image: "win3",
     title: "No Lock-in",
     desc: "Freedom to choose your VPN usage, supports open internet access, and builds trust by prioritizing choice and flexibility.",
   },

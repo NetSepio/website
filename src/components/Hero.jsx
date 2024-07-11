@@ -14,7 +14,7 @@ const Hero = () => {
       className='w-full  overflow-hidden my-[0%] sm:my-[2%]  flex relative  pt-[4%] justify-between items-center bg-tranparent h-[60vh] sm:h-screen'
     >
       {/* Conic Gradient */}
-      <div className='absolute top-0 bottom-0 w-full h-full element opacity-10 sm:opacity-30 '></div>
+      <div className='absolute top-0 bottom-0 w-full h-full bg-cover bg-[url(/images/herobg.jpeg)] opacity-10 sm:opacity-90 '></div>
 
       {/* Hero Text */}
       <div className='z-20 absolut lg:relative bottom-10 lg:bottom-0 mx-[80px]'>
@@ -29,7 +29,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <motion.div
+      {/* <motion.div
         animate={{ rotate: 180 }}
         transition={{
           repeat: Infinity,
@@ -48,7 +48,7 @@ const Hero = () => {
             priority
           />
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

@@ -54,7 +54,7 @@ export default function Home() {
         <WinSection />
         <section className='w-full  space-y-[5vh] pt-[7%]  flex flex-col items-center   h-[800px] bg-contain bg-center bg-[url(/images/upcoming.jpg)] bg-repeat'>
           <h2 className='text-primary font-semibold text-4xl md:text-[52px] leading-none tracking-wider  '>
-            DWiFi Revolutionizing Wireless Access
+          ÐWifi Revolutionizing Wireless Access
           </h2>
           <p className='text-primary font-medium w-[80%] md:w-[50%] text-xl lg:text-[28px] leading-tight text-center'>
             Share unused bandwidth, turning each participant <br/>into both a

@@ -25,7 +25,7 @@ const WinSection = () => {
               className='flex w-[400px] hover:-translate-y-4 duration-300 flex-col justify-start    '
             >
               <Image
-                src={`/images/${item.image}.svg`}
+                src={`/images/${item.image}.jpeg`}
                 alt='pic'
                 className='mb-4 sm:mb-[54px]   object-cover overflow-clip'
                 width={400}

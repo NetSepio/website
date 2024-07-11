@@ -76,7 +76,7 @@ const Mission = () => {
               <CustomBtn link='/about' title={"Our Mission"} />
             </motion.div>
             <div className='w-[45%] lg:flex overflow-hidden hidden justify-between h-[80%]'>
-              <motion.div
+              {/* <motion.div
                 animate={animation}
                 transition={{ type: "tween", duration: 1 }}
                 className='w-[45%] self-start h-[65%] flex flex-col relative'
@@ -94,15 +94,15 @@ const Mission = () => {
                   {" "}
                   DVPN
                 </h6>
-              </motion.div>
+              </motion.div> */}
               <motion.div
                 animate={animation2}
                 transition={{ type: "tween", duration: 2 }}
-                className='w-[45%] self-end mr-[4%] h-[65%] flex flex-col relative'
+                className='w-[70%] self-end  h-[90%] flex flex-col relative  ml-32'
               >
                 <Image
                   className='object-cover rounded-[10px]'
-                  src={"/images/computer.jpg"}
+                  src={"/images/mission1.jpeg"}
                   fill
                   alt='access'
                 />
@@ -111,7 +111,7 @@ const Mission = () => {
                   className='font-medium absolute text-4xl leading-tight self-center bottom-4 z-20 text-white w-[250px]'
                 >
                   {" "}
-                  Review System
+                  {/* Review System */}
                 </h6>
               </motion.div>
             </div>
