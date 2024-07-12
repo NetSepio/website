@@ -32,15 +32,15 @@ export const cardDetails = [
   },
   {
     image: "pix_6",
-    title: "Reliable Uptime",
+    title: "Reliable Uptime,<br/><br/> Fast connectivity",
     link: "/",
     button: "Learn more",
-    desc: "Maintaining consistent and reliable access to the internet and services, even in high-demand scenarios.",
+    desc: "Netsepio ensures optimal performance with high-speed connectivity across its decentralized network, minimizing latency and maximizing efficiency while maintaining consistent and reliable access to the internet and services, even in high-demand scenarios.",
   },
   {
     image: "pix_5",
-    title: "Fast Connectivity",
-    desc: "Optimal performance with high-speed connectivity across its decentralized network, minimizing latency and maximizing efficiency",
+    title: "Mobile App",
+    desc: "Secure your online activity with our blockchain VPN app, utilizing NFTs for robust privacy and decentralization.",
   },
 ];
 export const cardDetails2 = [

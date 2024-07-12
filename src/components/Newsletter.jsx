@@ -8,7 +8,7 @@ const Newsletter = () => {
   return (
     <div
       style={roboto.style}
-      className='w-full h-[694px] mt-[5%] flex flex-row-reverse  justify-between items-center gap-10'
+      className='w-[90%] h-[694px] mt-[5%] flex flex-row-reverse  justify-between items-center gap-10'
     >
       <div className='flex pl-[0%] sm:pl-[5%] flex-col  w-[50%]'>
         <h4 className=' text-2xl lg:text-[42px] flex mb-[36px] flex-col leading-tight text-white'>
@@ -21,7 +21,7 @@ const Newsletter = () => {
           title={"Subscribe To Our Newsletter"}
         />
       </div>
-      <div className='flex flex-col relative h-[70%] sm:h-full  w-[50%]'>
+      <div className='flex flex-col relative h-[70%] sm:h-[80%] w-[40%] ml-10'>
         <Image
           src={"/images/newsletter.jpg"}
           className='object-cover'

@@ -50,3 +50,6 @@ body {
     background: radial-gradient(600px 400px at 70% 58%,#11d9c526,transparent 100%);
 ;
 }
+.bg-gradient1 {
+  background: linear-gradient(360deg, rgba(17, 217, 197, 0.3) 0%, rgba(9, 84, 91, 0.486) 52%, rgba(39, 188, 252, 0.3) 100%);
+}

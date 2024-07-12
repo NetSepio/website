@@ -7,6 +7,7 @@ import Mission from "@/components/Mission";
 import Newsletter from "@/components/Newsletter";
 import Reviews from "@/components/Reviews";
 import Socials from "@/components/Socials";
+import SubscribePage from "@/components/Subcribe";
 import WinSection from "@/components/WinSection";
 import { cardDetails } from "@/utils/data";
 import Image from "next/image";
@@ -67,7 +68,8 @@ export default function Home() {
           />
         </section>
         <DownloadNow />
-        <Socials />
+        {/* <Socials /> */}
+        <SubscribePage/>
         <Newsletter />
       </main>
     </>
