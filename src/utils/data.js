@@ -3,44 +3,48 @@ export const cardDetails = [
     image: "pix",
     title: "Browser Extension",
     link: "extension",
-    button: "Discover more",
-    desc: "Netsepio's browser extension combines a Web 3 crypto wallet with AI, ensuring secure reviews and easy navigation for safer online decisions.",
+    button: "Download now",
+    desc: "Combines your Web3 wallet with AI-driven insights and reviews for every site you explore, giving you the power to make safer and more informed online decisions.",
   },
   {
     image: "pix_2",
     title: "Web App",
     link: "webapp",
-    button: "Discover more",
+    button: "Login now",
 
-    desc: "Contribute to verified reviews, manage projects, secure internet access, all while earning rewards and enhancing security with a built-in VPN.",
-  },
-  {
-    image: "pix_3",
-    title: "Privacy Firewall",
-    link: "sotreus",
-    button: "Learn more",
-
-    desc: "Fast and easy-to-use VPN service that protects internet activities from cyber threats and surveillance.",
-  },
-  {
-    image: "pix_4",
-    title: "ÐVPN",
-    link: "erebrus",
-    button: "Learn more",
-
-    desc: "Decentralized VPN Service based on the WireGuard VPN Protocol.It is designed to enhance user privacy, anonymity, and security when using Public VPNs.",
+    desc: "Leave verified reviews, manage projects with ease, and secure your internet connection with a built-in VPN.  All while earning rewards for your participation.",
   },
   {
     image: "pix_6",
-    title: "Reliable Uptime,<br/><br/> Fast connectivity",
-    link: "/",
+    title: "Erebrus",
+    link: "erebrus",
     button: "Learn more",
-    desc: "Netsepio ensures optimal performance with high-speed connectivity across its decentralized network, minimizing latency and maximizing efficiency while maintaining consistent and reliable access to the internet and services, even in high-demand scenarios.",
+
+    desc: "Tap into redefined digital connectivity and unleash the future of internet with globally accessible, secure and private network through the power of DePIN.",
+  },
+  {
+    image: "pix_4",
+    title: "Mobile App",
+    link: "erebrus",
+    button: "Download now",
+
+    desc: "Empower your online activity with our Erebrus mobile app for secure, private and accessible network. We utilize NFTs for robust privacy and decentralization.",
+  },
+  {
+    image: "pix_3",
+    // title: "Reliable Uptime,<br/><br/> Fast connectivity",
+    title: "Sotreus",
+    // link: "/",
+    link: "#",
+    button: "Coming soon",
+    desc: "Redefined digital connectivity for enterprises. Unleash the future of internet with a secure and private network with firewall and dedicated ÐVPN.",
   },
   {
     image: "pix_5",
-    title: "Mobile App",
-    desc: "Secure your online activity with our blockchain VPN app, utilizing NFTs for robust privacy and decentralization.",
+    title: "NetCast",
+    link: "#",
+    button: "Coming soon",
+    desc: "Join this insightful podcast with the architects of a secure tomorrow, where our team of experts cracks the code on DePIN, online privacy, security, and the future of decentralized Web.",
   },
 ];
 export const cardDetails2 = [
