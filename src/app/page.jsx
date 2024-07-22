@@ -20,6 +20,22 @@ export default function Home() {
     width: "95vw",
   };
 
+  const gradientBackground = `
+    linear-gradient(
+      to bottom, 
+      #DD4D76 0%, 
+      #8A277D 10%, 
+      #761E7F 20%, 
+      #611480 30%, 
+      #380184 40%, 
+      #B969FF 50%, 
+      #669CFF 60%, 
+      #5DFF39 70%, 
+      #E0F7A3 80%, 
+      #11D9C5 90%
+    )
+  `;
+
   return (
     <>
       <main className='flex flex-col  items-center justify-between'>
@@ -46,7 +62,9 @@ export default function Home() {
       <main className='flex min-h-screen bg-primary flex-col items-center justify-between'>
         <Hero />
         <Mission />
-        <div className='bg-white justify-center gap-[.25%] w-full flex flex-col lg:flex-row flex-wrap'>
+        <div className='justify-center gap-[0.5%] w-full flex flex-col lg:flex-row flex-wrap p-1' style={{
+        background: gradientBackground,
+      }}>
           {cardDetails.map((item, index) => {
             return <Card key={index.toString()} item={item} />;
           })}
