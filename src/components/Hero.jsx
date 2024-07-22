@@ -8,20 +8,32 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   const { roboto } = useFonts();
+
+  const banner = {
+    backgroundImage:
+      "linear-gradient(to right, #050B21B2, #050B21B2, #B7990D26, #11D9C54D, #B7990D26, #050B21B2, #050B21B2)",
+      // "linear-gradient(to right, #050B214D 30%, #322F1C43 26.25%, #5E521739 22.5%, #11D9C54D 30%, #B7990D26 15%, #050B214D 30%)",
+    width: "95vw",
+  };
+  
   return (
+    <>
     <div
       style={roboto.style}
-      className='w-full  overflow-hidden my-[0%] sm:my-[2%]  flex relative  pt-[4%] justify-between items-center bg-tranparent h-[60vh] sm:h-screen'
+      className='w-full  overflow-hidden flex relative justify-between items-center bg-tranparent h-[60vh] sm:h-screen'
     >
       {/* Conic Gradient */}
-      <div className='absolute top-0 bottom-0 w-full h-full bg-cover bg-[url(/images/herobg.jpeg)] opacity-10 sm:opacity-90 '></div>
+      <div className='absolute top-0 bottom-0 w-full h-full bg-cover bg-[url(/images/herobg.png)] opacity-10 sm:opacity-90 '></div>
 
       {/* Hero Text */}
       <div className='z-20 absolut lg:relative bottom-10 lg:bottom-0 mx-[80px]'>
-        <h3 className=' text-3xl lg:text-[58px] max-w-[100%] lg:max-w-[65%] leading-tight text-white'>
-          Securing and Decentralizing the Internet Layer
+        <h3 className=' text-3xl lg:text-[58px] max-w-[100%] leading-tight text-white'>
+        No More Gatekeepers, Only Gateways
         </h3>
-        <div className='flex items-center mt-[35px] gap-[26px]'>
+        <p className='text-lg lg:text-xl md:text-xl max-w-[100%] lg:max-w-[50%] leading-tight text-white mt-10'>
+          NetSepio secures your last mile, unlocks a borderless web. 
+        Explore the future, together.</p>
+        <div className='flex items-center mt-[60px] gap-[26px]'>
           <CustomBtn link='https://app.netsepio.com' title={"Explore Webapp"} />
           <DarkBtn
             link='https://discordapp.com/invite/5uaFhNpRF6'
@@ -50,6 +62,16 @@ const Hero = () => {
         </div>
       </motion.div> */}
     </div>
+
+    <div className='items-center justify-between' style={{ letterSpacing: '0.06em' }}>
+          <div
+            style={banner}
+            className='py-6 text-xl text-gray-300 text-center'
+          >
+            Unleash the Power of Future Internet 
+          </div>
+        </div>
+    </>
   );
 };
 
