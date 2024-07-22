@@ -75,45 +75,28 @@ const Mission = () => {
               </p>
               <CustomBtn link='/about' title={"Our Mission"} />
             </motion.div>
-            <div className='w-[45%] lg:flex overflow-hidden hidden justify-between h-[80%]'>
-              {/* <motion.div
-                animate={animation}
-                transition={{ type: "tween", duration: 1 }}
-                className='w-[45%] self-start h-[65%] flex flex-col relative'
-              >
-                <Image
-                  className='object-cover rounded-[10px]'
-                  src={"/images/vault.jpg"}
-                  fill
-                  alt='access'
-                />
-                <h6
-                  style={roboto.style}
-                  className='font-semibold absolute text-4xl leading-tight self-center bottom-4 z-20 text-white w-[234px]'
-                >
-                  {" "}
-                  DVPN
-                </h6>
-              </motion.div> */}
+            <div className='w-[45%] lg:flex lg:flex-col flex flex-col overflow-hidden hidden justify-center h-[80%] items-center'>
               <motion.div
                 animate={animation2}
                 transition={{ type: "tween", duration: 2 }}
-                className='w-[70%] self-end  h-[90%] flex flex-col relative  ml-32'
+                className='w-[70%] h-[90%] flex flex-col relative'
               >
                 <Image
                   className='object-cover rounded-[10px]'
-                  src={"/images/mission1.jpeg"}
+                  src={"/images/mission1.png"}
                   fill
                   alt='access'
                 />
-                <h6
+              </motion.div>
+
+              <h6
                   style={roboto.style}
-                  className='font-medium absolute text-4xl leading-tight self-center bottom-4 z-20 text-white w-[250px]'
+                  className='text-sm leading-tight text-center bottom-4 mt-4 z-20 text-white w-2/3 justify-center items-center flex'
                 >
                   {" "}
-                  {/* Review System */}
+                  Everyone is a provider and consumer. Welcome to the future. 
                 </h6>
-              </motion.div>
+              
             </div>
           </div>
         </div>

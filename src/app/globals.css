@@ -44,7 +44,7 @@ body {
     background: radial-gradient(480px 400px at 100% 58%,#11d9c5, #b7980d7f,#040a206e);
 }
 .element2 {
-    background: radial-gradient(400px 400px at bottom left,#b7980dc8 20%,#11d9c545 50%,transparent 100%);
+    background: radial-gradient(400px 400px at bottom left,#b7980dc8 35%,#11d9c545 70%,transparent 100%);
   }
   .features-card {
     background: radial-gradient(600px 400px at 70% 58%,#11d9c526,transparent 100%);
