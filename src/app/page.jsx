@@ -107,7 +107,7 @@ export default function Home() {
         <WinnersPage/>
         <DownloadNow />
         {/* <Socials /> */}
-        <SubscribePage/>
+        {/* <SubscribePage/> */}
         <Newsletter />
       </main>
     </>
