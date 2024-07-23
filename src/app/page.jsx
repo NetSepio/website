@@ -115,6 +115,33 @@ export default function Home() {
         <Cuttingedge />
         <SuccessRoad />
         <Partners />
+
+        <div className="min-h-screen mx-auto py-20 w-full flex items-center justify-center bg-cover bg-[url('/revolution.png')]">
+  <div className="lg:w-1/2 md:w-1/2 background-gradient lg:py-10 md:py-10 py-5 rounded-3xl mx-4 lg:mx-0 md:mx-0">
+    <div className="flex flex-col items-center justify-start lg:h-full mt-10 lg:ml-0 lg:mr-0 md:ml-0 md:mr-0 ml-4 mr-4 lg:mb-0 mb-2">
+      <h1
+        className="lg:text-4xl md:text-3xl text-2xl text-gray-300 mb-10 text-center lg:w-2/3 md:w-2/3"
+        style={{ lineHeight: '1.2'}}
+      >
+        Revolutionizing Internet Access Through the Power of DePIN
+      </h1>
+      <p
+        className="lg:text-lg md:text-lg text-lg text-gray-300 mb-8 text-center"
+      >
+        Subscribe for insights from our DePIN experts.
+      </p>
+      <div
+        className="text-black py-2 px-14 rounded-full bg-white text-lg"
+        // style={{backgroundImage: 'linear-gradient(#FFFFFF00, #0099FF)'}}
+      >
+        <Link href="https://discord.com/invite/5uaFhNpRF6" target="_blank" rel="noopener noreferrer">
+          Subscribe
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
       </main>
     </>
   );

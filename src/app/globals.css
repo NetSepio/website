@@ -58,3 +58,7 @@ body {
   background: linear-gradient(to top right, #B7990D80 0%,  #64B96840 30%, #040A20 60% , transparent 100%);
 }
 
+.background-gradient {
+  background: linear-gradient(to bottom, #073A4699 0%, #1F7C7B99 26%, #37BDB099 60%, #11D9C599 100%);
+}
+

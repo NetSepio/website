@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div
       style={roboto.style}
-      className=" h-[507px] mt-[3%]  w-full pt-[102px] rounded-t-[12px]  sm:rounded-t-[50px]  bg-gradient-to-t from-primary/40 to-cta/40 "
+      className=" h-[507px] w-full pt-[102px] bg-gradient-to-t from-primary/40 to-cta/40 "
     >
       <footer className="w-[85%] relative mx-auto border-b border-cta border-opacity-30 pb-[30px]  justify-between flex-col gap-8 sm:gap-0  flex lg:flex-row">
         <div className="flex w-max relative bottom-3 flex-col ">
