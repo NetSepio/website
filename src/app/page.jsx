@@ -1,3 +1,4 @@
+"use client"
 import Card from "@/components/Card";
 import CustomBtn from "@/components/CustomBtn";
 import DownloadNow from "@/components/DownloadNow";
@@ -9,6 +10,7 @@ import Reviews from "@/components/Reviews";
 import Socials from "@/components/Socials";
 import SubscribePage from "@/components/Subcribe";
 import WinSection from "@/components/WinSection";
+import WinnersPage from "@/components/winners"
 import { cardDetails } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,6 +35,14 @@ export default function Home() {
       #5DFF39 70%, 
       #E0F7A3 80%, 
       #11D9C5 90%
+    )
+  `;
+
+  const greengradient = `
+    linear-gradient(
+      to bottom, 
+      #E7E7EA 50%, 
+      #11D9C5 100%
     )
   `;
 
@@ -71,20 +81,30 @@ export default function Home() {
         </div>
         <Reviews />
         <WinSection />
-        <section className='w-full  space-y-[5vh] pt-[7%]  flex flex-col items-center   h-[800px] bg-contain bg-center bg-[url(/images/upcoming.jpg)] bg-repeat'>
-          <h2 className='text-primary font-semibold text-4xl md:text-[52px] leading-none tracking-wider  '>
-          ÐWifi Revolutionizing Wireless Access
-          </h2>
-          <p className='text-primary font-medium w-[80%] md:w-[50%] text-xl lg:text-[28px] leading-tight text-center'>
-            Share unused bandwidth, turning each participant <br/>into both a
-            provider and consumer.
-          </p>
-          <CustomBtn
-            title='Upcoming'
-            link='https://sotreus.com/'
-            width='w-[140px] bg-[#11D9C5] text-white lg:w-[191px]'
-          />
+        <section className="w-full h-[600px] flex items-center justify-center my-auto"
+        style={{
+          background: greengradient,
+        }}
+>
+          <div className="flex flex-col items-center space-y-[5vh] justify-center mx-auto">
+            <h2 className="text-primary font-semibold text-4xl md:text-[52px] leading-none tracking-wider">
+              ÐWifi Revolutionizing Wireless Access
+            </h2>
+            <p className="text-primary text-2xl leading-tight text-center">
+              Share unused bandwidth, turning each participant
+              <br />
+              into both a provider and consumer.
+            </p>
+            <CustomBtn
+              title="Coming Soon"
+              link="https://sotreus.com/"
+              width="w-[140px] bg-[#040A2080] text-white lg:w-[191px]"
+              disabled
+            />
+          </div>
         </section>
+
+        <WinnersPage/>
         <DownloadNow />
         {/* <Socials /> */}
         <SubscribePage/>

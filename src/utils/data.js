@@ -50,18 +50,18 @@ export const cardDetails = [
 export const cardDetails2 = [
   {
     image: "win1",
-    title: "Subsidized VPN Access",
-    desc: "Enhances security with encrypted access to essential services, reduces cyber threats.",
+    title: "Unleash Secure Wi-Fi, Explore a Borderless Web",
+    desc: "Erebus safeguards last-mile connections and unlocks borderless browsing, allowing users to  explore freely, securely and confidently.",
   },
   {
     image: "win2",
-    title: "Improved User Experience",
-    desc: "Providing encrypted, smooth, and uninterrupted browsing.",
+    title: "Supercharge User Loyalty & Expand Reach",
+    desc: "Empower users with sponsored secure Erebus VPN. Increase user engagement and loyalty, fostering a stronger business foundation.",
   },
   {
     image: "win3",
-    title: "No Lock-in",
-    desc: "Freedom to choose your VPN usage, supports open internet access, and builds trust by prioritizing choice and flexibility.",
+    title: "Become a Network Guardian",
+    desc: "Turn existing hardware into a ÐWi-Fi & ÐVPN powerhouse, fortifying the network and securing a lucrative passive income stream..",
   },
 ];
 export const privacyData = [

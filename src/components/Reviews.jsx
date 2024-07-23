@@ -6,25 +6,33 @@ import Link from "next/link";
 
 const Reviews = () => {
   const { roboto } = useFonts();
+
+  const radialGradientBackground = `
+    radial-gradient(ellipse at 30% 35%, #11D9C533 5%, #040A20 40%,  #040A20 100%)
+  `;
+
   return (
-    <div className='relative flex flex-col lg:flex-row items-center justify-around w-full h-[672px]'>
-      <Image
+    <div className='relative flex flex-col lg:flex-row items-center justify-around w-full h-[672px]' 
+    style={{
+      background: radialGradientBackground,
+    }}>
+      {/* <Image
         src={"/images/link.png"}
         className='absolute object-cover'
         fill
         priority
         alt='link'
-      />
+      /> */}
       <div className='z-20 flex flex-col items-start  gap-10'>
         <p style={roboto.style} className='flex flex-col gap-1'>
           <span className='text-white text-3xl lg:text-5xl font-medium'>
-            Trusted Reviews,
+          Boost Your Online Security with 
           </span>
           <span className='text-white text-3xl lg:text-5xl font-medium'>
-            Boosting Your Online Security
+          Trusted, Verified Reviews
           </span>
         </p>
-        <CustomBtn link='https://app.netsepio.com' title={"Get Started"} />
+        <CustomBtn link='https://app.netsepio.com' width="w-[200px] lg:w-[200px]" title={"Login to Web App"} />
       </div>
       <div className='z-20 flex flex-col gap-[27px] justify-center  items-center'>
         <Link
