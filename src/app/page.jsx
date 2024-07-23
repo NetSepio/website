@@ -12,6 +12,7 @@ import SubscribePage from "@/components/Subcribe";
 import WinSection from "@/components/WinSection";
 import WinnersPage from "@/components/winners";
 import Cuttingedge from "@/components/Cuttingedge";
+import SuccessRoad from "@/components/SuccessRoad";
 import { cardDetails } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -111,6 +112,7 @@ export default function Home() {
         {/* <SubscribePage/> */}
         <Newsletter />
         <Cuttingedge />
+        <SuccessRoad />
       </main>
     </>
   );
