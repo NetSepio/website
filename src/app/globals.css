@@ -53,3 +53,8 @@ body {
 .bg-gradient1 {
   background: linear-gradient(360deg, rgba(17, 217, 197, 0.3) 0%, rgba(9, 84, 91, 0.486) 52%, rgba(39, 188, 252, 0.3) 100%);
 }
+
+.cutting-edge {
+  background: linear-gradient(to top right, #B7990D80 0%,  #64B96840 30%, #040A20 60% , transparent 100%);
+}
+

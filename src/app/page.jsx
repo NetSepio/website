@@ -10,7 +10,8 @@ import Reviews from "@/components/Reviews";
 import Socials from "@/components/Socials";
 import SubscribePage from "@/components/Subcribe";
 import WinSection from "@/components/WinSection";
-import WinnersPage from "@/components/winners"
+import WinnersPage from "@/components/winners";
+import Cuttingedge from "@/components/Cuttingedge";
 import { cardDetails } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -109,6 +110,7 @@ export default function Home() {
         {/* <Socials /> */}
         {/* <SubscribePage/> */}
         <Newsletter />
+        <Cuttingedge />
       </main>
     </>
   );
