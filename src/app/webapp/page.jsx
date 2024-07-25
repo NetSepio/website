@@ -6,7 +6,7 @@ import React from "react";
 const Index = () => {
   return (
     <div className='bg-primary w-full   flex flex-col items-center h-auto'>
-      <section className=' h-screen md:h-[967px] w-full space-y-5 md:space-y-10 md:pt-[10vh] bg-cover flex flex-col justify-center px-[3.5%] bg-[url(/images/webapp/hero.svg)] bg-no-repeat'>
+      <section className=' h-screen md:h-[967px] w-full space-y-5 md:space-y-10 md:pt-[10vh] bg-cover flex flex-col justify-center px-[3.5%] bg-[url(/images/webapp/hero2.png)] bg-no-repeat'>
         <h3 className='uppercase text-white text-3xl md:text-[95px] leading-none font-semibold flex flex-col'>
           <span>Netsepio</span>
           <span>Webapp</span>
