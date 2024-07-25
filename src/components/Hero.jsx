@@ -30,8 +30,8 @@ const Hero = () => {
         <h3 className=' text-3xl lg:text-[58px] max-w-[100%] leading-tight text-white'>
         No More Gatekeepers, Only Gateways
         </h3>
-        <p className='text-lg lg:text-xl md:text-xl max-w-[100%] lg:max-w-[50%] leading-tight text-white mt-10'>
-          NetSepio secures your last mile, unlocks a borderless web. 
+        <p className='text-lg lg:text-xl md:text-xl max-w-[100%] leading-tight text-white mt-10'>
+          NetSepio secures your last mile, unlocks a borderless web. <br></br>
         Explore the future, together.</p>
         <div className='flex items-center mt-[60px] gap-[26px]'>
           <CustomBtn link='https://app.netsepio.com' title={"Explore Webapp"} />
