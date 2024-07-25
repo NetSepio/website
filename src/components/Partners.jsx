@@ -26,7 +26,7 @@ const Partners = () => {
 
             <div className='flex justify-between items-center'>
             <img src="/akindo.png" className="w-1/4 px-24 py-4"/>
-            <img src="/numa.png" className="w-1/4 px-24 -mt-40 -ml-40 py-4"/>
+            <img src="/Numa.png" className="w-1/4 px-24 -mt-40 -ml-40 py-4"/>
             <img src="/aptos.png" className="w-1/4 px-24 -ml-40 py-4"/>
             <img src="/ipfs.png" className="w-1/4 px-24 mr-20 py-4"/>
             </div>

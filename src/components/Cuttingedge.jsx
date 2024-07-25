@@ -23,7 +23,7 @@ const Cuttingedge = () => {
 
             <div className='flex lg:flex-row md:flex-row flex-col'>
                  <div className='w-1/3 p-20' style={{border:'0.5px solid #11D9C5'}}>
-                    <h1 className='text-3xl mb-20'>Blockchain</h1>
+                    <h1 className='text-3xl mb-10'>Blockchain</h1>
                     <p>NetSepio builds on blockchain technology, a secure digital ledger, for trustworthy data storage and verifiable transactions. This forms the foundation for a reliable and secure internet. </p>
                  </div>
                  <div className='w-1/3 p-20' style={{border:'0.5px solid #11D9C5'}}>
@@ -31,7 +31,7 @@ const Cuttingedge = () => {
                     <p>Unlike traditional identifiers, DIDs empower each node with complete control over its unique identity in public network. This fosters a secure and transparent network environment, where users can trust the authenticity of the nodes they connect to.</p>
                  </div>
                  <div className='w-1/3 p-20' style={{border:'0.5px solid #11D9C5'}}>
-                    <h1 className='text-3xl mb-20'>ZK Proofs</h1>
+                    <h1 className='text-3xl mb-10'>ZK Proofs</h1>
                     <p>This innovative technology allows you to prove you possess certain information without revealing the information itself. This ensures privacy while maintaining security and trust within the decentralized network. </p>
                  </div>
             </div>

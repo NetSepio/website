@@ -28,12 +28,12 @@ const WinSection = () => {
               <Image
                 src={`/images/${item.image}.jpeg`}
                 alt='pic'
-                className='object-cover overflow-clip mb-6'
+                className='object-cover overflow-clip mb-6 rounded-xl'
                 width={400}
                 height={320}
               />
-              <h4 className='mb-[10px] text-white text-[22px] text-center'>{item.title}</h4>
-              <p className='text-sm font-thin text-white'>{item.desc}</p>
+              <h4 className='mb-[10px] text-white text-[22px] text-center w-[80%] mx-auto'>{item.title}</h4>
+              <p className='text-[17px] font-thin text-white'>{item.desc}</p>
             </div>
           );
         })}

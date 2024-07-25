@@ -94,14 +94,14 @@ export default function Home() {
               ÐWifi Revolutionizing Wireless Access
             </h2>
             <p className="text-primary text-2xl leading-tight text-center">
-              Share unused bandwidth, turning each participant
+              Share unused bandwidth turns each participant
               <br />
               into both a provider and consumer.
             </p>
             <CustomBtn
               title="Coming Soon"
-              link="https://sotreus.com/"
-              width="w-[140px] bg-[#040A2080] text-white lg:w-[191px]"
+              link="#"
+              width="w-[140px] bg-[#00000080] text-white lg:w-[191px]"
               disabled
             />
           </div>
@@ -134,7 +134,7 @@ export default function Home() {
         className="text-black py-2 px-14 rounded-full bg-white text-lg"
         // style={{backgroundImage: 'linear-gradient(#FFFFFF00, #0099FF)'}}
       >
-        <Link href="https://discord.com/invite/5uaFhNpRF6" target="_blank" rel="noopener noreferrer">
+        <Link href="https://netsepio.substack.com/" target="_blank" rel="noopener noreferrer">
           Subscribe
         </Link>
       </div>
