@@ -32,7 +32,7 @@ const Footer = () => {
             />
           </Link>
           <p className="text-[20px] mt-[22px] sm:mt-[55px] text-white w-[280px] font-light">
-            AI DePIN CyberSecurity which Protects Online Presence
+          Securing and decentralizing the internet layer with Cybersecurity and powered by DePIN technology.
           </p>
         </div>
 

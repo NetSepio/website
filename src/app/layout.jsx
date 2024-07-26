@@ -20,7 +20,35 @@ export const metadata = {
   metadataBase: new URL("https://netsepio.com"),
   title: "NetSepio",
   description:
-    "Protect your online presence with NetSepio, the decentralized cybersecurity platform. Say goodbye to malware and scams with our innovative features, including Web3 archive and DAO-driven governance. Download now for free.",
+    "Securing and decentralizing the internet layer with Cybersecurity and powered by DePIN technology.",
+    openGraph: {
+      type: 'website',
+      url: 'https://netsepio.com',
+      title: 'NetSepio',
+      description: 'Securing and decentralizing the internet layer with Cybersecurity and powered by DePIN technology.',
+      images: [
+        {
+          url: '/metaimg.png',
+          width: 1200,
+          height: 630,
+          alt: 'NetSepio',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      site: '@NetSepio',
+      title: 'NetSepio',
+      description: 'Securing and decentralizing the internet layer with Cybersecurity and powered by DePIN technology.',
+      images: [
+        {
+          url: '/metaimg.png',
+          width: 1200,
+          height: 630,
+          alt: 'NetSepio',
+        },
+      ],
+    },
 };
 
 export default function RootLayout({ children }) {
