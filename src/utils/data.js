@@ -17,7 +17,7 @@ export const cardDetails = [
   {
     image: "pix_6",
     title: "Erebrus",
-    link: "erebrus",
+    link: "https://erebrus.io",
     button: "Learn more",
 
     desc: "Tap into redefined digital connectivity and unleash the future of internet with globally accessible, secure and private network through the power of DePIN.",
