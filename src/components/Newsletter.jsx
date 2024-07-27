@@ -7,13 +7,13 @@ const Newsletter = () => {
   const { roboto } = useFonts();
   return (
     <div className="w-[80%] mt-[5%] ">
-      <div className="flex mr-auto text-5xl">Tune into Expert NetCast </div>
+      <div className="flex lg:mr-auto md:mr-auto text-center lg:text-5xl md:text-5xl text-3xl">Tune into Expert NetCast </div>
     <div
       style={roboto.style}
-      className='h-[694px] flex flex-row-reverse  justify-between items-center gap-10'
+      className='lg:h-[694px] md:h-[694px] flex lg:flex-row-reverse md:flex-row-reverse flex-col justify-between items-center gap-10'
     >
-      <div className='flex pl-[0%] sm:pl-[5%] flex-col w-[50%] -mt-40'>
-        <h4 className=' text-2xl flex mb-[36px] flex-col leading-tight text-gray-400'>
+      <div className='flex pl-[0%] sm:pl-[5%] flex-col lg:w-[50%] md:w-[50%] lg:-mt-40 md:-mt-40'>
+        <h4 className=' text-2xl flex mb-[36px] flex-col leading-tight text-gray-400 lg:mt-0 md:mt-0 mt-10'>
           <span>Stay ahead of the curve on DePIN, online privacy, security, and the future of decentralized Web.</span>
         </h4>
         <CustomBtn
@@ -22,7 +22,7 @@ const Newsletter = () => {
           title={"Coming Soon"}
         />
       </div>
-      <div className='flex flex-col relative sm:h-[80%]'>
+      <div className='flex flex-col relative sm:h-[80%] lg:mb-0 md:mb-0 mb-20'>
         <img
           src={"/images/newsletter.png"}
           fill

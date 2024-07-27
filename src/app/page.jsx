@@ -89,11 +89,11 @@ export default function Home() {
           background: greengradient,
         }}
 >
-          <div className="flex flex-col items-center space-y-[5vh] justify-center mx-auto">
-            <h2 className="text-primary font-semibold text-4xl md:text-[52px] leading-none tracking-wider">
+          <div className="flex flex-col items-center space-y-[5vh] justify-center mx-auto p-4">
+            <h2 className="text-primary font-semibold text-2xl md:text-[52px] lg:text-[52px] leading-none tracking-wider text-center">
               ÐWifi Revolutionizing Wireless Access
             </h2>
-            <p className="text-primary text-2xl leading-tight text-center">
+            <p className="text-primary text-lg lg:text-2xl md:text-2xl leading-tight text-center">
               Share unused bandwidth turns each participant
               <br />
               into both a provider and consumer.
@@ -114,7 +114,7 @@ export default function Home() {
         <Newsletter />
         <Cuttingedge />
         <SuccessRoad />
-        <Partners />
+        {/* <Partners /> */}
 
         <div className="min-h-screen mx-auto py-20 w-full flex items-center justify-center bg-cover bg-[url('/revolution.png')]">
   <div className="lg:w-1/2 md:w-1/2 background-gradient lg:py-10 md:py-10 py-5 rounded-3xl mx-4 lg:mx-0 md:mx-0">
