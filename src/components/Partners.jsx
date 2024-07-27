@@ -12,7 +12,7 @@ const Partners = () => {
 
   return (
     <div className=''>
-        <div className='text-5xl mb-20 text-center'>Partners and Supporters</div>
+        <div className='lg:text-5xl md:text-5xl text-3xl lg:mt-0 md:mt-0 mt-28 mb-20 text-center'>Partners and Supporters</div>
         <div className='py-20' 
         style={{
           background: greengradient,
