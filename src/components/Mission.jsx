@@ -54,24 +54,16 @@ const Mission = () => {
           <div className='w-full h-full z-20 rounded-[50px] flex items-center justify-between  bg-gradient-to-tl from-primary2/20 to-primary2/20'>
             <motion.div
               transition={{ duration: 1.5 }}
-              className='flex-col lg:w-[45%]  ml-[89px]  h-[80%] justify-between flex'
+              className='flex-col lg:w-[45%]  lg:ml-[89px] md:ml-[89px]  h-[80%] justify-between flex lg:items-start md:items-start items-center'
             >
               <h3
                 style={roboto.style}
-                className='text-white max-w-[420px] leading-none font-medium text-3xl lg:text-[72px]'
+                className='text-white max-w-[420px] leading-none font-medium text-2xl lg:text-[72px] md:text-[72px] lg:text-start md:text-start text-center'
               >
                 Empowering Connectivity
               </h3>
-              <p className='text-base sm:text-[18px]  text-white font-thin'>
-                Netsepio introduces our groundbreaking decentralized internet
-                solution, designed to advance the adoption of decentralized
-                networks. Featuring superior capabilities, robust performance,
-                and competitive pricing, Netsepio is ideal for those exploring
-                the potential of decentralized internet. Built on the innovative
-                DePIN (Decentralized Physical Infrastructure Network), our
-                platform is tailored to enhance internet access and foster
-                global digital ecosystems, ensuring secure and unrestricted
-                connectivity for all.
+              <p className='text-base sm:text-[18px] text-white font-thin lg:text-start md:text-start text-center p-10 lg:p-0 md:p-0'>
+              NetSepio is revolutionizing internet access through the power of DePIN, empowering anyone to set up a VPN node and share their internet bandwidth, thus fostering a network that is both secure and universally accessible. By combining decentralized VPN (ÐVPN) and decentralized Wi-Fi (ÐWi-Fi) technologies, our mission is to make the internet safer, more private, and available to everyone.
               </p>
               <CustomBtn link='/about' title={"Our Mission"} />
             </motion.div>

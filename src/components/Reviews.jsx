@@ -23,12 +23,12 @@ const Reviews = () => {
         priority
         alt='link'
       /> */}
-      <div className='z-20 flex flex-col items-start  gap-10'>
+      <div className='z-20 flex flex-col lg:items-start md:items-start items-center gap-10'>
         <p style={roboto.style} className='flex flex-col gap-1'>
-          <span className='text-white text-3xl lg:text-5xl font-medium'>
+          <span className='text-white text-2xl lg:text-5xl md:text-5xl font-medium text-center lg:text-start md:text-start'>
           Boost Your Online Security with 
           </span>
-          <span className='text-white text-3xl lg:text-5xl font-medium'>
+          <span className='text-white text-2xl lg:text-5xl md:text-5xl font-medium text-center lg:text-start md:text-start'>
           Trusted, Verified Reviews
           </span>
         </p>
