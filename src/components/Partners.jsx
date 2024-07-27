@@ -18,24 +18,24 @@ const Partners = () => {
           background: greengradient,
         }}>
             <div className='flex justify-between items-center'>
-            <img src="/aptos.png" className="w-1/4 px-24 py-4"/>
-            <img src="/peaq.png" className="w-1/4 px-24 -mt-20 py-4"/>
-            <img src="/unilend.png" className="w-1/4 px-24 mt-10 py-4"/>
-            <img src="/manta.png" className="w-1/4 px-40 py-4"/>
+            <img src="/aptos.png" className="w-1/4 lg:px-24 md:px-10 px-2 py-4"/>
+            <img src="/peaq.png" className="w-1/4 lg:px-24 md:px-10 px-2 -mt-20 py-4"/>
+            <img src="/unilend.png" className="w-1/4 lg:px-24 md:px-10 px-2 mt-10 py-4"/>
+            <img src="/manta.png" className="w-1/4 lg:px-40 md:px-10 px-2 py-4"/>
             </div>
 
             <div className='flex justify-between items-center'>
-            <img src="/akindo.png" className="w-1/4 px-24 py-4"/>
-            <img src="/Numa.png" className="w-1/4 px-24 -mt-40 -ml-40 py-4"/>
-            <img src="/Google.png" className="w-1/4 px-24 -ml-40 py-4"/>
-            <img src="/ipfs.png" className="w-1/4 px-24 mr-20 py-4"/>
+            <img src="/akindo.png" className="w-1/4 lg:px-24 md:px-10 px-2 py-4"/>
+            <img src="/Numa.png" className="w-1/4 lg:px-24 md:px-10 px-2 -mt-40 lg:-ml-40 md:-ml-20 py-4"/>
+            <img src="/Google.png" className="w-1/4 lg:px-24 md:px-10 px-2 lg:-ml-40 md:-ml-20 py-4"/>
+            <img src="/ipfs.png" className="w-1/4 lg:px-24 md:px-10 px-2 mr-20 py-4"/>
             </div>
 
             <div className='flex justify-between items-center'>
-            <img src="/foundance.png" className="w-1/4 px-40 py-4"/>
-            <img src="/filecoin.png" className="w-1/4 px-20 -mt-20 py-4"/>
-            <img src="/ivs.png" className="w-1/4 px-24 py-4"/>
-            <img src="/soonami.png" className="w-1/4 px-24 -mt-20 py-4"/>
+            <img src="/foundance.png" className="w-1/4 lg:px-40 md:px-10 px-2 py-4"/>
+            <img src="/filecoin.png" className="w-1/4 lg:px-20 md:px-10 px-2 -mt-20 py-4"/>
+            <img src="/ivs.png" className="w-1/4 lg:px-24 md:px-10 px-2 py-4"/>
+            <img src="/soonami.png" className="w-1/4 lg:px-24 md:px-10 px-2 -mt-20 py-4"/>
             </div>
         </div>
     </div>

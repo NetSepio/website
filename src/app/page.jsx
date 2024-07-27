@@ -114,7 +114,7 @@ export default function Home() {
         <Newsletter />
         <Cuttingedge />
         <SuccessRoad />
-        {/* <Partners /> */}
+        <Partners />
 
         <div className="min-h-screen mx-auto py-20 w-full flex items-center justify-center bg-cover bg-[url('/revolution.png')]">
   <div className="lg:w-1/2 md:w-1/2 background-gradient lg:py-10 md:py-10 py-5 rounded-3xl mx-4 lg:mx-0 md:mx-0">
