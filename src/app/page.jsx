@@ -91,7 +91,7 @@ export default function Home() {
 >
           <div className="flex flex-col items-center space-y-[5vh] justify-center mx-auto p-4">
             <h2 className="text-primary font-semibold text-2xl md:text-[52px] lg:text-[52px] leading-none tracking-wider text-center">
-              ÐWifi Revolutionizing Wireless Access
+              ÐWi-Fi Revolutionizing Wireless Access
             </h2>
             <p className="text-primary text-lg lg:text-2xl md:text-2xl leading-tight text-center">
               Share unused bandwidth turns each participant
