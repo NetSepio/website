@@ -21,7 +21,7 @@ const Cuttingedge = () => {
                  </div>
             </div>
 
-            <div className='flex lg:flex-row md:flex-row flex-col'>
+            <div className='flex lg:flex-row md:flex-row flex-col text-white'>
                  <div className='lg:w-1/3 md:w-1/3 p-20' style={{border:'0.5px solid #11D9C5'}}>
                     <h1 className='text-3xl mb-10'>Blockchain</h1>
                     <p>NetSepio builds on blockchain technology, a secure digital ledger, for trustworthy data storage and verifiable transactions. This forms the foundation for a reliable and secure internet. </p>
