@@ -10,7 +10,7 @@ const Index = () => {
     <div className='py-[16.7vh] flex items-center flex-col'>
       <Hero />
       <section className='w-full flex flex-col py-[12vh] items-center h-max'>
-        <h2 className='text-cta w-full mb-[6vh] text-center text-2xl font-medium md:text-4xl'>
+        <h2 className='text-cta w-full mb-[6vh] text-center text-2xl font-medium md:text-5xl'>
           Features
         </h2>
         {ExtFeatures.map((item, index) => {
