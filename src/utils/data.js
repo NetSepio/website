@@ -271,7 +271,7 @@ export const ExtFeatures = [
   {
     id: 1,
     img: "ai.png",
-    title: "AI Security Insights,",
+    title: "AI Security Insights",
     desc: "Our AI analyzes each website you visit, providing you with real-time security assessments.",
   },
   {
