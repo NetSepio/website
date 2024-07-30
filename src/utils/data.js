@@ -17,7 +17,7 @@ export const cardDetails = [
   {
     image: "pix_6",
     title: "Erebrus",
-    link: "https://erebrus.io",
+    link: "erebrus",
     button: "Learn more",
 
     desc: "Tap into redefined digital connectivity and unleash the future of internet with globally accessible, secure and private network through the power of DePIN.",
@@ -132,21 +132,40 @@ export const sotreusFeatures = [
 ];
 export const erebrusFeatures = [
   {
-    image: "community.svg",
-    title: "Community-Driven Network",
-    desc: "Erebrus enables anyone to become a node operator, enhancing the robustness of its decentralized network and earning rewards, thus promoting a transparent and collaborative VPN environment.",
+    image: "erebrusFeatures2.png",
+    title: "Speed Meets Security",
+    desc: "Enjoy blazing-fast speeds without compromising security. Our ÐVPN is optimized to deliver a seamless user experience without slowing you down.",
 
     button: "Run a node",
     link: "https://erebrus.io/",
   },
   {
-    image: "transparency.svg",
-    title: "Open-Source Transparency",
-    desc: "An open-source VPN, promotes transparency by allowing users to review its source code, boosting confidence in its security and privacy standards.",
+    image: "erebrusFeatures3.png",
+    title: "Your Privacy, Your Rules",
+    desc: "Take control of your online privacy with customizable ÐVPN settings. Choose the level of protection that suits your needs, from basic to maximum security.",
     button: "Explore More",
     link: "https://erebrus.io/",
   },
 ];
+
+export const erebrusFeatures2 = [
+  {
+    image: "erebrusFeatures4.png",
+    title: "Global Shield",
+    desc: "Protect yourself online, anywhere in the world. Our extensive server network ensures you're always covered, no matter where you go.",
+
+    button: "Run a node",
+    link: "https://erebrus.io/",
+  },
+  {
+    image: "erebrusFeatures5.png",
+    title: "Privacy for All",
+    desc: "We're building a future where privacy is a fundamental right. Enterprise  can sponsor their users’ ÐVPN, built inside their apps. ",
+    button: "Explore More",
+    link: "https://erebrus.io/",
+  },
+];
+
 export const webapp = [
   {
     image: "discover.svg",
