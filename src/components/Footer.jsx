@@ -40,7 +40,7 @@ const Footer = () => {
           return <FooterItem key={index.toString()} item={item} />;
         })}
         <div className="flex ml-4 flex-col">
-          <h4 className=" text-white text-[22px] mb-[49px]">{"Others"}</h4>
+          <h4 className=" text-white text-[22px] mb-[49px]">{"Connect"}</h4>
           <div className="flex relative right-[6px] gap-3 pl-2">
             <Link
               target="_blank"

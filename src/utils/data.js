@@ -195,18 +195,21 @@ export const footerContents = [
     title: "About",
     content: [
       { name: "Mission", link: "/about" },
-      { name: "How we help", link: "/about" },
-      { name: "Who we help", link: "/about" },
+      // { name: "How we help", link: "/about" },
+      // { name: "Who we help", link: "/about" },
+      { name: "Privacy Policy", link: "/privacy" },
+      { name: "Terms of use", link: "/terms" },
+      { name: "FAQs", link: "/faq" },
     ],
   },
   {
     title: "Products",
     content: [
+      { name: "Web App", link: "https://app.netsepio.com" },
       {
         name: "Browser Extension",
         link: "https://chromewebstore.google.com/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd",
       },
-      { name: "Webapp", link: "https://app.netsepio.com" },
       { name: "Erebrus", link: "https://erebrus.io" },
       { name: "Sotreus", link: "https://sotreus.com" },
       {
@@ -216,14 +219,14 @@ export const footerContents = [
       { name: "Telegram bot", link: "https://telegram.me/netsepiobot" },
     ],
   },
-  {
-    title: "Company",
-    content: [
-      { name: "Privacy Policy", link: "/privacy" },
-      { name: "Terms of use", link: "/terms" },
-      { name: "FAQs", link: "/faq" },
-    ],
-  },
+  // {
+  //   title: "Company",
+  //   content: [
+  //     { name: "Privacy Policy", link: "/privacy" },
+  //     { name: "Terms of use", link: "/terms" },
+  //     { name: "FAQs", link: "/faq" },
+  //   ],
+  // },
 ];
 
 export const faq = [
