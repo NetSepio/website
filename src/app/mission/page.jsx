@@ -1,6 +1,8 @@
 "use client"
 import CustomBtn from "@/components/CustomBtn";
 import DarkBtn from "@/components/DarkBtn";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -42,6 +44,38 @@ export default function Home() {
       
       <div className="my-20">
       <img src="/missionmen.png"/>
+      </div>
+
+      <div className="flex flex-col justify-center items-center my-40">
+        <div className='text-lg lg:text-3xl'>Join Our Mission. Join the Future.</div>
+        <div className='flex gap-20 my-20'>
+        <Link
+              target="_blank"
+              className="hover:scale-110 duration-150 pr-10 pl-6"
+              href={"https://discordapp.com/invite/5uaFhNpRF6"}
+              style={{border: '1px solid #11D9C5', display: 'flex', borderRadius:'8px'}}
+            >
+              <img
+                src={"/images/discord_green.svg"}
+                alt="discord"
+              />
+              <div className="mt-4">Discord</div>
+            </Link>
+
+            <Link
+              target="_blank"
+              className="hover:scale-110 duration-150 pr-10 pl-8"
+              href={"https://t.me/NetSepio?boost "}
+              style={{border: '1px solid #11D9C5', display: 'flex', borderRadius:'8px', gap:'8px'}}
+            >
+              <img
+                src={"/images/tele_green.svg"}
+                alt="telegram"
+                className="w-10"
+              />
+              <div className="mt-4">Telegram</div>
+            </Link>
+        </div>
       </div>
 
       </main>

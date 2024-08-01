@@ -116,6 +116,38 @@ export default function Home() {
         <SuccessRoad />
         <Partners />
 
+        <div className="flex flex-col justify-center items-center mt-40 mb-20">
+        <div className='text-lg lg:text-3xl'>Join Our Mission. Join the Future.</div>
+        <div className='flex gap-20 my-20'>
+        <Link
+              target="_blank"
+              className="hover:scale-110 duration-150 pr-10 pl-6"
+              href={"https://discordapp.com/invite/5uaFhNpRF6"}
+              style={{border: '1px solid #11D9C5', display: 'flex', borderRadius:'8px'}}
+            >
+              <img
+                src={"/images/discord_green.svg"}
+                alt="discord"
+              />
+              <div className="mt-4">Discord</div>
+            </Link>
+
+            <Link
+              target="_blank"
+              className="hover:scale-110 duration-150 pr-10 pl-8"
+              href={"https://t.me/NetSepio?boost "}
+              style={{border: '1px solid #11D9C5', display: 'flex', borderRadius:'8px', gap:'8px'}}
+            >
+              <img
+                src={"/images/tele_green.svg"}
+                alt="telegram"
+                className="w-10"
+              />
+              <div className="mt-4">Telegram</div>
+            </Link>
+        </div>
+      </div>
+
         <div className="min-h-screen mx-auto py-20 w-full flex items-center justify-center bg-cover bg-[url('/revolution.png')]">
   <div className="lg:w-1/2 md:w-1/2 background-gradient lg:py-10 md:py-10 py-5 rounded-3xl mx-4 lg:mx-0 md:mx-0">
     <div className="flex flex-col items-center justify-start lg:h-full mt-10 lg:ml-0 lg:mr-0 md:ml-0 md:mr-0 ml-4 mr-4 lg:mb-0 mb-2">
