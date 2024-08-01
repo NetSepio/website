@@ -65,7 +65,7 @@ const Mission = () => {
               <p className='text-base sm:text-[18px] text-white font-thin lg:text-start md:text-start text-center p-10 lg:p-0 md:p-0'>
               NetSepio is revolutionizing internet access through the power of DePIN, empowering anyone to set up a VPN node and share their internet bandwidth, thus fostering a network that is both secure and universally accessible. By combining decentralized VPN (ÐVPN) and decentralized Wi-Fi (ÐWi-Fi) technologies, our mission is to make the internet safer, more private, and available to everyone.
               </p>
-              <CustomBtn link='/about' title={"Our Mission"} />
+              <CustomBtn link='/mission' title={"Our Mission"} />
             </motion.div>
             <div className='w-[45%] lg:flex lg:flex-col flex flex-col overflow-hidden hidden justify-center h-[80%] items-center'>
               <motion.div

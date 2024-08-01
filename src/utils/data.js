@@ -194,7 +194,7 @@ export const footerContents = [
   {
     title: "About",
     content: [
-      { name: "Mission", link: "/about" },
+      { name: "Mission", link: "/mission" },
       // { name: "How we help", link: "/about" },
       // { name: "Who we help", link: "/about" },
       { name: "Privacy Policy", link: "/privacy" },
