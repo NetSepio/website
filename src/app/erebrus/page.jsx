@@ -24,7 +24,7 @@ const Index = () => {
           </h3>
           <p className='md:text-[34px] text-center md:w-[75%] mt-[1%] leading-tight text-xl font-light text-white'>
           Erebrus is a shared decentralized VPN Service based on the WireGuard 
-          Protocol. It is designed to enhance users' privacy, anonymity, 
+          Protocol. It is designed to enhance users privacy, anonymity, 
           and security when using Public Wi-Fi. {" "}
           </p>
           <CustomBtn

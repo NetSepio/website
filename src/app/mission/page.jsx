@@ -24,7 +24,7 @@ export default function Home() {
         Pioneering the Future of DePIN
         </p>
         <p className='text-lg lg:text-2xl w-3/5 text-gray-300 rounded-3xl p-10' 
-        style={{  background: 'linear-gradient(to right, #141E4380, #11D9C523)',}}>
+        style={{  background: 'linear-gradient(to right, #141E4380, #11D9C523)'}}>
         NetSepio is pioneering the future of internet infrastructure through DePIN. We are on a mission to redefine internet access 
         by building a decentralized, user-centric network that prioritizes security, privacy, and accessibility. We empower enterprises 
         and individuals to contribute to a more equitable digital world by sharing their internet resources, while safeguarding their 
