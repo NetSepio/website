@@ -84,7 +84,7 @@ export default function Home() {
         </div>
         <Reviews />
         <WinSection />
-        <section className="w-full h-[600px] flex items-center justify-center my-auto"
+        <section className="w-full h-[600px] flex items-center justify-center "
         style={{
           background: greengradient,
         }}
@@ -93,7 +93,7 @@ export default function Home() {
             <h2 className="text-primary font-semibold text-2xl md:text-[52px] lg:text-[52px] leading-none tracking-wider text-center">
               ÐWi-Fi Revolutionizing Wireless Access
             </h2>
-            <p className="text-primary text-lg lg:text-2xl md:text-2xl leading-tight text-center">
+            <p className="text-primary text-lg lg:text-2xl md:text-2xl leading-tight text-center lg:pt-10">
               Share unused bandwidth turns each participant
               <br />
               into both a provider and consumer.
@@ -101,7 +101,7 @@ export default function Home() {
             <CustomBtn
               title="Coming Soon"
               link="#"
-              width="w-[140px] bg-[#00000080] text-white lg:w-[191px]"
+              width="w-[140px] bg-[#040A2080] text-white lg:w-[191px]"
               disabled
             />
           </div>

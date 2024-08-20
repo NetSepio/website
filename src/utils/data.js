@@ -25,8 +25,8 @@ export const cardDetails = [
   {
     image: "pix_4",
     title: "Mobile App",
-    link: "#",
-    button: "Coming soon",
+    link: "https://drive.google.com/file/d/1jdkqwIXY825iG3shRRoFyg5SMGy6LN8J/view?usp=drive_link",
+    button: "Download now",
 
     desc: "Empower your online activity with our Erebrus mobile app for secure, private and accessible network. We utilize NFTs for robust privacy and decentralization.",
   },

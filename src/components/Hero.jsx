@@ -25,6 +25,7 @@ const Hero = () => {
       {/* Conic Gradient */}
       <div className='absolute top-0 bottom-0 w-full h-full bg-cover lg:bg-[url(/images/herobg.png)] md:bg-[url(/images/herobg.png)] bg-[url(/images/herobg2.png)]'></div>
 
+
       {/* Hero Text */}
       <div className='z-20 absolut lg:relative bottom-10 lg:bottom-0 lg:mx-[80px] md:mx-[80px] mx-[30px]'>
         <h3 className='text-3xl lg:text-[58px] max-w-[100%] leading-tight text-white'>
@@ -66,7 +67,7 @@ const Hero = () => {
     <div className='items-center justify-between' style={{ letterSpacing: '0.06em' }}>
           <div
             style={banner}
-            className='py-6 lg:text-xl md:text-xl text-lg text-gray-300 text-center'
+            className='py-6 lg:text-[30px] md:text-xl text-lg text-gray-300 text-center'
           >
             Unleash the Power of Future Internet 
           </div>

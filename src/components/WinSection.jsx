@@ -6,6 +6,19 @@ import Image from "next/image";
 
 const WinSection = () => {
   const { roboto } = useFonts();
+
+  const customStyles = [
+    {background: 'radial-gradient(  ellipse at 2.36% 97.72%, rgba(17, 217, 197, 0.3) 0%, rgba(17, 217, 197, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%     )'
+    },
+    { background: 'radial-gradient(  ellipse at 2.36% 97.72%, rgba(17, 217, 197, 0.3) 0%, rgba(17, 217, 197, 0.3) 100%, rgba(0, 0, 0, 0.3) 100%     )'
+     },
+    { 
+      background: 'linear-gradient(105.93deg, rgba(17, 217, 197, 0.2) 0.61%, rgba(16, 100, 92, 0.2) 99.6%), radial-gradient(90.47% 109.68% at 90.36% 130.72%, rgba(183, 153, 13, 0.5) 20.5%, rgba(100, 185, 104, 0.25) 60.25%, rgba(17, 217, 195, 0) 100%)',
+    
+    },
+  ];
+
+
   return (
     <div
       style={roboto.style}
@@ -22,13 +35,13 @@ const WinSection = () => {
           return (
             <div
               key={index.toString()}
-              className='flex w-[400px] hover:-translate-y-4 duration-300 flex-col justify-start p-10 rounded-3xl'
-              style={{backgroundColor:'#11D9C580'}}
+              className='flex w-[400px] hover:-translate-y-4 duration-300 flex-col justify-start p-8 rounded-[50px] '
+              style={customStyles[index % customStyles.length]}
             >
               <Image
                 src={`/images/${item.image}.jpeg`}
                 alt='pic'
-                className='object-cover overflow-clip mb-6 rounded-xl'
+                className='object-cover overflow-clip mb-6 rounded-[20px]'
                 width={400}
                 height={320}
               />

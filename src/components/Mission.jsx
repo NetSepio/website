@@ -62,7 +62,7 @@ const Mission = () => {
               >
                 Empowering Connectivity
               </h3>
-              <p className='text-base sm:text-[18px] text-white font-thin lg:text-start md:text-start text-center p-10 lg:p-0 md:p-0'>
+              <p className='text-base sm:text-[18px] text-white font-thin lg:text-start lg:text-[24px] md:text-start text-center p-10 lg:p-0 md:p-0'>
               NetSepio is revolutionizing internet access through the power of DePIN, empowering anyone to set up a VPN node and share their internet bandwidth, thus fostering a network that is both secure and universally accessible. By combining decentralized VPN (ÐVPN) and decentralized Wi-Fi (ÐWi-Fi) technologies, our mission is to make the internet safer, more private, and available to everyone.
               </p>
               <CustomBtn link='/mission' title={"Our Mission"} />
@@ -83,10 +83,10 @@ const Mission = () => {
 
               <h6
                   style={roboto.style}
-                  className='text-sm leading-tight text-center bottom-4 mt-4 z-20 text-white w-2/3 justify-center items-center flex'
+                  className='text-sm leading-tight font-light px-10 lg:text-[16px] text-center bottom-4 mt-4 z-20 text-white w-2/3 justify-center items-center flex'
                 >
                   {" "}
-                  Everyone is a provider and consumer. Welcome to the future. 
+                  Everyone is a provider and consumer.<br/> Welcome to the future. 
                 </h6>
               
             </div>

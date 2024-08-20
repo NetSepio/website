@@ -21,7 +21,7 @@ const WinnersPage = () => {
     <div className="bg-[#040A20] text-white py-40">
       <h1 className="lg:text-5xl md:text-5xl text-3xl text-center mb-20">Join the Winners!</h1>
       <div className="w-full mx-auto flex lg:flex-row md:flex-row flex-col justify-center items-center">
-        <div className="w-80 relative h-80 rounded-2xl lg:block md:block hidden"
+        <div className="lg:w-[420px] relative h-80 rounded-2xl lg:block md:block hidden"
         style={{ background: 'linear-gradient(to bottom, #FFFFFF, #FFFFFF)' }}>
           {achievements.map((item, index) => (
             <div 
@@ -49,9 +49,9 @@ const WinnersPage = () => {
             <a 
               key={index} 
               href="#" 
-              className="block hover:text-blue-300 text-white hover:text-blue-200 transition-colors duration-300 mt-10 lg:ml-20 md:ml-20 lg:text-xl md:text-xl text-sm"
+              className="block hover:text-blue-300 text-white  font-normal  transition-colors duration-300  lg:ml-20 md:ml-20 lg:text-[30px] md:text-xl text-sm"
             >
-              {item.prize} <span className="text-blue-300">↗</span>
+              {item.prize} <span className="text-[#13D9C6]">↗</span>
             </a>
           ))}
         </div>
