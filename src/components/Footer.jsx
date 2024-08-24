@@ -45,7 +45,7 @@ const Footer = () => {
             <Link
               target="_blank"
               className="hover:scale-110 duration-150"
-              href={"https://t.me/NetSepio?boost "}
+              href={"https://t.me/NetSepio"}
             >
               <Image
                 src={"/images/tele_green.svg"}
