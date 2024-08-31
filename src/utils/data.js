@@ -66,22 +66,22 @@ export const cardDetails2 = [
 ];
 export const privacyData = [
   {
-    image: "filter.svg",
+    image: "item1.png",
     title: "DNS Filtering",
-    desc: "Both AdGuard Home and Pi-Hole offer robust DNS filtering that blocks ads, tracking cookies, and malicious links across the entire network.",
+    desc: "AdGuard Home and Pi-Hole provide robust DNS filtering to block ads, tracking cookies, and malicious links network-wide.",
   },
   {
-    image: "customize.svg",
+    image: "item2.png",
     title: "Customizeable Control",
-    desc: "Administrators can tailor filtering rules, including blacklists and whitelists, to meet specific security and browsing needs.",
+    desc: "Administrators can customize filtering rules, including blacklists and whitelists, to suit specific security and browsing requirements.",
   },
   {
-    image: "network.svg",
+    image: "item3.png",
     title: "Network Level Protection",
-    desc: "Ensures all devices connected to the network are protected from unwanted content and cyber threats, regardless of their operating system or hardware.",
+    desc: "Administrators can customize filtering rules, including blacklists and whitelists, to suit specific security and browsing requirements.",
   },
   {
-    image: "enhance.svg",
+    image: "item4.png",
     title: "Enhanced Network Performance",
     desc: "Tools block intrusive ads and harmful domains, reducing page load times and saving bandwidth for a smoother, faster browsing experience..",
   },
@@ -110,24 +110,24 @@ export const erebrusData = [
 ];
 export const sotreusFeatures = [
   {
-    image: "functionality.svg",
+    image: "feature1.png",
     title: "Comprehensive Functionality",
-    desc: "It offers APIs that make it easier to set up, configure, and manage your WireGuard VPN, including distributing client files to users. The APIs abstract away much of the complexity of VPN operations.",
+    desc: "Benefit from a global network of decentralized VPN nodes for increased reliability and censorship resistance. Access a vast network of Wi-Fi hotspots operated by independent providers with better price and reliability.",
   },
   {
-    image: "integration.svg",
+    image: "feature2.png",
     title: "Easy Integration",
-    desc: "Work seamlessly with WireGuard VPN services, allowing users to integrate and manage their VPN networks with ease.",
+    desc: "Benefit from a global network of decentralized VPN nodes for increased reliability and censorship resistance. Access a vast network of Wi-Fi hotspots operated by independent providers with better price and reliability.",
   },
   {
-    image: "deployment.svg",
+    image: "feature3.png",
     title: "Easy Deployment",
-    desc: "Seamless adaptation to various environments, enabling easy scaling and customization to meet specific needs without disrupting operations.",
+    desc: "Benefit from a global network of decentralized VPN nodes for increased reliability and censorship resistance. Access a vast network of Wi-Fi hotspots operated by independent providers with better price and reliability.",
   },
   {
-    image: "private.svg",
+    image: "feature4.png",
     title: "Secure and Private",
-    desc: "Built on the secure and privacy-focused WireGuard VPN protocol, ensuring your VPN network remains safe.",
+    desc: "Benefit from a global network of decentralized VPN nodes for increased reliability and censorship resistance. Access a vast network of Wi-Fi hotspots operated by independent providers with better price and reliability.",
   },
 ];
 export const erebrusFeatures = [
