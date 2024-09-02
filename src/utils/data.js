@@ -25,8 +25,8 @@ export const cardDetails = [
   {
     image: "pix_4",
     title: "Mobile App",
-    link: "https://drive.google.com/file/d/1jdkqwIXY825iG3shRRoFyg5SMGy6LN8J/view?usp=drive_link",
-    button: "Download now",
+    link: "mobile",
+    button: "Learn more",
 
     desc: "Empower your online activity with our Erebrus mobile app for secure, private and accessible network. We utilize NFTs for robust privacy and decentralization.",
   },
@@ -34,9 +34,8 @@ export const cardDetails = [
     image: "pix_3",
     // title: "Reliable Uptime,<br/><br/> Fast connectivity",
     title: "Sotreus",
-    // link: "/",
-    link: "#",
-    button: "Coming soon",
+    link: "sotreus",
+    button: "Learn more",
     desc: "Redefined digital connectivity for enterprises. Unleash the future of internet with a secure and private network with firewall and dedicated ÐVPN.",
   },
   {

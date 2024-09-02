@@ -7,9 +7,9 @@ const Index = () => {
   return (
     <div className='bg-primary w-full pt-[17vh] md:pt-[20vh] flex flex-col items-center h-auto'>
       <section className='flex flex-col items-center justify-between rounded-[20px] w-[95%] h-[1100px] md:h-[1400px]'>
-        <h2 className='mt-3 md:w-[50%] text-center mb-[4%] text-white font-extrabold text-xl md:text-4xl leading-tight'>
-          Secure, Decentralized VPN Service for Enhanced Privacy and Anonymity
-        </h2>
+        <h1 className='text-3xl md:text-5xl max-w-[90%] md:max-w-1/2 text-center font-light lg:mb-10'>
+          Secure, Decentralized VPN Service<br/> for Enhanced Privacy and Anonymity
+        </h1>
         <div className='w-[90vw]  h-[90%] relative'>
           <Image
             src={"/images/erebrus/hero.png"}
@@ -17,12 +17,19 @@ const Index = () => {
             alt='hero'
             fill
           />
+           <Image
+            src="/images/erebrus/erebruslogo.png"
+            className="absolute top-1/2 transform left-10 md:left-10 -translate-y-1/2 w-[40vw] md:w-[25vw] h-auto"
+            alt="logo"
+            width={1000}
+            height={600}
+          />
         </div>
-        <div className='flex flex-1 gap-[39px] py-20 w-[90vw] items-center mt-[3%] flex-col rounded-3xl' style={{background: 'linear-gradient(to top right, #11D9C580 10%, #64B96840 30%, #141E4380 50%)',}}>
-          <h3 className='font-medium flex text-white text-xl md:text-[40px] md:leading-normal '>
+        <div className='flex flex-1 gap-[39px] py-10 w-[70vw] items-center mt-[3%] flex-col rounded-3xl' style={{background: 'linear-gradient(to top right, #11D9C580 10%, #64B96840 30%, #141E4380 50%)',}}>
+          <h1 className='font-medium flex text-white text-xl md:text-2xl md:leading-normal '>
             ABOUT
-          </h3>
-          <p className='md:text-[34px] text-center md:w-[75%] mt-[1%] leading-tight text-xl font-light text-white'>
+          </h1>
+          <p className='md:text-xl text-center md:w-[75%] mt-[1%] leading-tight text-xl font-light text-white'>
           Erebrus is a shared decentralized VPN Service based on the WireGuard 
           Protocol. It is designed to enhance users privacy, anonymity, 
           and security when using Public Wi-Fi. {" "}
@@ -122,8 +129,8 @@ const Index = () => {
 
       </section>
 
-      <section className='mt-[119px] w-[90%] gap-[7vw] flex flex-col'>
-      <div className='w-full h-max flex flex-col md:flex-row gap-[2vw] justify-between'>      
+      <section className='mt-[119px] w-[90%] gap-[7vw] flex flex-col '>
+      <div className='w-full h-max flex flex-col md:flex-row gap-[2vw] justify-between '>      
           <h2 className='font-medium  text-xl text-white md:text-[55px] leading-tight w-1/2'>
           Features of erebrus
           </h2>
