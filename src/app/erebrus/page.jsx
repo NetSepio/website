@@ -3,9 +3,11 @@ import { erebrusFeatures, erebrusFeatures2 } from "@/utils/data";
 import Image from "next/image";
 import React from "react";
 
+
 const Index = () => {
   return (
     <div className='bg-primary w-full pt-[17vh] md:pt-[20vh] flex flex-col items-center h-auto'>
+      <title>Erebrus | NetSepio</title>
       <section className='flex flex-col items-center justify-between rounded-[20px] w-[95%] h-[1100px] md:h-[1400px]'>
         <h1 className='text-3xl md:text-5xl max-w-[90%] md:max-w-1/2 text-center font-light lg:mb-10'>
           Secure, Decentralized VPN Service<br/> for Enhanced Privacy and Anonymity

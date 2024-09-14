@@ -14,6 +14,7 @@ export default function Home() {
   
   return (
     <>
+    <title>Mission | NetSepio</title>
   <main className='flex min-h-screen bg-primary flex-col items-center justify-between p-4 lg:p-8'>
     <section className='w-screen lg:mt-28 mt-20  space-y-8 lg:space-y-[4vh] flex flex-col items-center justify-center h-[542px] bg-cover bg-[url(/global.png)] bg-no-repeat lg:h-[724px]'>
       <h2 className='text-2xl text-white font-semibold md:text-4xl lg:text-6xl text-center '>

@@ -5,8 +5,9 @@ import React from "react";
 
 const Index = () => {
   return (
+    
     <div className='bg-primary w-full py-[16.7vh] flex flex-col items-center h-auto'>
-      
+      <title>Web App | NetSepio</title>
       <div className='h-[90vh] relative flex flex-col py-[5vh] md:py-0 md:flex-row items-center w-full bg-[url(/images/extension/extension_bg.png)] bg-cover bg-white'>
       <div className='absolute right-0 bottom-[40px] md:right-[35%] w-[140px] lg:w-[337px] h-[125px] lg:h-[316px] bg-[#11D9C5] rounded-full blur-3xl opacity-30' />
       <div className='absolute right-0 bottom-0 md:right-[10%] w-[140px] lg:w-[337px] h-[125px] lg:h-[316px] bg-[#11D9C5] rounded-full blur-3xl opacity-30' />

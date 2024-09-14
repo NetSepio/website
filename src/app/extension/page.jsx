@@ -8,6 +8,7 @@ import React from "react";
 const Index = () => {
   return (
     <div className='py-[16.7vh] flex items-center flex-col'>
+      <title>Extension | NetSepio</title>
       <Hero />
       <section className='w-full flex flex-col py-[12vh] items-center h-max'>
         <h2 className='text-cta w-full mb-[6vh] text-center text-2xl font-medium md:text-5xl'>
