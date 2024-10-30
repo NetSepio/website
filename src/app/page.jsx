@@ -52,12 +52,12 @@ export default function Home() {
   return (
     <>
       <main className='flex flex-col  items-center justify-between'>
-        <Link href='/nodeform'>
-          <div
+      <a href="https://docs.google.com/forms/d/1YJ6xhno0EyqSb6vZx0AisFv4D05ocx4Ufb9QKe1X3as/viewform?edit_requested=true" target="_blank" rel="noopener noreferrer">
+      <div
             style={banner}
             className='py-3 text-xs  md:text-base  text-gray-300 text-center'
           >
-            Become a Node Runner and Earn Triple Rewards,&nbsp;
+            Join the movement and earn rewards,&nbsp;
             <span
               className='text-bold'
               style={{
@@ -67,10 +67,10 @@ export default function Home() {
                 color: "#11D9C5",
               }}
             >
-              Join waitlist &nbsp;&#10138;
+              sign up here &nbsp;&#10138;
             </span>
           </div>
-        </Link>
+        </a>
       </main>
       <main className='flex min-h-screen bg-primary flex-col items-center justify-between'>
         <Hero />
