@@ -32,7 +32,7 @@ const Hero = () => {
         Pioneering Social DePIN
         </h3>
         <p className='text-lg lg:text-xl md:text-xl max-w-[100%] leading-tight text-white mt-10'>
-        NetSepio puts the power back to the people by providing a secure, private and uncensored decentralized internet protocol.
+        NetSepio puts the power back to the people by providing a secure, private <br/>and uncensored decentralized internet protocol.
         </p>
         <div className='flex items-center mt-[60px] gap-[26px]'>
           <CustomBtn link='https://app.netsepio.com' title={"Explore Webapp"} />
