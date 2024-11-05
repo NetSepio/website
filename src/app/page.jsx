@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <>
       <main className='flex flex-col  items-center justify-between'>
-      <a href="https://docs.google.com/forms/d/1YJ6xhno0EyqSb6vZx0AisFv4D05ocx4Ufb9QKe1X3as/viewform?edit_requested=true" target="_blank" rel="noopener noreferrer">
+      <a href="https://netsepio.substack.com/p/cypherpunk-rewards-program-join-the?r=3m9sxn&utm_campaign=post&utm_medium=web&triedRedirect=true" target="_blank" rel="noopener noreferrer">
       <div
             style={banner}
             className='py-3 text-xs  md:text-base  text-gray-300 text-center'
