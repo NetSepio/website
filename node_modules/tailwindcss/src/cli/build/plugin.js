@@ -12,12 +12,13 @@ import { loadAutoprefixer, loadCssNano, loadPostcss, loadPostcssImport } from '.
 import { formatNodes, drainStdin, outputFile } from './utils'
 import { env } from '../../lib/sharedState'
 import resolveConfig from '../../../resolveConfig.js'
-import getModuleDependencies from '../../lib/getModuleDependencies.js'
-import { parseCandidateFiles } from '../../lib/content.js'
+import { createBroadPatternCheck, parseCandidateFiles } from '../../lib/content.js'
 import { createWatcher } from './watching.js'
 import fastGlob from 'fast-glob'
 import { findAtConfigPath } from '../../lib/findAtConfigPath.js'
 import log from '../../util/log'
+import { loadConfig } from '../../lib/load-config'
+import getModuleDependencies from '../../lib/getModuleDependencies'
 
 /**
  *
@@ -117,7 +118,9 @@ let state = {
   /** @type {{content: string, extension: string}[]} */
   changedContent: [],
 
-  configDependencies: new Set(),
+  /** @type {ReturnType<typeof load> | null} */
+  configBag: null,
+
   contextDependencies: new Set(),
 
   /** @type {import('../../lib/content.js').ContentPath[]} */
@@ -142,37 +145,35 @@ let state = {
 
   loadConfig(configPath, content) {
     if (this.watcher && configPath) {
-      this.refreshConfigDependencies(configPath)
+      this.refreshConfigDependencies()
     }
 
-    let config = configPath ? require(configPath) : {}
+    let config = loadConfig(configPath)
+    let dependencies = getModuleDependencies(configPath)
+    this.configBag = {
+      config,
+      dependencies,
+      dispose() {
+        for (let file of dependencies) {
+          delete require.cache[require.resolve(file)]
+        }
+      },
+    }
 
     // @ts-ignore
-    config = resolveConfig(config, { content: { files: [] } })
+    this.configBag.config = resolveConfig(this.configBag.config, { content: { files: [] } })
 
     // Override content files if `--content` has been passed explicitly
     if (content?.length > 0) {
-      config.content.files = content
+      this.configBag.config.content.files = content
     }
 
-    return config
+    return this.configBag.config
   },
 
-  refreshConfigDependencies(configPath) {
+  refreshConfigDependencies() {
     env.DEBUG && console.time('Module dependencies')
-
-    for (let file of this.configDependencies) {
-      delete require.cache[require.resolve(file)]
-    }
-
-    if (configPath) {
-      let deps = getModuleDependencies(configPath).map(({ file }) => file)
-
-      for (let dependency of deps) {
-        this.configDependencies.add(dependency)
-      }
-    }
-
+    this.configBag?.dispose()
     env.DEBUG && console.timeEnd('Module dependencies')
   },
 
@@ -183,18 +184,15 @@ let state = {
     // TODO: When we make the postcss plugin async-capable this can become async
     let files = fastGlob.sync(this.contentPatterns.all)
 
+    let checkBroadPattern = createBroadPatternCheck(this.contentPatterns.all)
+
     for (let file of files) {
-      if (env.OXIDE) {
-        content.push({
-          file,
-          extension: path.extname(file).slice(1),
-        })
-      } else {
-        content.push({
-          content: fs.readFileSync(path.resolve(file), 'utf8'),
-          extension: path.extname(file).slice(1),
-        })
-      }
+      checkBroadPattern(file)
+
+      content.push({
+        content: fs.readFileSync(path.resolve(file), 'utf8'),
+        extension: path.extname(file).slice(1),
+      })
     }
 
     // Resolve raw content in the tailwind config
@@ -210,15 +208,15 @@ let state = {
   },
 
   getContext({ createContext, cliConfigPath, root, result, content }) {
+    env.DEBUG && console.time('Searching for config')
+    let configPath = findAtConfigPath(root, result) ?? cliConfigPath
+    env.DEBUG && console.timeEnd('Searching for config')
+
     if (this.context) {
       this.context.changedContent = this.changedContent.splice(0)
 
       return this.context
     }
-
-    env.DEBUG && console.time('Searching for config')
-    let configPath = findAtConfigPath(root, result) ?? cliConfigPath
-    env.DEBUG && console.timeEnd('Searching for config')
 
     env.DEBUG && console.time('Loading config')
     let config = this.loadConfig(configPath, content)
@@ -277,9 +275,9 @@ export async function createProcessor(args, cliConfigPath) {
   let tailwindPlugin = () => {
     return {
       postcssPlugin: 'tailwindcss',
-      Once(root, { result }) {
+      async Once(root, { result }) {
         env.DEBUG && console.time('Compiling CSS')
-        tailwind(({ createContext }) => {
+        await tailwind(({ createContext }) => {
           console.error()
           console.error('Rebuilding...')
 
@@ -324,7 +322,7 @@ export async function createProcessor(args, cliConfigPath) {
       return fs.promises.readFile(path.resolve(input), 'utf8')
     }
 
-    // No input file provided, fallback to default atrules
+    // No input file provided, fallback to default at-rules
     return '@tailwind base; @tailwind components; @tailwind utilities'
   }
 
@@ -383,7 +381,11 @@ export async function createProcessor(args, cliConfigPath) {
           // The watcher will start watching the imported CSS files and will be
           // resilient to future errors.
 
-          console.error(err)
+          if (state.watcher) {
+            console.error(err)
+          } else {
+            return Promise.reject(err)
+          }
         }
       )
   }
@@ -416,7 +418,7 @@ export async function createProcessor(args, cliConfigPath) {
         async rebuild(changes) {
           let needsNewContext = changes.some((change) => {
             return (
-              state.configDependencies.has(change.file) ||
+              state.configBag?.dependencies.has(change.file) ||
               state.contextDependencies.has(change.file)
             )
           })
