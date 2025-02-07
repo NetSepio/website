@@ -30,7 +30,6 @@ const NavBar = () => {
             alt="NetSepio-Logo"
             style={{
               height: "35px",
-              
             }}
           />
         </div>
@@ -69,7 +68,7 @@ const NavBar = () => {
                 {["Link1", "Link2", "Link3"].map((link, index) => (
                   <li key={index} style={{ borderBottom: "1px solid #ddd" }}>
                     <a
-                      href="#"
+                      href="https://google.com"
                       style={{
                         display: "block",
                         padding: "10px",
