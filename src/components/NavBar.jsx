@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen] = useState(false);
   return (
     <div
       style={{
@@ -36,7 +36,7 @@ const NavBar = () => {
         <div>
           {/* Explore Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            // onClick={() => setIsOpen(!isOpen)}
             style={{
                 padding: "15px 30px",
                 border: "2px solid #11D9C5",

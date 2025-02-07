@@ -115,21 +115,37 @@ const Cypherpunk = () => {
             </h3>
           </div>
         </div>
-        <div style={{display: "flex", justifyContent: "center", alignItems: "center", gap: "2rem", marginTop: "2rem"}}>
-          <h2 style={{fontSize: "2rem", color: "#11D9C5"}}>CLAIM YOUR ROLE AND EARN REWARDS</h2>
-          <button
-            style={{
-              padding: "15px 30px",
-              backgroundColor: "#11D9C5",
-              color: "black",
-              borderRadius: "10px",
-              fontSize: "1rem",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "2rem",
+            marginTop: "2rem",
+          }}
+        >
+          <h2 style={{ fontSize: "2rem", color: "#11D9C5" }}>
+            CLAIM YOUR ROLE AND EARN REWARDS
+          </h2>
+          <a
+            href="https://netsepio.substack.com/p/cypherpunk-rewards-program-join-the"
+            target="_blank"
+            rel="noreferrer"
           >
-            JOIN NOW
-          </button>
+            <button
+              style={{
+                padding: "15px 30px",
+                backgroundColor: "#11D9C5",
+                color: "black",
+                borderRadius: "10px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+                cursor: "pointer",
+              }}
+            >
+              JOIN NOW
+            </button>
+          </a>
         </div>
       </div>
     </div>

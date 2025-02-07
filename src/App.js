@@ -7,6 +7,8 @@ import Cypherpunk from "./components/Cypherpunk";
 import Winners from "./components/Winner";
 import Technology from "./components/Technology";
 import Subscribe from "./components/Subscribe";
+import Footer from "./components/Footer";
+import Success from "./components/Success";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
       <Cypherpunk />
       <Winners />
       <Technology />
+      <Success />
       <Subscribe />
+      <Footer />
     </div>
   );
 }

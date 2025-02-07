@@ -9,7 +9,7 @@ const Technology = () => {
         width: "100%",
       }}
     >
-      <div>
+      <div style={{paddingBottom: "10rem"}}>
         <h1
           style={{
             color: "#fff",

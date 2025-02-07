@@ -41,34 +41,46 @@ const Cyrene = () => {
             marginTop: "3rem",
           }}
         >
-          <button
-            style={{
-              padding: "15px 30px",
-              border: "2px solid white",
-              backgroundColor: "transparent",
-              color: "white",
-              borderRadius: "10px",
-              fontSize: "1rem",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
+          <a
+            href="https://www.cyreneai.com/"
+            target="_blank"
+            rel="noreferrer"
           >
-            Website
-          </button>
-          <button
-            style={{
-              padding: "15px 30px",
-              border: "2px solid white",
-              backgroundColor: "transparent",
-              color: "white",
-              borderRadius: "10px",
-              fontSize: "1rem",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
+            <button
+              style={{
+                padding: "15px 30px",
+                border: "2px solid white",
+                backgroundColor: "transparent",
+                color: "white",
+                borderRadius: "10px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+                cursor: "pointer",
+              }}
+            >
+              Website
+            </button>
+          </a>
+          <a
+            href="https://x.com/CyreneAI"
+            target="_blank"
+            rel="noreferrer"
           >
-            Follow us on X
-          </button>
+            <button
+              style={{
+                padding: "15px 30px",
+                border: "2px solid white",
+                backgroundColor: "transparent",
+                color: "white",
+                borderRadius: "10px",
+                fontSize: "1rem",
+                fontWeight: "bold",
+                cursor: "pointer",
+              }}
+            >
+              Follow us on X
+            </button>
+          </a>
         </div>
       </div>
     </div>

@@ -35,35 +35,49 @@ const Erebrus = () => {
             gap: "5rem",
           }}
         >
-          <div style={{display: "flex", flexDirection: "column", gap: "3rem"}}>
-            <button
-              style={{
-                padding: "15px 30px",
-                border: "2px solid white",
-                backgroundColor: "#ccc",
-                color: "black",
-                borderRadius: "10px",
-                fontSize: "1rem",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "3rem" }}
+          >
+            <a
+              href="https://play.google.com/store/apps/details?id=com.erebrus.app"
+              target="_blank"
+              rel="noreferrer"
             >
-              Play Store
-            </button>
-            <button
-              style={{
-                padding: "15px 30px",
-                border: "2px solid white",
-                backgroundColor: "#ccc",
-                color: "black",
-                borderRadius: "10px",
-                fontSize: "1rem",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
+              <button
+                style={{
+                  padding: "15px 30px",
+                  border: "2px solid white",
+                  backgroundColor: "#ccc",
+                  color: "black",
+                  borderRadius: "10px",
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
+              >
+                Play Store
+              </button>
+            </a>
+            <a
+              href="https://testflight.apple.com/join/BvdARC75"
+              target="_blank"
+              rel="noreferrer"
             >
-              iOS Test Flight
-            </button>
+              <button
+                style={{
+                  padding: "15px 30px",
+                  border: "2px solid white",
+                  backgroundColor: "#ccc",
+                  color: "black",
+                  borderRadius: "10px",
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
+              >
+                iOS Test Flight
+              </button>
+            </a>
             <button
               style={{
                 padding: "15px 30px",
@@ -75,6 +89,7 @@ const Erebrus = () => {
                 fontWeight: "bold",
                 cursor: "pointer",
               }}
+              disabled
             >
               Web App
             </button>

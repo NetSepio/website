@@ -48,34 +48,42 @@ const Hero = () => {
               gap: "2rem",
             }}
           >
-            <button
-              style={{
-                padding: "15px 30px",
-                border: "2px solid #11D9C5",
-                backgroundColor: "transparent",
-                color: "white",
-                borderRadius: "10px",
-                fontSize: "1rem",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
+            <a href="https://x.com/netsepio" target="_blank" rel="noreferrer">
+              <button
+                style={{
+                  padding: "15px 30px",
+                  border: "2px solid #11D9C5",
+                  backgroundColor: "transparent",
+                  color: "white",
+                  borderRadius: "10px",
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
+              >
+                Follow on X
+              </button>
+            </a>
+            <a
+              href="https://discordapp.com/invite/5uaFhNpRF6"
+              target="_blank"
+              rel="noreferrer"
             >
-              Follow on X
-            </button>{" "}
-            <button
-              style={{
-                padding: "15px 30px",
-                border: "2px solid #11D9C5",
-                backgroundColor: "transparent",
-                color: "white",
-                borderRadius: "10px",
-                fontSize: "1rem",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-            >
-              Join Discord
-            </button>
+              <button
+                style={{
+                  padding: "15px 30px",
+                  border: "2px solid #11D9C5",
+                  backgroundColor: "transparent",
+                  color: "white",
+                  borderRadius: "10px",
+                  fontSize: "1rem",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                }}
+              >
+                Join Discord
+              </button>
+            </a>
           </div>
         </div>
 
