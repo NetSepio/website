@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Navbar.css"; // Import the external CSS file
 
 const NavBar = () => {
   const [isOpen, setOpenState] = useState(false);
+  const navigate = useNavigate();
   const dropDownLinks = [
     "https://erebrus.io/",
     "https://www.cyreneai.com/",
@@ -11,7 +13,11 @@ const NavBar = () => {
   return (
     <div className="navbar-container">
       <div className="navbar-content">
-        <div className="navbar-logo">
+        <div
+          className="navbar-logo"
+          onClick={() => navigate("/")}
+          style={{ cursor: "pointer" }}
+        >
           <img
             src="/images/Logo.png"
             alt="NetSepio-Logo"
@@ -37,7 +43,12 @@ const NavBar = () => {
                 {["Erebrus", "CyreneAI", "Browser Extension"].map(
                   (link, index) => (
                     <li key={index} className="dropdown-item">
-                      <a href={dropDownLinks[index]} target="_blank" className="dropdown-link">
+                      <a
+                        href={dropDownLinks[index]}
+                        target="_blank"
+                        className="dropdown-link"
+                        rel="noreferrer"
+                      >
                         {link}
                       </a>
                     </li>

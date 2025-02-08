@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer-container">
-        <div style={{paddingTop: "3rem"}}>
+        <div style={{ paddingTop: "3rem" }}>
           <img src="/images/Logo.png" alt="NetSepio-Logo" className="logo" />
           <img
             src="/assets/NetSepio.svg"
@@ -21,13 +21,11 @@ const Footer = () => {
 
         <div className="footer-section">
           <h1 className="footer-heading">About</h1>
-          {["Mission", "Privacy Policy", "Terms of Use", "FAQ's"].map(
+          {["Mission", "Privacy Policy", "Terms of Use", "FAQ"].map(
             (item, index) => (
               <a
                 key={index}
-                href={`https://netsepio.com/${item
-                  .toLowerCase()
-                  .replace(" ", "")}`}
+                href={`/${item.toLowerCase().replace(/\s+/g, "-")}`} // Replaces all spaces with '-'
                 target="_blank"
                 rel="noreferrer"
                 className="footer-link"
