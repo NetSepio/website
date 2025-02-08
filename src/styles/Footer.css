@@ -9,8 +9,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-  width: 100%;
-  max-width: 1200px;
+  width: 70%;
+
   margin: 0 auto;
   padding: 2rem 0;
 }

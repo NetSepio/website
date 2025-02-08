@@ -23,7 +23,7 @@
 
 /* Explore Button */
 .explore-button {
-  padding: 15px 30px;
+  padding: 15px 40px;
   border: 2px solid #11d9c5;
   background-color: transparent;
   color: white;
@@ -37,11 +37,12 @@
 .dropdown-menu {
   position: absolute;
   top: 75px;
-  right: 31px;
-  background-color: white;
+  right: 120px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 150px;
+  background-color: #040A20;
+  cursor: pointer;
 }
 
 /* Dropdown List */
@@ -51,16 +52,12 @@
   padding: 0;
 }
 
-/* Dropdown Items */
-.dropdown-item {
-  border-bottom: 1px solid #ddd;
-}
-
 .dropdown-link {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: #333;
+  color: white;
+  cursor: pointer;
 }
 
 /* Responsive Styles */
