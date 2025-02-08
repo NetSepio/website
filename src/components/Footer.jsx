@@ -1,306 +1,120 @@
 import React from "react";
+import "../styles/Footer.css";
 
 const Footer = () => {
   return (
-    <div
-      style={{
-        background: "url(/images/Footer.png)",
-      }}
-    >
-      <div
-        style={{
-          width: "70%",
-          margin: "0 auto",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "2rem 0",
-        }}
-      >
-        <div>
-          <img
-            src="/images/Logo.png"
-            alt="NetSepio-Logo"
-            style={{
-              height: "45px",
-            }}
-          />
+    <div className="footer">
+      <div className="footer-container">
+        <div style={{paddingTop: "3rem"}}>
+          <img src="/images/Logo.png" alt="NetSepio-Logo" className="logo" />
           <img
             src="/assets/NetSepio.svg"
             alt="NetSepio-Logo"
-            style={{
-              height: "35px",
-            }}
+            className="netsepio-logo"
           />
-          <h1
-            style={{
-              fontSize: "1.2rem",
-              color: "white",
-              fontWeight: "normal",
-              paddingTop: "2rem",
-            }}
-          >
+          <h1 className="footer-description">
             NetSepio delivers private, secure, <br /> and censorship-free
             internet with <br />
             an AI coordination layer, shaping <br /> an agentic future.
           </h1>
         </div>
-        <div>
-          <h1
-            style={{
-              fontSize: "2rem",
-              color: "white",
-              fontWeight: "normal",
-              paddingTop: "2rem",
-            }}
-          >
-            About
-          </h1>
-          <a
-            href="https://netsepio.com/mission"
-            target="_blank"
-            rel="noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "white",
-                fontWeight: "normal",
-              }}
-            >
-              Mission <img src="/images/arrow.png" alt="up-arrrow" />
-            </p>
-          </a>
-          <a
-            href="https://netsepio.com/privacy"
-            target="_blank"
-            rel="noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "white",
-                fontWeight: "normal",
-              }}
-            >
-              Privacy Policy <img src="/images/arrow.png" alt="up-arrrow" />
-            </p>
-          </a>
-          <a
-            href="https://netsepio.com/terms"
-            target="_blank"
-            rel="noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "white",
-                fontWeight: "normal",
-              }}
-            >
-              Terms of use <img src="/images/arrow.png" alt="up-arrrow" />
-            </p>
-          </a>
-          <a
-            href="https://netsepio.com/faq"
-            target="_blank"
-            rel="noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "white",
-                fontWeight: "normal",
-              }}
-            >
-              FAQ's <img src="/images/arrow.png" alt="up-arrrow" />
-            </p>
-          </a>
+
+        <div className="footer-section">
+          <h1 className="footer-heading">About</h1>
+          {["Mission", "Privacy Policy", "Terms of Use", "FAQ's"].map(
+            (item, index) => (
+              <a
+                key={index}
+                href={`https://netsepio.com/${item
+                  .toLowerCase()
+                  .replace(" ", "")}`}
+                target="_blank"
+                rel="noreferrer"
+                className="footer-link"
+              >
+                {item} <img src="/images/arrow.png" alt="up-arrow" />
+              </a>
+            )
+          )}
         </div>
-        <div>
-          <h1
-            style={{
-              fontSize: "2rem",
-              color: "white",
-              fontWeight: "normal",
-              paddingTop: "0",
-            }}
-          >
-            Products
-          </h1>
-          <a
-            href="https://erebrus.io/"
-            target="_blank"
-            rel="noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "white",
-                fontWeight: "normal",
-              }}
+
+        <div className="footer-section">
+          <h1 className="footer-heading">Products</h1>
+          {[
+            { name: "Erebrus", url: "https://erebrus.io/" },
+            { name: "Cyrene AI", url: "https://www.cyreneai.com/" },
+            {
+              name: "Browser Extension",
+              url: "https://chromewebstore.google.com/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd",
+            },
+          ].map((product, index) => (
+            <a
+              key={index}
+              href={product.url}
+              target="_blank"
+              rel="noreferrer"
+              className="footer-link"
             >
-              Erebrus <img src="/images/arrow.png" alt="up-arrrow" />
-            </p>
-          </a>
-          <a
-            href="https://www.cyreneai.com/"
-            target="_blank"
-            rel="noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "white",
-                fontWeight: "normal",
-              }}
-            >
-              Cyrene AI <img src="/images/arrow.png" alt="up-arrrow" />
-            </p>
-          </a>
-          <a
-            href="https://chromewebstore.google.com/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd"
-            target="_blank"
-            rel="noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <p
-              style={{
-                fontSize: "1.2rem",
-                color: "white",
-                fontWeight: "normal",
-                paddingBottom: "1rem"
-              }}
-            >
-              Browser Extension
-              <img src="/images/arrow.png" alt="up-arrrow" />
-            </p>
-          </a>
+              {product.name} <img src="/images/arrow.png" alt="up-arrow" />
+            </a>
+          ))}
         </div>
-        <div>
-          <h1
-            style={{
-              fontSize: "2rem",
-              color: "white",
-              fontWeight: "normal",
-              paddingTop: "2rem",
-            }}
-          >
-            Connect
-          </h1>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginLeft: "-0.5rem",
-            }}
-          >
-            <a
-              href="https://t.me/NetSepio"
-              target="_blank"
-              rel="noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <img
-                src="/images/Telegram.png"
-                alt="Telegram"
-                style={{
-                  borderRadius: "20px",
-                }}
-              />
-            </a>
-            <a
-              href="https://github.com/Netsepio"
-              target="_blank"
-              rel="noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <img
-                src="/images/Github.png"
-                alt="Github"
-                style={{
-                  borderRadius: "20px",
-                }}
-              />
-            </a>
-            <a
-              href="https://discordapp.com/invite/5uaFhNpRF6"
-              target="_blank"
-              rel="noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <img
-                src="/images/Discord.png"
-                alt="Discord"
-                style={{
-                  borderRadius: "20px",
-                }}
-              />
-            </a>
+
+        <div className="footer-section">
+          <h1 className="footer-heading">Connect</h1>
+          <div className="social-links">
+            {[
+              {
+                name: "Telegram",
+                url: "https://t.me/NetSepio",
+                img: "Telegram.png",
+              },
+              {
+                name: "Github",
+                url: "https://github.com/Netsepio",
+                img: "Github.png",
+              },
+              {
+                name: "Discord",
+                url: "https://discordapp.com/invite/5uaFhNpRF6",
+                img: "Discord.png",
+              },
+            ].map((social, index) => (
+              <a key={index} href={social.url} target="_blank" rel="noreferrer">
+                <img
+                  src={`/images/${social.img}`}
+                  alt={social.name}
+                  className="social-icon"
+                />
+              </a>
+            ))}
           </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "left",
-              alignItems: "center",
-              paddingBottom: "2rem",
-            }}
-          >
-            <a
-              href="https://www.linkedin.com/company/netsepio/"
-              target="_blank"
-              rel="noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <img
-                src="/images/Linkedin.png"
-                alt="Linkedin"
-                style={{
-                  marginLeft: "-1rem",
-                  borderRadius: "20px",
-                }}
-              />
-            </a>
-            <a
-              href="https://x.com/netsepio"
-              target="_blank"
-              rel="noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <img
-                src="/images/X.png"
-                alt="X"
-                style={{
-                  borderRadius: "20px",
-                  marginLeft: "-1rem"
-                }}
-              />
-            </a>
+
+          <div className="social-links">
+            {[
+              {
+                name: "Linkedin",
+                url: "https://www.linkedin.com/company/netsepio/",
+                img: "Linkedin.png",
+              },
+              { name: "X", url: "https://x.com/netsepio", img: "X.png" },
+            ].map((social, index) => (
+              <a key={index} href={social.url} target="_blank" rel="noreferrer">
+                <img
+                  src={`/images/${social.img}`}
+                  alt={social.name}
+                  className="social-icon"
+                />
+              </a>
+            ))}
           </div>
         </div>
       </div>
-      <div style={{ width: "70%", margin: "0 auto", marginBottom: "2rem" }}>
-        <hr style={{ border: "1px solid #11D9C5" }} />
-      </div>
-      <div>
-        <h1
-          style={{
-            color: "#11D9C5",
-            fontSize: "1rem",
-            width: "70%",
-            margin: "0 auto",
-            paddingBottom: "2rem",
-          }}
-        >
-          © 2025 - NetSepio. All rights reserved.
-        </h1>
+
+      <div className="footer-divider"></div>
+
+      <div className="footer-bottom">
+        <h1 className="footer-copy">© 2025 - NetSepio. All rights reserved.</h1>
       </div>
     </div>
   );

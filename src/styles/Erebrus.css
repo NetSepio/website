@@ -1,0 +1,127 @@
+/* Main Container */
+.erebrus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #040a20;
+  text-align: center;
+  padding-bottom: 10rem;
+}
+
+/* Title */
+.erebrus-title {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 5rem;
+  margin-top: 0;
+}
+
+/* Description */
+.erebrus-text {
+  color: #ccc;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Content Wrapper */
+.erebrus-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* Buttons Container */
+.erebrus-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Button */
+.erebrus-button {
+  padding: 15px 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active Buttons */
+.erebrus-active-button {
+  background-color: #ccc;
+  color: black;
+}
+
+.erebrus-active-button:hover {
+  background-color: white;
+}
+
+/* Disabled Button */
+.erebrus-disabled-button {
+  background-color: transparent;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Image */
+.erebrus-image {
+  border-radius: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+  .erebrus-text {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    padding: 0 1rem;
+  }
+
+  .erebrus-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .erebrus-buttons {
+    gap: 2rem;
+  }
+
+  .erebrus-button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .erebrus-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .erebrus-buttons {
+    gap: 1.5rem;
+  }
+
+  .erebrus-button {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .erebrus-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .erebrus-title {
+    font-size: 2.5rem;
+  }
+}

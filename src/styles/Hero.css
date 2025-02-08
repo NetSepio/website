@@ -1,0 +1,129 @@
+/* Hero Container */
+.hero-container {
+  position: relative;
+  height: 100vh;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(35%);
+}
+
+
+/* Hero Content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  color: white;
+  text-align: left;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-button {
+  padding: 15px 30px;
+  border: 2px solid #11d9c5;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hero Footer */
+.hero-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 11, 33, 0.5),
+    rgba(11, 114, 115, 0.5),
+    rgba(5, 11, 33, 0.5)
+  );
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero-footer-text {
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .hero-content {
+    font-size: 32px;
+    left: 5%;
+  }
+  .hero-footer {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    font-size: 28px;
+    left: 5%;
+  }
+  .hero-buttons {
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .hero-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+  .hero-footer {
+    font-size: 20px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    font-size: 24px;
+    left: 3%;
+    text-align: center;
+    width: 90%;
+  }
+  .hero-buttons {
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+  .hero-footer {
+    font-size: 18px;
+    height: 70px;
+  }
+}

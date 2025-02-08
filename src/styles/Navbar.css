@@ -1,0 +1,125 @@
+/* Navbar Container */
+.navbar-container {
+  background-color: #040a20;
+  padding: 0 8rem;
+}
+
+/* Navbar Content */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+/* Navbar Logo */
+.navbar-logo img {
+  height: 45px;
+}
+
+.netsepio-logo {
+  height: 35px;
+}
+
+/* Explore Button */
+.explore-button {
+  padding: 15px 30px;
+  border: 2px solid #11d9c5;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 75px;
+  right: 31px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 150px;
+}
+
+/* Dropdown List */
+.dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 2rem;
+  }
+
+  .navbar-content {
+    height: 80px;
+  }
+
+  .explore-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-menu {
+    top: 65px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .navbar-content {
+    height: 70px;
+  }
+
+  .navbar-logo img {
+    height: 35px;
+  }
+
+  .netsepio-logo {
+    height: 30px;
+  }
+
+  .explore-button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .dropdown-menu {
+    top: 60px;
+    right: 10px;
+    width: 120px;
+  }
+
+  .dropdown-link {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}

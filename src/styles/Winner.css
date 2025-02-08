@@ -1,0 +1,119 @@
+.winners-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #040a20;
+  text-align: center;
+  padding-bottom: 10rem;
+}
+
+.winners-title {
+  color: #fff;
+  margin-bottom: 100px;
+  font-size: 5rem;
+}
+
+.winners-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 70%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.winners-images {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 40%;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.winner-image {
+  border-radius: 20px;
+  width: 150px;
+}
+
+.winners-links {
+  text-align: left;
+  color: white;
+}
+
+.winner-link {
+  text-decoration: none;
+  color: white;
+}
+
+.winner-link h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.winner-link img {
+  width: 20px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) and (max-width: 1400px) {
+  .winners-images {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .winners-title {
+    font-size: 3.5rem;
+  }
+
+  .winner-image {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .winners-container {
+    padding-bottom: 5rem;
+  }
+
+  .winners-title {
+    font-size: 3rem;
+  }
+
+  .winners-content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .winners-images {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .winner-image {
+    width: 100px;
+  }
+
+  .winners-links {
+    padding: 0 2rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .winners-title {
+    font-size: 2.5rem;
+  }
+
+  .winner-image {
+    width: 80px;
+  }
+
+  .winners-links h2 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Technology.css";
 
 const Technology = () => {
   return (
@@ -9,21 +10,13 @@ const Technology = () => {
         width: "100%",
       }}
     >
-      <div style={{paddingBottom: "10rem"}}>
-        <h1
-          style={{
-            color: "#fff",
-            marginBottom: "150px",
-            fontSize: "5rem",
-            marginTop: "0",
-          }}
-        >
+      <div style={{ paddingBottom: "10rem" }}>
+        <h1 className="technology-title">
           Cutting-Edge Technology
         </h1>
         <div
           style={{
-            width: "100%",
-            height: "100vh", // Full viewport height
+            width: "100%", // Full viewport height
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -34,7 +27,7 @@ const Technology = () => {
             background: `
             radial-gradient(farthest-side, #1D3B57 1%, #64B96830 40%, #11D9C300 100%), 
             linear-gradient(#040a20, #040a20, #141E43)
-          `
+          `,
           }}
         >
           <div
@@ -58,7 +51,7 @@ const Technology = () => {
                   justifyContent: "center",
                 }}
               >
-                <div style={{padding: "40px"}}>
+                <div style={{ padding: "40px" }}>
                   <h1 style={{ fontSize: "2rem", textAlign: "left" }}>
                     Decentralized Peer Discovery
                   </h1>
@@ -67,7 +60,7 @@ const Technology = () => {
                       fontSize: "1.2rem",
                       color: "#ccc",
                       textAlign: "left",
-                      fontWeight: "normal"
+                      fontWeight: "normal",
                     }}
                   >
                     NetSepio builds on blockchain technology, a secure digital

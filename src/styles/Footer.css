@@ -1,0 +1,131 @@
+/* General styles */
+.footer {
+  background: url("../../public/images/Footer.png") no-repeat center center;
+  background-size: cover;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.logo {
+  height: 45px;
+}
+
+.netsepio-logo {
+  height: 35px;
+}
+
+.footer-description {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: normal;
+  padding-top: 2rem;
+}
+
+.footer-heading {
+  font-size: 2rem;
+  color: white;
+  font-weight: normal;
+  padding-top: 2rem;
+}
+
+.footer-link {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.footer-divider {
+  width: 70%;
+  margin: 0 auto;
+  border-top: 1px solid #11d9c5;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.footer-copy {
+  color: #11d9c5;
+  font-size: 1rem;
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  border-radius: 20px;
+  margin-right: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    width: 100%;
+  }
+
+  .footer-heading {
+    font-size: 1.8rem;
+  }
+
+  .footer-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    width: 95%;
+  }
+
+  .footer-heading {
+    font-size: 1.5rem;
+  }
+
+  .footer-description {
+    font-size: 1rem;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    height: 40px;
+  }
+}

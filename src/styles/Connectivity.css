@@ -1,0 +1,92 @@
+/* Main Container */
+.connectivity-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #040a20;
+}
+
+/* Content Box */
+.connectivity-box {
+  border: 2px solid transparent; /* Transparent border to allow gradient effect */
+  border-image: linear-gradient(90deg, #11d9c5, #0071ad) 1;
+  padding: 60px 80px;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Title */
+.connectivity-title {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 3rem;
+}
+
+/* Paragraph Text */
+.connectivity-text {
+  color: #ccc;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.connectivity-button {
+  background-color: #11d9c5;
+  color: #000;
+  padding: 20px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.connectivity-button:hover {
+  background-color: #0fb8a9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .connectivity-box {
+    padding: 40px 50px;
+  }
+
+  .connectivity-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .connectivity-text {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .connectivity-button {
+    padding: 15px 25px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .connectivity-box {
+    padding: 30px 40px;
+  }
+
+  .connectivity-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .connectivity-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .connectivity-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}

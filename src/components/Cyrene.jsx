@@ -1,85 +1,21 @@
 import React from "react";
+import "../styles/Cyrene.css"; // Import external CSS file
 
 const Cyrene = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh", // Full viewport height
-        backgroundColor: "#040a20",
-        textAlign: "center",
-      }}
-    >
-      <div>
-        <h1 style={{ color: "#fff", marginBottom: "50px", fontSize: "5rem" }}>
-          Meet CyreneAI
-        </h1>
-        <p
-          style={{
-            color: "#ccc",
-            fontSize: "2rem",
-            lineHeight: "1.5",
-            marginBottom: "30px",
-          }}
-        >
+    <div className="cyrene-container">
+      <div className="cyrene-content">
+        <h1 className="cyrene-title">Meet CyreneAI</h1>
+        <p className="cyrene-text">
           Multi-Agent Platform and AI Coordination layer on secure VPN network
         </p>
-        <img
-          src="/images/Cyrene.png"
-          alt="NetSepio-Logo"
-          style={{
-            borderRadius: "20px",
-          }}
-        />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "4rem",
-            marginTop: "3rem",
-          }}
-        >
-          <a
-            href="https://www.cyreneai.com/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button
-              style={{
-                padding: "15px 30px",
-                border: "2px solid white",
-                backgroundColor: "transparent",
-                color: "white",
-                borderRadius: "10px",
-                fontSize: "1rem",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-            >
-              Website
-            </button>
+        <img src="/images/Cyrene.png" alt="NetSepio-Logo" className="cyrene-image" />
+        <div className="cyrene-buttons">
+          <a href="https://www.cyreneai.com/" target="_blank" rel="noreferrer">
+            <button className="cyrene-button">Website</button>
           </a>
-          <a
-            href="https://x.com/CyreneAI"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button
-              style={{
-                padding: "15px 30px",
-                border: "2px solid white",
-                backgroundColor: "transparent",
-                color: "white",
-                borderRadius: "10px",
-                fontSize: "1rem",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-            >
-              Follow us on X
-            </button>
+          <a href="https://x.com/CyreneAI" target="_blank" rel="noreferrer">
+            <button className="cyrene-button">Follow us on X</button>
           </a>
         </div>
       </div>
