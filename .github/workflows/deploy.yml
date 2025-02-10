@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - ["react_ui"]
+      - react_ui
 
 permissions:
   contents: read
