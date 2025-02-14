@@ -34,7 +34,7 @@ const Hero = () => {
 
         <div className="hero-footer">
           <div className="hero-footer-text">
-            DVPN and AI Coordination Layer for Privacy and Sovereignty
+          ÐVPN and AI Coordination Layer for Privacy and Sovereignty
           </div>
         </div>
       </div>

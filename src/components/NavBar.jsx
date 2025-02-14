@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Navbar.css"; // Import the external CSS file
+import "../styles/Navbar.css";
 
 const NavBar = () => {
   const [isOpen, setOpenState] = useState(false);

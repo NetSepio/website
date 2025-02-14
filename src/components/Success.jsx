@@ -20,7 +20,7 @@ const Success = () => {
         <img
           src="/images/Success.png"
           alt="Road To Success"
-          style={{ width: "70%" }}
+          style={{ width: "95%" }}
         />
       </div>
     </div>

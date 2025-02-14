@@ -13,12 +13,8 @@
 }
 
 /* Navbar Logo */
-.navbar-logo img {
+.navbar-logo .logo-img {
   height: 45px;
-}
-
-.netsepio-logo {
-  height: 35px;
 }
 
 /* Explore Button */

@@ -58,7 +58,7 @@ const Winners = () => {
                 rel="noreferrer"
                 className="winner-link"
               >
-                <h2>{item.text} <img src="/images/arrow.png" alt="arrow" /></h2>
+                <h2>{item.text} <img src="/images/arrow.png" alt="arrow" style={{width: "35px"}}/></h2>
               </a>
             ))}
             <h2>+ many more!!</h2>
