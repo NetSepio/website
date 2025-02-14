@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
+import { useEffect } from "react";
 import Hero from "./components/Hero";
 import Connectivity from "./components/Connectivity";
 import Cyrene from "./components/Cyrene";
@@ -14,6 +20,17 @@ import Mission from "./pages/Mission";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsofUse";
 import FAQ from "./pages/Faq";
+
+function RedirectHandler() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const path = window.location.search.replace("?", "");
+    if (path) navigate(path);
+  }, [navigate]);
+
+  return null;
+}
 
 function Home() {
   return (
@@ -35,6 +52,7 @@ function Home() {
 function App() {
   return (
     <Router>
+      <RedirectHandler />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mission" element={<Mission />} />
