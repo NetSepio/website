@@ -25,7 +25,7 @@ const Footer = () => {
             (item, index) => (
               <a
                 key={index}
-                href={`/#/${item.toLowerCase().replace(/\s+/g, "-")}`} // Replaces all spaces with '-'
+                href={`/${item.toLowerCase().replace(/\s+/g, "-")}`} // Replaces all spaces with '-'
                 target="_blank"
                 rel="noreferrer"
                 className="footer-link"
