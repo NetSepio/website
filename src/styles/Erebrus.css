@@ -116,12 +116,14 @@
 
 @media (max-width: 1000px) {
   .erebrus-title {
+    padding: 0 1rem;
     font-size: 4rem;
   }
 }
 
 @media (max-width: 576px) {
   .erebrus-title {
+    padding: 0 1rem;
     font-size: 2.5rem;
   }
 }
