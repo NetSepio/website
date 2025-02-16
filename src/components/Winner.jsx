@@ -5,7 +5,7 @@ const Winners = () => {
   return (
     <div className="winners-container">
       <div>
-        <h1 className="winners-title">Join the Winners!!</h1>
+        <h1 className="winners-title">Join the Winners!</h1>
         <div className="winners-content">
           <div className="winners-images">
             {[

@@ -16,9 +16,9 @@
     rgba(56, 132, 254, 0.1) 0%,
     rgba(17, 217, 197, 0.1) 82.62%
   );
-  border: 2px solid transparent;
-  border-image: linear-gradient(90deg, #11d9c5, #0071ad);
+  border: 2px solid #0071ad;
   border-image-slice: 1;
+  border-radius: 40px;
 }
 
 .cypherpunk-title {

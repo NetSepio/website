@@ -2,15 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
   background-color: #040a20;
   text-align: center;
+  padding-top: 7rem;
   padding-bottom: 10rem;
 }
 
 .winners-title {
   color: #fff;
   font-size: 5rem;
+  font-weight: normal;
 }
 
 .winners-content {

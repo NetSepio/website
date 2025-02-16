@@ -31,7 +31,11 @@
   color: white;
   text-align: left;
   font-size: 40px;
-  font-weight: 400;
+  font-weight: normal;
+}
+
+.hero-content h1 {
+  font-weight: normal;
 }
 
 /* Hero Buttons */

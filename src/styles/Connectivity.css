@@ -9,11 +9,11 @@
 
 /* Content Box */
 .connectivity-box {
-  border: 2px solid transparent; /* Transparent border to allow gradient effect */
-  border-image: linear-gradient(90deg, #11d9c5, #0071ad) 1;
+  border: 3px solid #0071ad; /* Transparent border to allow gradient effect */
   padding: 60px 80px;
   text-align: center;
   max-width: 600px;
+  border-radius: 40px;
 }
 
 /* Title */
