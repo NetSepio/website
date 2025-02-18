@@ -20,6 +20,7 @@ import Mission from "./pages/Mission";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsofUse";
 import FAQ from "./pages/Faq";
+import "./App.css"
 
 function RedirectHandler() {
   const navigate = useNavigate();

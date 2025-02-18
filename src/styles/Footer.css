@@ -73,11 +73,12 @@
 .social-links {
   display: flex;
   align-items: center;
+  margin-left: -.5rem;
 }
 
 .social-icon {
   border-radius: 20px;
-  margin-right: 1rem;
+  margin-right: 1.4rem;
 }
 
 /* Responsive Design */

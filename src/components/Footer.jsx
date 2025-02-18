@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
             ))}
           </div>
-
+            <br />
           <div className="social-links">
             {[
               {

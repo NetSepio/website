@@ -12,7 +12,7 @@
 .erebrus-title {
   color: #fff;
   margin-bottom: 50px;
-  font-size: 5rem;
+  font-size: 4rem;
   margin-top: 0;
   font-weight: normal;
 }
@@ -20,7 +20,7 @@
 /* Description */
 .erebrus-text {
   color: #ccc;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.5;
   margin-bottom: 30px;
 }

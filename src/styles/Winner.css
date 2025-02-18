@@ -10,7 +10,7 @@
 
 .winners-title {
   color: #fff;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: normal;
 }
 
@@ -49,6 +49,7 @@
 }
 
 .winner-link h2 {
+  font-weight: normal;
   display: flex;
   align-items: center;
   gap: 8px;
