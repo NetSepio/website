@@ -1,10 +1,11 @@
 import React from "react";
 import "../styles/Erebrus.css";
+import { FadeUp } from "./FadeAnimations";
 
 const Erebrus = () => {
   return (
     <div className="erebrus-container">
-      <div>
+      <FadeUp>
         <h1 className="erebrus-title">Erebrus Decentralized VPN</h1>
         <p className="erebrus-text">
           Private, Secure, and censorship-free internet with <br /> CyreneAI
@@ -35,10 +36,14 @@ const Erebrus = () => {
             </button>
           </div>
           <div className="erebrus-image-container">
-            <img src="/images/Erebrus_Mobile.png" alt="Erebrus Mobile" className="erebrus-image" />
+            <img
+              src="/images/Erebrus_Mobile.png"
+              alt="Erebrus Mobile"
+              className="erebrus-image"
+            />
           </div>
         </div>
-      </div>
+      </FadeUp>
     </div>
   );
 };

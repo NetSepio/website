@@ -5,6 +5,7 @@
   "homepage": "https://NetSepio.github.io/",
   "dependencies": {
     "cra-template": "1.2.0",
+    "framer-motion": "^12.4.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^6.29.0",

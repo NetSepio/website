@@ -43,3 +43,25 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Background of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+/* Scrollbar handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #41375a;
+  border-radius: 5px;
+}
+
+/* Scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

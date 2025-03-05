@@ -1,10 +1,11 @@
 import React from "react";
 import "../styles/Winner.css"; // Import the CSS file
+import { FadeUp } from "./FadeAnimations";
 
 const Winners = () => {
   return (
     <div className="winners-container">
-      <div>
+      <FadeUp>
         <h1 className="winners-title">Join the Winners!</h1>
         <div className="winners-content">
           <div className="winners-images">
@@ -64,7 +65,7 @@ const Winners = () => {
             <h2>+ many more!!</h2>
           </div>
         </div>
-      </div>
+        </FadeUp>
     </div>
   );
 };
