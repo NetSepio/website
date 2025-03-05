@@ -20,15 +20,15 @@ export const metadata = {
   metadataBase: new URL("https://netsepio.com"),
   title: "NetSepio",
   description:
-    "Securing and decentralizing the internet layer with Cybersecurity and powered by DePIN technology.",
+    "NetSepio delivers private, secure, and censorship-free internet with decentralized infrastructure and an AI coordination layer, shaping an empowered, agentic future.",
     openGraph: {
       type: 'website',
       url: 'https://netsepio.com',
       title: 'NetSepio',
-      description: 'Securing and decentralizing the internet layer with Cybersecurity and powered by DePIN technology.',
+      description: 'NetSepio delivers private, secure, and censorship-free internet with decentralized infrastructure and an AI coordination layer, shaping an empowered, agentic future.',
       images: [
         {
-          url: '/metaimg.png',
+          url: '/NetSepio_metadata_image.png',
           width: 1200,
           height: 630,
           alt: 'NetSepio',
@@ -37,17 +37,17 @@ export const metadata = {
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@NetSepio',
       title: 'NetSepio',
-      description: 'Securing and decentralizing the internet layer with Cybersecurity and powered by DePIN technology.',
+      description: 'NetSepio delivers private, secure, and censorship-free internet with decentralized infrastructure and an AI coordination layer, shaping an empowered, agentic future.',
       images: [
         {
-          url: '/metaimg.png',
+          url: '/NetSepio_metadata_image.png',
           width: 1200,
           height: 630,
           alt: 'NetSepio',
         },
       ],
+      site: "https://netsepio.com",
     },
 };
 
