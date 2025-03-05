@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Connectivity.css"; // Import the external CSS file
-import { FadeUp, ZoomIn } from "./FadeAnimations";
+import { ZoomIn } from "./FadeAnimations";
 
 const Connectivity = () => {
   return (
