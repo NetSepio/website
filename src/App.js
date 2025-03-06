@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async"; 
+import { Helmet } from "react-helmet"; 
 import Hero from "./components/Hero";
 import Connectivity from "./components/Connectivity";
 import Cyrene from "./components/Cyrene";
@@ -18,6 +18,7 @@ import TermsOfUse from "./pages/TermsofUse";
 import FAQ from "./pages/Faq";
 import "./App.css";
 
+
 function RedirectHandler() {
   const navigate = useNavigate();
 
@@ -28,6 +29,7 @@ function RedirectHandler() {
 
   return null;
 }
+
 
 function Home() {
   return (
@@ -74,20 +76,19 @@ function Home() {
   );
 }
 
+
 function App() {
   return (
-    <HelmetProvider>
-      <Router>
-        <RedirectHandler />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/mission" element={<Mission />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-use" element={<TermsOfUse />} />
-          <Route path="/faq" element={<FAQ />} />
-        </Routes>
-      </Router>
-    </HelmetProvider>
+    <Router>
+      <RedirectHandler />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/mission" element={<Mission />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/faq" element={<FAQ />} />
+      </Routes>
+    </Router>
   );
 }
 
