@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import "../styles/Success.css";
 
 const Achievement = ({ id, position, isVisible, heading, description, pinPosition }) => {
@@ -44,7 +44,7 @@ const Achievement = ({ id, position, isVisible, heading, description, pinPositio
 };
 
 const Success = () => {
-  const achievements = [
+  const achievements = useMemo(() => [
     {
       id: 1,
       position: { top: "40%", left: "15%" }, // Position for title and description
@@ -101,7 +101,7 @@ const Success = () => {
       description: "Q2 2025",
       pinPosition: { top: "37%", right: "27%" }, // Custom pin position for ID 8
     },
-  ];
+  ], []);
 
   const [visibleSteps, setVisibleSteps] = useState([]);
 
