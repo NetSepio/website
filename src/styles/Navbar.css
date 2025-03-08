@@ -11,12 +11,24 @@
   align-items: center;
   height: 100px;
 }
+.navbar-logo {
+  display: flex;
+  flex-direction: row; /* Stack logo-img above netsepio-logo */
+  align-items: center; /* Center both images horizontally */
+  justify-content: center;
+  gap: 0px; /* Adjust spacing between images */
+  height: 100%; /* Ensure it aligns with navbar height */
+}
 
 /* Navbar Logo */
 .navbar-logo .logo-img {
   height: 45px;
 }
 
+.navbar-logo .netsepio-logo {
+  height: 35px; 
+  margin-top: 5px;
+}
 /* Explore Button */
 .explore-button {
   padding: 15px 40px;
