@@ -1,45 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kode+Mono:wght@400..700&display=swap');
-
 .cypherpunk-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #040a20;
   text-align: center;
+  min-height: 100vh;
 }
 
+/* Cyberpunk Box */
 .cypherpunk-box {
+  position: relative;
   width: 1110px;
   height: 759px;
+  background-color: #040a20;
+  border-radius: 40px;
+  padding: 40px;
+  z-index: 1;
+}
+
+/* Pseudo-element for Gradient Border */
+.cypherpunk-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 40px;
+  padding: 2px; 
+  background: linear-gradient(135deg, #11D9C5, #0F6A98);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Inner Gradient Background */
+.cypherpunk-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     208.05deg,
     rgba(56, 132, 254, 0.1) 0%,
     rgba(17, 217, 197, 0.1) 82.62%
   );
-  border: 2px solid #0071ad;
-  border-image-slice: 1;
-  border-radius: 40px;
+  border-radius: 38px;
+  z-index: 0;
 }
 
+/* Title */
 .cypherpunk-title {
   color: #fff;
   margin-top: 100px;
   margin-bottom: 40px;
   font-size: 3.5rem;
+  position: relative;
+  z-index: 2;
 }
 
+/* Subtitle */
 .cypherpunk-subtitle {
   color: #ccc;
   margin-bottom: 70px;
   font-size: 1.8rem;
+  position: relative;
+  z-index: 2;
 }
 
+/* Image Section */
 .cypherpunk-images {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .cypherpunk-image-wrapper {
@@ -50,12 +92,19 @@
   border-radius: 20px;
 }
 
+.cypherpunk-image-wrapper:nth-child(2) {
+  margin-left: -20px; /* Adjust the value as needed */
+}
+
+
+
 .cypherpunk-image-title {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 20px;
   font-family: "Kode Mono", serif;
 }
 
+/* Footer */
 .cypherpunk-footer {
   display: flex;
   justify-content: center;
@@ -63,13 +112,16 @@
   gap: 2rem;
   margin-top: 1rem;
   font-family: "Kode Mono", serif;
+  position: relative;
+  z-index: 2;
 }
 
 .cypherpunk-cta-text {
-  font-size: 2rem;
+  font-size: 30px;
   color: #11d9c5;
 }
 
+/* Button */
 .cypherpunk-button {
   padding: 15px 30px;
   background-color: #11d9c5;
@@ -78,9 +130,16 @@
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
-/* Existing styles remain the same */
 
+.cypherpunk-button:hover {
+  background-color: #0fb8a9;
+}
+
+/* Responsive Styles */
 @media (max-width: 1200px) {
   .cypherpunk-box {
     width: 90%;

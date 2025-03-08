@@ -24,12 +24,12 @@ const Cypherpunk = () => {
                   alt="Reward"
                   className="cypherpunk-image"
                 />
-                <h3 className="cypherpunk-image-title">{names[index]}</h3>
+                <h3 className="cypherpunk-image-title font-bold py-4">{names[index]}</h3>
               </div>
             )
           )}
         </div>
-        <div className="cypherpunk-footer">
+        <div className="cypherpunk-footer font-bold">
           <h2 className="cypherpunk-cta-text">
             CLAIM YOUR ROLE AND EARN REWARDS
           </h2>

@@ -8,7 +8,7 @@ const Cyrene = () => {
       <FadeUp>
         <div className="cyrene-content">
           <h1 className="cyrene-title">Meet CyreneAI</h1>
-          <p className="cyrene-text">
+          <p className="cyrene-text font-sans">
             Multi-Agent Platform and AI Coordination layer on secure VPN network
           </p>
           <img
@@ -22,10 +22,10 @@ const Cyrene = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="cyrene-button">Website</button>
+              <button className="cyrene-button font-sans">Website</button>
             </a>
             <a href="https://x.com/CyreneAI" target="_blank" rel="noreferrer">
-              <button className="cyrene-button">Follow us on X</button>
+              <button className="cyrene-button font-sans">Follow on X</button>
             </a>
           </div>
         </div>

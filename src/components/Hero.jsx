@@ -14,11 +14,13 @@ const Hero = () => {
           </video>
         </div>
 
-        <div className="hero-content">
-          <h1>
-            DePIN Powered Private, <br /> Secure & Agentic Internet
-          </h1>
-          <div className="hero-buttons">
+        <div className="hero-content ">
+        <h1 class="text-white text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.6]">
+  DePIN Powered Private,<br /> Secure & Agentic Internet
+</h1>
+
+
+          <div className="hero-buttons py-6">
             <a href="https://x.com/netsepio" target="_blank" rel="noreferrer">
               <button className="hero-button">Follow on X</button>
             </a>

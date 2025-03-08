@@ -5,31 +5,37 @@
   text-align: left;
 }
 
+
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: stretch;
-  width: 70%;
-
+  align-items: center; /* Ensure items align in the same row */
+  width: 80%;
   margin: 0 auto;
   padding: 2rem 0;
 }
 
-.footer-section {
+
+.footer-logo-section{
   display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  flex-direction: row; /* Stack logo-img above netsepio-logo */
+  align-items: center; /* Center both images horizontally */
+  justify-content: center;
+  gap: 4px; /* Adjust spacing between images */
+  height: 10%; /* Ensure it aligns with navbar height */
 }
 
-.logo {
+.footer-logo-section.logo {
   height: 45px;
 }
 
-.netsepio-logo {
-  height: 35px;
+.footer-logo-section.netsepio-logo {
+  height: 30px;
 }
 
+/* Other Footer Styles */
 .footer-description {
   font-size: 1rem;
   color: white;
@@ -89,6 +95,10 @@
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
+  }
+
+  .footer-logo-section {
+    justify-content: center; /* Center the logos on smaller screens */
   }
 
   .social-links {

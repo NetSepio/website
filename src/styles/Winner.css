@@ -1,12 +1,21 @@
+
 .winners-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #040a20;
+  background-color: #040a20; /* Ensures the base color is dark */
+  background-image: radial-gradient(
+    600px 200px at center 75%, /* Moves the gradient lower */ 
+    rgba(17, 217, 197, 0.1) 1%, 
+    rgba(4, 10, 32, 1) 100%, 
+    rgba(4, 10, 32, 0.4) 100% 
+  );
+  backdrop-filter: blur(400px);
   text-align: center;
   padding-top: 7rem;
   padding-bottom: 10rem;
 }
+
 
 .winners-title {
   color: #fff;
@@ -28,7 +37,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: 40%;
+  width: 50%;
   justify-content: center;
   gap: 2rem;
 }
@@ -41,6 +50,7 @@
 .winners-links {
   text-align: left;
   color: white;
+  font-size: 20px;
 }
 
 .winner-link {

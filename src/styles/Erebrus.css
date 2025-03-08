@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Kode+Mono:wght@400..700&display=swap');
+
 /* Main Container */
 .erebrus-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #040a20;
+  background-image: radial-gradient(
+    600px 180px at 68% 80%, /* Moves the gradient lower */ 
+    rgba(17, 217, 197, 0.1) 1%, 
+    rgba(4, 10, 32, 1) 100%, 
+    rgba(4, 10, 32, 0.4) 100% 
+  );
+  backdrop-filter: blur(400px);
   text-align: center;
   padding-bottom: 10rem;
 }
@@ -42,14 +51,22 @@
 
 /* Button */
 .erebrus-button {
-  padding: 15px 30px;
+  display: inline-flex;  /* Keeps button inline and centers text */
+  justify-content: center;
+  align-items: center;
+  width: 200px; /* Fixed width */
+  height: 50px; /* Fixed height */
   border: 2px solid white;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: hidden; /* Ensures text doesn't overflow */
+  white-space: nowrap; /* Prevents wrapping */
 }
+
 
 /* Active Buttons */
 .erebrus-active-button {
@@ -64,9 +81,8 @@
 /* Disabled Button */
 .erebrus-disabled-button {
   background-color: transparent;
-  color: white;
-  cursor: not-allowed;
-  opacity: 0.5;
+  color:  #ccc;
+  opacity: 1;
 }
 
 /* Image */

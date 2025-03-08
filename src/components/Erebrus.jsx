@@ -6,8 +6,8 @@ const Erebrus = () => {
   return (
     <div className="erebrus-container">
       <FadeUp>
-        <h1 className="erebrus-title">Erebrus Decentralized VPN</h1>
-        <p className="erebrus-text">
+        <h1 className="erebrus-title font-sans">Erebrus Decentralized VPN</h1>
+        <p className="erebrus-text font-sans">
           Private, Secure, and censorship-free internet with <br /> CyreneAI
           integration
         </p>
@@ -18,8 +18,8 @@ const Erebrus = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="erebrus-button erebrus-active-button">
-                Play Store
+              <button className="erebrus-button erebrus-active-button font-sans">
+                Play Store  
               </button>
             </a>
             <a
@@ -27,13 +27,19 @@ const Erebrus = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <button className="erebrus-button erebrus-active-button">
+              <button className="erebrus-button erebrus-active-button font-sans">
                 iOS Test Flight
               </button>
             </a>
-            <button className="erebrus-button erebrus-disabled-button" disabled>
+            <a 
+            href="https://erebrus.io/"
+            target="_blank"
+            rel="noreferrer"
+            >
+            <button className="erebrus-button erebrus-disabled-button font-sans" >
               Web App
             </button>
+            </a>
           </div>
           <div className="erebrus-image-container">
             <img
