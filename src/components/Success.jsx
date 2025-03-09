@@ -21,7 +21,7 @@ const Success = () => {
         <img
           src="/images/Success-1.png"
           alt="Road To Success"
-          style={{ width: "95%" }}
+          style={{ width: "100%" }}
         />
       </ZoomIn>
     </div>
