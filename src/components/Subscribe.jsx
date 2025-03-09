@@ -22,8 +22,8 @@ const Subscribe = () => {
         </div>
       </div>
 
-      <div className="community-section">
-        <h1>Join Our Community. Join the Future.</h1>
+      <div className="community-section ">
+        <h1 >Join Our Community. Join the Future.</h1>
         <div className="community-buttons">
           <a
             href="https://discordapp.com/invite/5uaFhNpRF6"

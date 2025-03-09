@@ -6,7 +6,7 @@ export function Technology() {
   return (
     <div className="bg-[#040a20] min-h-screen">
       <div className="max-w-5xl mx-auto px-8 py-12">
-        <h1 className="text-5xl  text-center text-white mb-12">
+        <h1 className="text-6xl  text-center text-white mb-12">
           Cutting-Edge Technology
         </h1>
         <HoverEffect items={technologies} />
