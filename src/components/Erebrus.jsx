@@ -6,7 +6,7 @@ const Erebrus = () => {
   return (
     <div className="erebrus-container">
       <FadeUp>
-        <h1 className="erebrus-title font-sans">Erebrus Decentralized VPN</h1>
+        <h1 className="text-6xl  text-center text-white mb-12 font-sans">Erebrus Decentralized VPN</h1>
         <p className="erebrus-text font-sans">
           Private, Secure, and censorship-free internet with <br /> CyreneAI
           integration

@@ -6,7 +6,7 @@ const Winners = () => {
   return (
     <div className="winners-container">
       <FadeUp>
-        <h1 className="winners-title ">Join the Winners!</h1>
+        <h1 className="text-6xl  text-center text-white mb-12 ">Join the Winners!</h1>
         <div className="winners-content py-6">
           <div className="winners-images">
             {[

@@ -7,7 +7,7 @@ const Cyrene = () => {
     <div className="cyrene-container">
       <FadeUp>
         <div className="cyrene-content">
-          <h1 className="cyrene-title">Meet CyreneAI</h1>
+          <h1 className="text-6xl  text-center text-white mb-12">Meet CyreneAI</h1>
           <p className="cyrene-text font-sans">
             Multi-Agent Platform and AI Coordination layer on secure VPN network
           </p>

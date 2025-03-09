@@ -10,9 +10,9 @@ const Cypherpunk = () => {
   ];
   return (
     <div className="cypherpunk-container">
-      <div className="cypherpunk-box">
+      <div className="cypherpunk-box ">
         <h1 className="cypherpunk-title">Cypherpunk Rewards Program</h1>
-        <p className="cypherpunk-subtitle">
+        <p className="cypherpunk-subtitle -mt-5">
           Empowering Community to Shape the Future
         </p>
         <div className="cypherpunk-images">
@@ -29,7 +29,7 @@ const Cypherpunk = () => {
             )
           )}
         </div>
-        <div className="cypherpunk-footer font-bold">
+        <div className="cypherpunk-footer font-bold py-4">
           <h2 className="cypherpunk-cta-text">
             CLAIM YOUR ROLE AND EARN REWARDS
           </h2>
