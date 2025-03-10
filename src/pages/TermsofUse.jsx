@@ -9,14 +9,14 @@ const TermsOfUse = () => {
         <NavBar />
         <div style={{ width: "70%", margin: "0 auto" }}>
           <h1
-            style={{ fontSize: "5rem", textAlign: "center", color: "#08d9c5" }}
+            style={{ fontSize: "4rem", textAlign: "center", color: "#08d9c5" }}
           >
             Terms and Conditions
           </h1>
           <p
             style={{
-              fontSize: "1.8rem",
-              fontWeight: "200",
+              fontSize: "1.4rem",
+              fontWeight: "400",
               paddingBottom: "5rem",
               color: "white",
             }}
