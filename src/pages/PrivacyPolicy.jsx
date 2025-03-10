@@ -7,10 +7,18 @@ const PrivacyPolicy = () => {
     <div style={{ backgroundColor: "#040a20" }}>
       <NavBar />
       <div style={{ width: "70%", margin: "0 auto" }}>
-        <h1 style={{ fontSize: "5rem", textAlign: "center", color: "#08d9c5" }}>
+        <h1 style={{ fontSize: "4rem", textAlign: "center", color: "#08d9c5" }}>
           Privacy Policy
         </h1>
-        <p style={{ fontSize: "1.8rem", fontWeight: "200", paddingBottom: "5rem", color: "white" }}>
+        <p
+          style={{
+            fontSize: "1.4rem",
+            fontWeight: "400",
+            paddingBottom: "5rem",
+            paddingTop: "2rem",
+            color: "white",
+          }}
+        >
           This Privacy Policy describes our policies and procedures on the
           collection, use and disclosure of your information when you use the
           Service and tells you about your privacy rights and how the law
