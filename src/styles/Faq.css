@@ -73,13 +73,13 @@
 }
 
 .faq-title {
-  font-size: 4rem;
+  font-size: 2.25rem;
   text-align: center;
   color: white;
 }
 
 .faq-subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #08d9c5;
 }
@@ -101,9 +101,9 @@
   background-color: #171717;
   color: white;
   border: none;
-  padding: 25px;
+  padding: 15px;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
@@ -123,7 +123,7 @@
 .faq-answer {
   color: white;
   padding: 15px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: block;
   border-radius: 0 0 5px 5px;
 }
