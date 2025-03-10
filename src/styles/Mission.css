@@ -11,16 +11,16 @@
 }
 
 .mission-title {
-  font-size: 4rem;
+  font-size: 2.25rem;
 }
 
 .mission-subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-bottom: 2rem;
 }
 
 .mission-text {
-  font-size: 1.4rem;
+  font-size: 1rem;
   padding-bottom: 4rem;
   font-weight: 200;
   text-align: left;
@@ -49,18 +49,6 @@
     width: 80%;
   }
 
-  .mission-title {
-    font-size: 4rem;
-  }
-
-  .mission-subtitle {
-    font-size: 2.2rem;
-  }
-
-  .mission-text {
-    font-size: 1.5rem;
-  }
-
   .mission-image {
     width: 80%;
     height: auto;
@@ -72,34 +60,10 @@
     width: 90%;
   }
 
-  .mission-title {
-    font-size: 3rem;
-  }
-
-  .mission-subtitle {
-    font-size: 2rem;
-  }
-
-  .mission-text {
-    font-size: 1.2rem;
-  }
-
 }
 
 @media (max-width: 480px) {
   .mission-title {
     font-size: 2.5rem;
-  }
-
-  .mission-subtitle {
-    font-size: 1.8rem;
-  }
-
-  .mission-text {
-    font-size: 1rem;
-  }
-
-  .mission-image {
-    width: 100%;
   }
 }
