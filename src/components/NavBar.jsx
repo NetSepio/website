@@ -29,7 +29,7 @@ const NavBar = () => {
             className="netsepio-logo"
           />
         </div>
-        <div className="navbar-menu">
+        <div className="navbar-menu ">
           <button
             onClick={() => setOpenState(!isOpen)}
             className="explore-button"
@@ -39,7 +39,7 @@ const NavBar = () => {
 
           {isOpen && (
             <div className="dropdown-menu">
-              <ul className="dropdown-list">
+              <ul className="dropdown-list ">
                 {["Erebrus", "CyreneAI", "Browser Extension"].map(
                   (link, index) => (
                     <li key={index} className="dropdown-item">
