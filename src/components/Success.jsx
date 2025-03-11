@@ -17,7 +17,7 @@ const Success = () => {
       }}
     >
       <ZoomIn>
-        <h1 className="text-6xl  text-center text-white mb-12">Road To Success</h1>
+        <h1 className="text-6xl  text-center text-white mb-12  py-12">Road To Success</h1>
         <img
           src="/images/Success-1.png"
           alt="Road To Success"
