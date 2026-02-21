@@ -1,0 +1,11 @@
+{
+  "app": {
+    "[project]/src/app/mission/page": [],
+    "[project]/src/app/page": [],
+    "[project]/src/app/privacy.html/page": [],
+    "[project]/src/app/terms.html/page": []
+  },
+  "appUsingSizeAdjust": false,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}
