@@ -19,10 +19,11 @@ const Subscribe = () => {
 
           <div className="relative glass p-12 md:p-16 text-center border border-white/10">
             <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Transforming Internet Through <br /> the Power of <span className="text-gradient">DePIN and AI</span>
+              Build With The <br /> <span className="text-gradient">Sovereignty Stack</span>
             </h2>
             <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
-              Subscribe to our newsletter for insights and the next meta.
+              Follow NetSepio for updates on private connectivity, local-first
+              sharing, security tools, and user-owned AI infrastructure.
             </p>
             <motion.a
               whileHover={{ scale: 1.05 }}

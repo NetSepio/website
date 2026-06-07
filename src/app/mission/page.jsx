@@ -20,7 +20,7 @@ export default function MissionPage() {
                         Our <span className="text-brand-cyan">Mission</span>
                     </h1>
                     <h2 className="text-2xl md:text-3xl font-medium text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                        DePIN-Powered Private, Secure, and <br className="hidden md:block" /> Agentic Internet for the Future
+                        Privacy, Sovereignty, and Individual Agency <br className="hidden md:block" /> for the Open Internet
                     </h2>
                 </motion.div>
 
@@ -32,31 +32,28 @@ export default function MissionPage() {
                         className="space-y-6 text-lg text-gray-400 leading-relaxed"
                     >
                         <p className="text-xl text-white font-medium border-l-4 border-brand-cyan pl-6 rounded-r-lg bg-white/5 py-4 w-full">
-                            NetSepio delivers private, secure, and censorship-free internet
-                            with an AI coordination layer for secure data and inference,
-                            shaping an agentic future.
+                            NetSepio is building a sovereignty stack for the open
+                            internet: privacy-first, censorship-resistant tools that help
+                            people control how they connect, share, protect, train, and host.
                         </p>
                         <p>
-                            We are on a mission to redefine internet access by
-                            building a decentralized, user-centric network that prioritizes
-                            security, privacy, and accessibility. By harnessing decentralized VPN
-                            (ÐVPN) technologies, we empower enterprises and
-                            individuals to contribute to a more equitable digital world while
-                            safeguarding their own online presence.
+                            Erebrus VPN enables private, resilient connectivity through
+                            decentralized infrastructure. Erebrus Drop makes local-first
+                            file sharing simple, secure, and independent of centralized
+                            platforms when people just need to move data directly.
                         </p>
                         <p>
-                            Our AI coordination layer ensures that decentralized data
-                            transmission and inference happen with enhanced autonomy, security,
-                            and reliability. This innovation is central to our vision of an
-                            agentic future, where decentralized AI agents work together across
-                            the network to provide a smarter, more secure, and self-sustaining
-                            internet.
+                            Upcoming firewall and security tools will help users defend
+                            their devices, networks, and data from unwanted tracking,
+                            intrusion, and control. DePIN strengthens the resilience layer
+                            inside a larger sovereignty mission: infrastructure that gives
+                            users durable agency in a digitally surveilled world.
                         </p>
                         <p>
-                            NetSepio challenges the status quo of centralized internet
-                            control by enabling a global, resilient network. We empower users
-                            with unmatched digital freedom, allowing them to navigate the
-                            internet without compromising on security or privacy.
+                            With ClawBrick, NetSepio extends that agency into AI,
+                            enabling users to fine-tune, PEFT, deploy, and host personal
+                            agents and smaller language models on their own terms instead
+                            of depending entirely on closed platforms.
                         </p>
                     </motion.div>
 

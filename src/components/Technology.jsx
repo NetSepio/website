@@ -5,28 +5,28 @@ import { motion } from "framer-motion";
 
 export const technologies = [
   {
-    title: "Decentralized Peer Discovery",
-    description: "NetSepio builds on secure digital ledger technology for trustworthy data storage and verifiable transactions without single points of failure.",
+    title: "Decentralized Infrastructure",
+    description: "DePIN remains part of the stack where it matters: resilient connectivity, permissionless participation, and fewer centralized choke points.",
   },
   {
-    title: "Encrypted Tunneling",
-    description: "Allows you to prove possession of information without revealing it, ensuring privacy while maintaining security and trust.",
+    title: "Private Connectivity",
+    description: "Erebrus VPN routes users through encrypted, censorship-resistant paths designed for privacy, continuity, and control.",
   },
   {
-    title: "ZK Proofs",
-    description: "Ensures privacy by enabling verification without exposing underlying data, securing online transactions and interactions.",
+    title: "Local-First Sharing",
+    description: "Erebrus Drop keeps file transfer close to the user with private WiFi and hotspot sharing that avoids cloud-dependent handoffs.",
   },
   {
-    title: "Confidential Containers",
-    description: "Ensures private data processing, zero-trust security, and compliance, securing NetSepio’s decentralized infrastructure.",
+    title: "Device and Network Defense",
+    description: "Upcoming firewall and security tools will help users block unwanted tracking, intrusion, and control across their devices and networks.",
   },
   {
-    title: "AI Coordination Layer",
-    description: "Automates network optimization, detects threats, and enables AI-driven, self-healing security for NetSepio.",
+    title: "User-Owned AI",
+    description: "ClawBrick lets builders fine-tune, PEFT, deploy, and host personal agents and SLMs without depending entirely on closed platforms.",
   },
   {
-    title: "SCION Integration",
-    description: "Enables secure, multi-path routing, isolation domains, and AI-driven encrypted communication for a censorship-free network.",
+    title: "Sovereign Hosting",
+    description: "The stack extends agency from the network layer into computation, intelligence, and hosting choices that remain under user control.",
   },
 ];
 
@@ -54,10 +54,11 @@ export function Technology() {
           className="text-center mb-16"
         >
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
-            Cutting-Edge <span className="text-brand-green">Technology</span>
+            Sovereignty <span className="text-brand-green">Stack Layers</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            The foundation of our privacy-first, decentralized network
+            Privacy, resilience, local ownership, and user-controlled AI across
+            the modern internet stack.
           </p>
         </motion.div>
 

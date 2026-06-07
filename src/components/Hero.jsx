@@ -29,12 +29,14 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-tight">
-            DePIN Powered <br />
-            <span className="text-gradient"><ScrambleText text="Private, Secure & Agentic Internet" /></span>
+            The Sovereignty Stack <br />
+            <span className="text-gradient"><ScrambleText text="For The Open Internet" /></span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-xl text-gray-300 mb-10 leading-relaxed">
-            ÐVPN and AI Coordination Layer for Privacy and Sovereignty
+          <p className="max-w-3xl mx-auto text-xl text-gray-300 mb-10 leading-relaxed">
+            NetSepio builds privacy-first, censorship-resistant tools for people
+            who want control over how they connect, share, protect, train, and
+            host in a surveilled digital world.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

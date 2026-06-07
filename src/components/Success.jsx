@@ -1,74 +1,30 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from "react";
+import { motion } from "framer-motion";
 import ScrambleText from "./ScrambleText";
 
-const StatCounter = ({ end, duration = 2, suffix = "", prefix = "" }) => {
-  const [count, setCount] = useState(0);
-  const { ref, inView } = useInView({ triggerOnce: true });
-
-  useEffect(() => {
-    if (inView) {
-      let start = 0;
-      const endVal = parseFloat(end);
-      if (start === endVal) return;
-
-      const incrementTime = (duration / endVal) * 1000;
-
-      let timer = setInterval(() => {
-        start += (endVal / (duration * 60)); // 60fps
-        if (start >= endVal) {
-          clearInterval(timer);
-          setCount(endVal);
-        } else {
-          setCount(start);
-        }
-      }, 1000 / 60);
-
-      return () => clearInterval(timer);
-    }
-  }, [inView, end, duration]);
-
-  return (
-    <span ref={ref}>
-      {prefix}
-      {Number.isInteger(parseFloat(end)) ? Math.floor(count) : count.toFixed(1)}
-      {suffix}
-    </span>
-  );
-};
-
 const Success = () => {
-  const stats = [
+  const principles = [
     {
-      value: "10.5",
-      suffix: "T",
-      prefix: "$",
-      title: "Global Cybercrime Cost",
-      description: "Estimated annual global cost of cybercrime by 2025, emphasizing the massive need for secure infrastructure.",
+      label: "Connect",
+      title: "Private by design",
+      description: "Erebrus VPN gives users resilient private connectivity through decentralized infrastructure.",
     },
     {
-      value: "82",
-      suffix: "%",
-      prefix: "",
-      title: "Data Breaches",
-      description: "Of all cyber breaches involve data stored in the cloud, exposing the weakness of centralized providers.",
+      label: "Share",
+      title: "Local when it matters",
+      description: "Erebrus Drop keeps nearby file transfers simple, direct, and independent of cloud platforms.",
     },
     {
-      value: "1.5",
-      suffix: "B",
-      prefix: "",
-      title: "VPN Users Worldwide",
-      description: "The rapidly growing number of users prioritizing personal privacy and circumventing censorship directly.",
+      label: "Protect",
+      title: "Defense against control",
+      description: "Security and firewall tools will help people resist unwanted tracking, intrusion, and manipulation.",
     },
     {
-      value: "100",
-      suffix: "%",
-      prefix: "",
-      title: "Decentralized Solution",
-      description: "NetSepio offers a truly sovereign alternative, ensuring zero single-point-of-failure network protection.",
+      label: "Train and host",
+      title: "AI on your terms",
+      description: "ClawBrick brings sovereignty to personal agents, PEFT, SLM deployment, and model hosting.",
     },
   ];
 
@@ -87,13 +43,14 @@ const Success = () => {
             The Need For <span className="text-gradient"><ScrambleText text="True Sovereignty" /></span>
           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Traditional internet infrastructure and centralized VPNs inherently pose security tracking risks.
-            The global shift demands verifiable, permissionless connectivity.
+            A surveilled internet pushes people toward rented access, rented
+            storage, rented intelligence, and rented security. NetSepio is built
+            for the opposite: practical tools that return control to the user.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
+          {principles.map((principle, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -104,12 +61,12 @@ const Success = () => {
             >
               <div className="absolute inset-0 bg-brand-green/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
-              <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-green mb-4">
-                <StatCounter end={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
+              <div className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-cyan mb-4">
+                {principle.label}
               </div>
 
-              <h3 className="font-bold text-white text-xl mb-3">{stat.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{stat.description}</p>
+              <h3 className="font-bold text-white text-xl mb-3">{principle.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">{principle.description}</p>
             </motion.div>
           ))}
         </div>

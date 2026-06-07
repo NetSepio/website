@@ -1,6 +1,6 @@
 # NetSepio Website
 
-The official website for **NetSepio**, revolutionizing internet privacy by providing secure, decentralized VPN (dVPN) and AI-driven networking built to ensure zero single-point-of-failure.
+The official website for **NetSepio**, a sovereignty stack for the open internet. NetSepio builds privacy-first tools for private connectivity, local file sharing, device and network defense, and user-owned AI deployment through Erebrus VPN, Erebrus Drop, upcoming security products, and ClawBrick.
 
 ## 🚀 Tech Stack
 

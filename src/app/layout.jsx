@@ -2,15 +2,16 @@ import './globals.css';
 import FilmGrain from '../components/FilmGrain';
 
 export const metadata = {
-    title: 'NetSepio - Decentralized VPN & Secure Connectivity',
-    description: 'NetSepio is revolutionizing internet privacy by providing secure, decentralized VPN (dVPN) and AI-driven networking built to ensure zero single-point-of-failure.',
+    metadataBase: new URL('https://netsepio.com'),
+    title: 'NetSepio - Sovereignty Stack for the Open Internet',
+    description: 'NetSepio builds privacy-first tools for digital sovereignty, including Erebrus VPN, Erebrus Drop, upcoming security products, and ClawBrick for user-owned AI deployment.',
     icons: {
         icon: '/images/Logo.png',
         apple: '/logo192.png',
     },
     openGraph: {
-        title: 'NetSepio - Decentralized VPN & Secure Connectivity',
-        description: 'NetSepio is revolutionizing internet privacy by providing secure, decentralized VPN (dVPN) and AI-driven networking.',
+        title: 'NetSepio - Sovereignty Stack for the Open Internet',
+        description: 'NetSepio builds privacy-first, censorship-resistant tools for private connectivity, local sharing, network defense, and user-owned AI.',
         url: 'https://netsepio.com',
         siteName: 'NetSepio',
         images: [

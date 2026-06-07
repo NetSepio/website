@@ -19,15 +19,13 @@ const Connectivity = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-brand-cyan/5 to-brand-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-            Empowering <span className="text-gradient">Connectivity</span>
+            Infrastructure For <span className="text-gradient">Digital Agency</span>
           </h2>
 
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-10 relative z-10">
-            NetSepio delivers private, secure, and censorship-free internet with
-            an AI coordination layer for secure data and inference, shaping an
-            agentic future. Powered by a DePIN-enabled ÐVPN protocol, we provide
-            a decentralized, resilient network that empowers humanity with
-            unmatched digital freedom.
+            NetSepio is the sovereignty stack for digital agency: DePIN-powered
+            where resilience matters, privacy-first everywhere, and built for
+            people who want to own their connection, sharing, defenses, and AI.
           </p>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

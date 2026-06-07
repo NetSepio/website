@@ -23,8 +23,9 @@ const Footer = () => {
               <img src="/assets/NetSepio.svg" alt="NetSepio Text" className="h-8" />
             </Link>
             <p className="text-gray-400 leading-relaxed max-w-sm">
-              NetSepio delivers private, secure, and censorship-free internet with
-              an AI coordination layer, shaping an agentic future.
+              NetSepio builds privacy-first tools for digital sovereignty:
+              private connectivity, local sharing, network defense, and
+              user-owned AI infrastructure.
             </p>
           </div>
 
@@ -49,12 +50,18 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-lg mb-6 tracking-wide">Products</h3>
             <ul className="space-y-4">
               {[
-                { name: "Erebrus", url: "https://erebrus.io/" },
-                { name: "Browser Extension", url: "https://chromewebstore.google.com/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd" },
-                { name: "Docs", url: "https://docs.netsepio.com/latest" },
+                { name: "Erebrus VPN", url: "https://erebrus.io/", external: true },
+                { name: "Erebrus Drop", url: "/#suite" },
+                { name: "ClawBrick", url: "https://clawbrick.com/", external: true },
+                { name: "Docs", url: "https://docs.netsepio.com/latest", external: true },
               ].map((item, index) => (
                 <li key={index}>
-                  <a href={item.url} target="_blank" rel="noreferrer" className="text-gray-400 hover:text-brand-green transition-colors duration-200">
+                  <a
+                    href={item.url}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noreferrer" : undefined}
+                    className="text-gray-400 hover:text-brand-green transition-colors duration-200"
+                  >
                     {item.name}
                   </a>
                 </li>

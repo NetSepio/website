@@ -10,8 +10,11 @@ const NavBar = () => {
   const router = useRouter();
 
   const dropDownLinks = [
-    { name: "Erebrus", url: "https://erebrus.io/" },
-    { name: "Browser Extension", url: "https://chromewebstore.google.com/detail/netsepio/bbkfclgnbddljhepbfpongcollhocghd" },
+    { name: "Erebrus VPN", url: "https://erebrus.io/", external: true },
+    { name: "Erebrus Drop", url: "/#suite" },
+    { name: "ClawBrick", url: "https://clawbrick.com/", external: true },
+    { name: "Mission", url: "/mission" },
+    { name: "Docs", url: "https://docs.netsepio.com/latest", external: true },
   ];
 
   useEffect(() => {
@@ -64,8 +67,8 @@ const NavBar = () => {
                     <a
                       key={index}
                       href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
+                      target={link.external ? "_blank" : undefined}
+                      rel={link.external ? "noreferrer" : undefined}
                       className="block px-6 py-3 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
                     >
                       {link.name}
