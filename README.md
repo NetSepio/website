@@ -1,6 +1,6 @@
 # NetSepio Website
 
-The official website for **NetSepio**, a sovereignty stack for the open internet. NetSepio builds privacy-first tools for private connectivity, local file sharing, device and network defense, and user-owned AI deployment through Erebrus VPN, Erebrus Drop, upcoming security products, and ClawBrick.
+The official website for **NetSepio**, a sovereignty stack for the open internet. NetSepio builds privacy-first tools for private connectivity (Erebrus VPN), local file sharing (Erebrus Drop), device and network defense (upcoming security products), and a user-owned second brain for businesses and people (ClawBrick).
 
 ## 🚀 Tech Stack
 
@@ -14,12 +14,13 @@ This project was recently migrated from Create React App to a modern static **Ne
 
 ## ✨ Key Features
 
-- **Decentralized Aesthetics**: Modern dark theme with vibrant cyan and green brand gradients.
-- **Advanced UI Interactions**: 
+- **Sci-Fi HUD Aesthetics**: Teal-on-void "command console" theme — sharp-cornered HUD panels with corner brackets, blueprint grids, CRT scanlines, radar sweeps, and terminal-style mono microcopy.
+- **Typography**: Space Grotesk headings, JetBrains Mono labels, Inter body (all self-hosted via Fontsource).
+- **Advanced UI Interactions**:
   - Mouse-reactive dynamic particle constellation networks.
   - Hacker-style "Decrypt Sequence" text scramble effects on headlines.
   - Subtle cinematic film grain overlay applied globally.
-  - Sleek glassmorphism (`.glass`, `.glass-card`) overlapping elements.
+  - Angular clip-path buttons, animated scan beams, and blinking status indicators.
 - **Statically Exported**: Configured as a fully static SPA (`output: 'export'`) for seamless decentralised and static web hosting.
 
 ## 🛠️ Getting Started

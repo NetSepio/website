@@ -1,9 +1,10 @@
 @import '@fontsource/inter/400.css';
 @import '@fontsource/inter/500.css';
 @import '@fontsource/inter/600.css';
-@import '@fontsource/inter/700.css';
-@import '@fontsource/outfit/500.css';
-@import '@fontsource/outfit/700.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/700.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/600.css';
 
 @tailwind base;
 @tailwind components;
@@ -11,20 +12,127 @@
 
 @layer base {
   body {
-    @apply bg-zinc-950 text-white font-sans antialiased overflow-x-hidden;
+    @apply bg-void text-white font-sans antialiased overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-brand-cyan/30 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #020608;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(8, 217, 197, 0.25);
+    border: 2px solid #020608;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(8, 217, 197, 0.5);
   }
 }
 
 @layer utilities {
+  /* Frosted HUD surfaces — sharp corners, thin luminous borders */
   .glass {
-    @apply bg-black/40 backdrop-blur-md border border-white/10;
+    @apply bg-black/40 backdrop-blur-md border border-brand-cyan/15;
   }
 
+  .hud-panel {
+    @apply relative border border-brand-cyan/15 backdrop-blur-sm;
+    background: linear-gradient(180deg, rgba(8, 26, 30, 0.55), rgba(3, 10, 13, 0.85));
+  }
+
+  .hud-panel-solid {
+    @apply relative border border-brand-cyan/15;
+    background: linear-gradient(180deg, #071318, #030a0d);
+  }
+
+  /* Legacy alias used across sections — now maps to the HUD surface */
   .glass-card {
-    @apply bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl;
+    @apply hud-panel;
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan via-brand-green to-brand-cyan;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-cyan via-neon to-brand-cyan;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 28px rgba(0, 255, 225, 0.4);
+  }
+
+  /* Terminal-style micro labels */
+  .mono-label {
+    @apply font-mono text-[11px] uppercase tracking-[0.3em] text-brand-cyan/80;
+  }
+
+  /* Blueprint grid backdrops */
+  .bg-hud-grid {
+    background-image:
+      linear-gradient(rgba(8, 217, 197, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(8, 217, 197, 0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  .bg-hud-grid-fine {
+    background-image:
+      linear-gradient(rgba(8, 217, 197, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(8, 217, 197, 0.035) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  /* CRT scanlines for panel interiors */
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.025) 0px,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+
+  /* Sweeping scan beam — parent needs relative + overflow-hidden */
+  .scan-beam {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 90px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, transparent, rgba(0, 255, 225, 0.07), transparent);
+    animation: scan 7s linear infinite;
+  }
+
+  /* Angular buttons — corners notched via clip-path */
+  .btn-hud {
+    @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 font-heading font-bold tracking-widest uppercase text-sm bg-gradient-to-r from-brand-cyan to-neon text-black transition-all duration-300;
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  }
+  .btn-hud:hover {
+    box-shadow: 0 0 32px rgba(0, 255, 225, 0.45);
+    filter: brightness(1.1);
+  }
+
+  .btn-hud-outline {
+    @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 font-heading font-bold tracking-widest uppercase text-sm border border-brand-cyan/40 text-brand-cyan bg-brand-cyan/5 transition-all duration-300;
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  }
+  .btn-hud-outline:hover {
+    @apply bg-brand-cyan/15 text-white;
+    box-shadow: 0 0 24px rgba(8, 217, 197, 0.25);
+  }
+
+  .btn-hud-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 px-8 py-4 font-heading font-bold tracking-widest uppercase text-sm border border-white/15 text-gray-300 transition-all duration-300;
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  }
+  .btn-hud-ghost:hover {
+    @apply border-white/40 text-white bg-white/5;
   }
 }

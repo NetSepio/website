@@ -1,84 +1,213 @@
 import React from 'react';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
+import { Corners, MonoTag } from '../../components/hud';
+
+export const metadata = {
+    title: 'Privacy Policy | NetSepio',
+    description: 'How NetSepio collects, uses, and protects information across its website and services.',
+};
+
+const sections = [
+    {
+        code: '01',
+        title: 'Our Approach',
+        body: (
+            <>
+                <p>
+                    NetSepio builds privacy-first technology, and this policy is written
+                    to match: collect little, explain clearly, and give you control.
+                    It describes what information we collect when you use our website
+                    and services, how we use it, and the choices you have.
+                </p>
+                <p>
+                    By using the Service, you agree to the collection and use of
+                    information as described in this Privacy Policy.
+                </p>
+            </>
+        ),
+    },
+    {
+        code: '02',
+        title: 'Information You Provide',
+        body: (
+            <>
+                <p>
+                    When you interact with us — for example by subscribing to updates,
+                    joining our community, or contacting support — we may ask for
+                    information that can identify or contact you, such as:
+                </p>
+                <ul>
+                    <li>Email address</li>
+                    <li>First and last name</li>
+                    <li>Social handles you choose to share (such as X or Discord)</li>
+                </ul>
+                <p>
+                    You are never required to provide more than what a given feature
+                    needs to work.
+                </p>
+            </>
+        ),
+    },
+    {
+        code: '03',
+        title: 'Information Collected Automatically',
+        body: (
+            <>
+                <p>
+                    When you use the Service, some usage data is collected
+                    automatically. This may include your device&apos;s IP address,
+                    browser type and version, the pages you visit, the time and date
+                    of your visit, and other diagnostic data. We use this to operate,
+                    secure, and improve the Service — not to build advertising
+                    profiles.
+                </p>
+            </>
+        ),
+    },
+    {
+        code: '04',
+        title: 'Cookies and Tracking Technologies',
+        body: (
+            <>
+                <p>
+                    We use a minimal set of cookies and similar technologies to keep
+                    the Service functional and to understand how it is used:
+                </p>
+                <ul>
+                    <li>
+                        <strong className="text-white">Session cookies</strong> — deleted when you close your
+                        browser; used to keep basic functionality working.
+                    </li>
+                    <li>
+                        <strong className="text-white">Persistent cookies</strong> — remain on your device to
+                        remember preferences between visits.
+                    </li>
+                    <li>
+                        <strong className="text-white">Web beacons</strong> — small electronic files that may be
+                        used in emails or on pages to count visits and verify system
+                        integrity.
+                    </li>
+                </ul>
+                <p>
+                    You can instruct your browser to refuse all cookies or to indicate
+                    when a cookie is being sent. Some parts of the Service may not
+                    function without them.
+                </p>
+            </>
+        ),
+    },
+    {
+        code: '05',
+        title: 'How We Use Information',
+        body: (
+            <>
+                <p>We use the information we collect to:</p>
+                <ul>
+                    <li>Provide, maintain, and improve the Service</li>
+                    <li>Communicate with you about updates, features, and support</li>
+                    <li>Monitor usage to detect abuse and keep the Service secure</li>
+                    <li>Comply with legal obligations</li>
+                </ul>
+                <p>
+                    We do not sell your personal information.
+                </p>
+            </>
+        ),
+    },
+    {
+        code: '06',
+        title: 'Security of Data and No Liability',
+        body: (
+            <>
+                <p>
+                    The security of your data is important to us — but no method of
+                    transmission over the internet or method of electronic storage is
+                    100% secure. While we strive to use commercially acceptable means
+                    to protect your personal data, we cannot guarantee its absolute
+                    security.
+                </p>
+                <p>
+                    By using the Service, you acknowledge and agree that NetSepio
+                    assumes no liability for any data breaches, leaks, unauthorized
+                    access, or loss of information. You use the Service at your own
+                    risk.
+                </p>
+            </>
+        ),
+    },
+    {
+        code: '07',
+        title: 'Indemnification',
+        body: (
+            <>
+                <p>
+                    By accessing our Service, you agree to fully indemnify, defend,
+                    and hold harmless NetSepio, its affiliates, and their respective
+                    directors, officers, employees, and agents from any claims,
+                    liabilities, damages, losses, or expenses — including reasonable
+                    attorney fees — arising out of or in any way connected with your
+                    use of the Service or your violation of this Privacy Policy.
+                </p>
+            </>
+        ),
+    },
+    {
+        code: '08',
+        title: 'Changes and Contact',
+        body: (
+            <>
+                <p>
+                    We may update this Privacy Policy from time to time. Changes take
+                    effect when posted on this page, and material changes will be
+                    reflected in the &quot;last updated&quot; date above.
+                </p>
+                <p>
+                    Questions about this policy or your data? Contact us at{' '}
+                    <a href="mailto:support@netsepio.com" className="text-brand-cyan hover:text-neon transition-colors">
+                        support@netsepio.com
+                    </a>.
+                </p>
+            </>
+        ),
+    },
+];
 
 export default function PrivacyPolicyPage() {
     return (
-        <div className="min-h-screen bg-[#040a20]">
+        <div className="min-h-screen bg-void relative">
+            <div className="absolute inset-0 bg-hud-grid-fine opacity-40 pointer-events-none"></div>
             <NavBar />
-            <main className="max-w-4xl mx-auto px-6 py-24">
-                <h1 className="text-4xl md:text-5xl font-bold text-center text-[#08d9c5] mb-12">
-                    Privacy Policy
-                </h1>
-                <div className="prose prose-invert max-w-none text-gray-300 leading-relaxed space-y-6 pb-20">
-                    <p>
-                        This Privacy Policy describes our policies and procedures on the
-                        collection, use and disclosure of your information when you use the
-                        Service and tells you about your privacy rights and how the law
-                        protects You. We use your Personal data to provide and improve the
-                        Service. By using the Service, you agree to the collection and use of
-                        information in accordance with this Privacy Policy.
-                    </p>
-                    <p>
-                        While using Our
-                        Service, we may ask you to provide us with certain personally
-                        identifiable information that can be used to contact or identify you.
-                        Personally identifiable information may include, but is not limited
-                        to: Email address, First name and last name, Twitter and Discord
-                        account, Usage Data Usage Data is collected automatically when using
-                        the Service. Usage Data may include information such as your Device's
-                        Internet Protocol address (e.g. IP address), browser type, browser
-                        version, etc.
-                    </p>
-                    <p>
-                        We use Cookies and similar tracking technologies to track the
-                        activity on our Service and store certain information. Tracking
-                        technologies used are beacons, tags, and scripts to collect and track
-                        information and to improve and analyze our Service. The technologies
-                        we use may include:
-                    </p>
-                    <ul className="list-disc pl-6 space-y-4 pt-4">
-                        <li>
-                            <strong>Cookies can be "Persistent" or "Session" Cookies.</strong> Persistent Cookies remain on your personal computer or mobile device
-                            when you go offline, while Session Cookies are deleted as soon as you
-                            close your web browser.
-                        </li>
-                        <li>
-                            <strong>Cookies or Browser Cookies:</strong> A cookie is a
-                            small file placed on your Device. You can instruct your browser to
-                            refuse all Cookies or to indicate when a Cookie is being sent.
-                            However, if you do not accept Cookies, you may not be able to use some
-                            parts of our Service. Unless you have adjusted your browser setting so
-                            that it will refuse Cookies, our Service may use Cookies.
-                        </li>
-                        <li>
-                            <strong>Web Beacons:</strong> Certain sections of our Service and our emails may contain small
-                            electronic files known as web beacons (also referred to as clear gifs,
-                            pixel tags, and single-pixel gifs) that permit the Company, for
-                            example, to count users who have visited those pages or opened an
-                            email and for other related website statistics (for example, recording
-                            the popularity of a certain section and verifying system and server
-                            integrity).
-                        </li>
-                    </ul>
-                    <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Security of Data and No Liability</h2>
-                    <p>
-                        The security of your data is important to us, but remember that no method of transmission over
-                        the Internet, or method of electronic storage is 100% secure. While we strive to use commercially
-                        acceptable means to protect your Personal Data, we cannot guarantee its absolute security.
-                        By using the Service, you acknowledge and agree that NetSepio assumes absolutely NO LIABILITY
-                        for any data breaches, leaks, unauthorized access, or loss of information. You use the Service
-                        entirely at your own risk.
-                    </p>
-                    <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Indemnification</h2>
-                    <p>
-                        By accessing our Service, you agree to fully indemnify, defend, and hold harmless NetSepio,
-                        its affiliates, and their respective directors, officers, employees, and agents from any claims,
-                        liabilities, damages, losses, or expenses, including reasonable attorney fees, arising out of or
-                        in any way connected with your use of the Service or your violation of this Privacy Policy.
+
+            <main className="max-w-4xl mx-auto px-6 pt-36 pb-24 relative z-10">
+                <div className="text-center mb-16">
+                    <MonoTag className="mb-6">LEGAL <span className="text-brand-cyan/40">//</span> PRIVACY_POLICY</MonoTag>
+                    <h1 className="font-heading text-4xl md:text-5xl font-bold text-white uppercase tracking-tight mb-6">
+                        Privacy <span className="text-gradient">Policy</span>
+                    </h1>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-gray-500">
+                        Last updated: 2026-07-10
                     </p>
                 </div>
+
+                <div className="space-y-6">
+                    {sections.map((section) => (
+                        <section key={section.code} className="hud-panel p-8 md:p-10 relative">
+                            <Corners size="w-2 h-2" className="border-brand-cyan/25" />
+                            <p className="font-mono text-[10px] tracking-[0.3em] text-brand-cyan/60 uppercase mb-3">
+                                SEC.{section.code}
+                            </p>
+                            <h2 className="font-heading text-2xl font-bold text-white uppercase tracking-tight mb-5">
+                                {section.title}
+                            </h2>
+                            <div className="space-y-4 text-gray-400 leading-relaxed [&_ul]:list-none [&_ul]:space-y-2 [&_ul]:pl-0 [&_li]:pl-6 [&_li]:relative [&_li]:before:content-['▸'] [&_li]:before:absolute [&_li]:before:left-0 [&_li]:before:text-brand-cyan [&_li]:before:font-mono [&_li]:before:text-xs [&_li]:before:top-1.5">
+                                {section.body}
+                            </div>
+                        </section>
+                    ))}
+                </div>
             </main>
+
             <Footer />
         </div>
     );

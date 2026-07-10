@@ -5,7 +5,9 @@
   "homepage": "https://NetSepio.github.io/",
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
+    "@fontsource/jetbrains-mono": "^5.2.8",
     "@fontsource/outfit": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.10",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
     "clsx": "^2.1.1",
@@ -21,7 +23,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "og": "node scripts/generate-og.mjs",
+    "build": "node scripts/generate-og.mjs && next build",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "pnpm run build",
