@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 import NavBar from '../../components/NavBar';
 import Footer from '../../components/Footer';
 import ScrambleText from '../../components/ScrambleText';
-import { Corners, MonoTag } from '../../components/hud';
+import { Corners, MonoTag, RuleTag } from '../../components/hud';
+import { revealUp, viewportOnce } from '../../lib/motion';
 
 const principles = [
     {
@@ -137,16 +138,13 @@ export default function MissionPage() {
 
                 {/* Four pillars */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    {...revealUp}
+                    viewport={viewportOnce}
                     className="mb-28"
                 >
-                    <div className="flex items-center gap-4 mb-10 justify-center">
-                        <span className="hidden sm:block h-px w-12 bg-brand-cyan/30"></span>
-                        <MonoTag>01 <span className="text-brand-cyan/40">{"//"}</span> WHAT_WE_BUILD</MonoTag>
-                        <span className="hidden sm:block h-px w-12 bg-brand-cyan/30"></span>
-                    </div>
+                    <RuleTag className="mb-10">
+                        01 <span className="text-brand-cyan/40">{"//"}</span> WHAT_WE_BUILD
+                    </RuleTag>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
                         {pillars.map((pillar) => (
@@ -163,16 +161,13 @@ export default function MissionPage() {
 
                 {/* Principles */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    {...revealUp}
+                    viewport={viewportOnce}
                     className="mb-28"
                 >
-                    <div className="flex items-center gap-4 mb-10 justify-center">
-                        <span className="hidden sm:block h-px w-12 bg-brand-cyan/30"></span>
-                        <MonoTag>02 <span className="text-brand-cyan/40">{"//"}</span> OPERATING_PRINCIPLES</MonoTag>
-                        <span className="hidden sm:block h-px w-12 bg-brand-cyan/30"></span>
-                    </div>
+                    <RuleTag className="mb-10">
+                        02 <span className="text-brand-cyan/40">{"//"}</span> OPERATING_PRINCIPLES
+                    </RuleTag>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {principles.map((p) => (
@@ -190,9 +185,8 @@ export default function MissionPage() {
 
                 {/* CTA */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    {...revealUp}
+                    viewport={viewportOnce}
                     className="text-center hud-panel-solid p-12 md:p-16 max-w-4xl mx-auto relative overflow-hidden scanlines"
                 >
                     <Corners />

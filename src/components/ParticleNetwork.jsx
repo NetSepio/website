@@ -10,7 +10,11 @@ const ParticleNetwork = () => {
     useEffect(() => {
         initParticlesEngine(async (engine) => {
             await loadSlim(engine);
-        }).then(() => setReady(true));
+        })
+            .then(() => setReady(true))
+            .catch((error) => {
+                console.error('Failed to initialize tsParticles engine:', error);
+            });
     }, []);
 
     if (!ready) return null;
