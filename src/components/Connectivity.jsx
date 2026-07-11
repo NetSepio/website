@@ -4,6 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Corners, SectionHeader } from "./hud";
+import {
+  pressableScale,
+  revealScale,
+  viewportOnce,
+  viewportOnceEarly,
+} from "../lib/motion";
 
 const manifesto = [
   { cmd: "cat /etc/netsepio/ethos", out: null },
@@ -35,9 +41,8 @@ const Connectivity = () => {
         />
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
+          {...revealScale}
+          viewport={viewportOnceEarly}
           transition={{ duration: 0.6, ease: "easeOut" }}
           className="hud-panel-solid max-w-4xl mx-auto relative overflow-hidden scanlines"
         >
@@ -80,11 +85,11 @@ const Connectivity = () => {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={viewportOnce}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-center mt-12"
         >
-          <motion.span whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block">
+          <motion.span {...pressableScale} className="inline-block">
             <Link href="/mission" className="btn-hud">
               Read Our Mission
             </Link>

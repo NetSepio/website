@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ScrambleText from "./ScrambleText";
 import ParticleNetwork from "./ParticleNetwork";
+import { pressableScale } from "../lib/motion";
 
 const stats = [
   { key: "PRIVACY", value: "DEFAULT" },
@@ -63,16 +64,14 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.a
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+              {...pressableScale}
               href="/#suite"
               className="btn-hud w-full sm:w-auto"
             >
               Explore the Stack
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+              {...pressableScale}
               href="https://x.com/netsepio"
               target="_blank"
               rel="noreferrer"
@@ -81,8 +80,7 @@ const Hero = () => {
               Follow on X
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+              {...pressableScale}
               href="https://discordapp.com/invite/5uaFhNpRF6"
               target="_blank"
               rel="noreferrer"

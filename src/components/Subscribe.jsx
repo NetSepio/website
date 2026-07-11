@@ -4,6 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Corners, MonoTag } from "./hud";
+import {
+  pressableScale,
+  revealScale,
+  revealUp,
+  viewportOnce,
+} from "../lib/motion";
 
 const Subscribe = () => {
   return (
@@ -14,9 +20,8 @@ const Subscribe = () => {
 
         {/* Transmission signup */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          {...revealUp}
+          viewport={viewportOnce}
           className="relative overflow-hidden mb-24 max-w-5xl mx-auto"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-brand-cyan via-brand-darkgreen to-neon opacity-10"></div>
@@ -35,8 +40,7 @@ const Subscribe = () => {
               sharing, security tools, and user-owned AI infrastructure.
             </p>
             <motion.a
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+              {...pressableScale}
               href="https://netsepio.substack.com/"
               target="_blank"
               rel="noreferrer"
@@ -49,9 +53,8 @@ const Subscribe = () => {
 
         {/* Community */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
+          {...revealScale}
+          viewport={viewportOnce}
           className="text-center"
         >
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-white mb-10 uppercase tracking-tight">
@@ -60,8 +63,7 @@ const Subscribe = () => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-5">
             <motion.a
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+              {...pressableScale}
               href="https://discordapp.com/invite/5uaFhNpRF6"
               target="_blank"
               rel="noreferrer"
@@ -70,8 +72,7 @@ const Subscribe = () => {
               Discord <FiArrowUpRight />
             </motion.a>
             <motion.a
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
+              {...pressableScale}
               href="https://t.me/NetSepio"
               target="_blank"
               rel="noreferrer"
