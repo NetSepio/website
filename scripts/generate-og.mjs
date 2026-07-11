@@ -10,7 +10,13 @@ import { fileURLToPath } from 'node:url';
 const { ImageResponse } = og;
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
-const read = (relPath) => fs.readFileSync(path.join(root, relPath));
+const read = (relPath) => {
+    try {
+        return fs.readFileSync(path.join(root, relPath));
+    } catch (err) {
+        throw new Error(`Failed to read required asset "${relPath}": ${err.message}`, { cause: err });
+    }
+};
 
 const CYAN = '#08d9c5';
 const NEON = '#00ffe1';
