@@ -180,7 +180,7 @@ export default function TermsOfUsePage() {
 
             <main className="max-w-4xl mx-auto px-6 pt-36 pb-24 relative z-10">
                 <div className="text-center mb-16">
-                    <MonoTag className="mb-6">LEGAL <span className="text-brand-cyan/40">//</span> TERMS_OF_USE</MonoTag>
+                    <MonoTag className="mb-6">LEGAL <span className="text-brand-cyan/40">{"//"}</span> TERMS_OF_USE</MonoTag>
                     <h1 className="font-heading text-4xl md:text-5xl font-bold text-white uppercase tracking-tight mb-6">
                         Terms of <span className="text-gradient">Use</span>
                     </h1>

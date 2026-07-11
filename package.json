@@ -26,15 +26,9 @@
     "og": "node scripts/generate-og.mjs",
     "build": "node scripts/generate-og.mjs && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d out"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -49,7 +43,10 @@
     ]
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.6",
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.10",
     "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.0.0"

@@ -33,7 +33,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-mono text-[11px] uppercase tracking-[0.3em] text-brand-cyan/70 mb-6">
-              <span className="text-brand-cyan/40">//</span> About
+              <span className="text-brand-cyan/40">{"//"}</span> About
             </h3>
             <ul className="space-y-4">
               {[
@@ -53,7 +53,7 @@ const Footer = () => {
 
           <div>
             <h3 className="font-mono text-[11px] uppercase tracking-[0.3em] text-brand-cyan/70 mb-6">
-              <span className="text-brand-cyan/40">//</span> Products
+              <span className="text-brand-cyan/40">{"//"}</span> Products
             </h3>
             <ul className="space-y-4">
               {[
@@ -81,7 +81,7 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center py-8 border-t border-brand-cyan/10 gap-6">
           <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-gray-500">
-            © {currentYear} NetSepio <span className="text-brand-cyan/40">//</span> All rights reserved
+            © {currentYear} NetSepio <span className="text-brand-cyan/40">{"//"}</span> All rights reserved
           </p>
 
           <div className="flex gap-3">

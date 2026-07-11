@@ -1,18 +1,23 @@
 'use client';
 
-import React, { useCallback } from 'react';
-import Particles from '@tsparticles/react';
+import React, { useEffect, useState } from 'react';
+import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
 const ParticleNetwork = () => {
-    const particlesInit = useCallback(async (engine) => {
-        await loadSlim(engine);
+    const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        initParticlesEngine(async (engine) => {
+            await loadSlim(engine);
+        }).then(() => setReady(true));
     }, []);
+
+    if (!ready) return null;
 
     return (
         <Particles
             id="tsparticles"
-            init={particlesInit}
             className="absolute inset-0 z-0 opacity-40 pointer-events-none sm:pointer-events-auto"
             options={{
                 background: {

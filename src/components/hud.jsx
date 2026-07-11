@@ -44,7 +44,7 @@ export const SectionHeader = ({ index, code, title, sub, align = "center" }) => 
       <div className={`flex items-center gap-4 mb-6 ${isCenter ? "justify-center" : ""}`}>
         <span className="hidden sm:block h-px w-12 bg-brand-cyan/30"></span>
         <MonoTag>
-          {index} <span className="text-brand-cyan/40">//</span> {code}
+          {index} <span className="text-brand-cyan/40">{"//"}</span> {code}
         </MonoTag>
         <span className="hidden sm:block h-px w-12 bg-brand-cyan/30"></span>
       </div>
