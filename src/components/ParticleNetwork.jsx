@@ -6,7 +6,11 @@ import { loadSlim } from '@tsparticles/slim';
 
 const ParticleNetwork = () => {
     const particlesInit = useCallback(async (engine) => {
-        await loadSlim(engine);
+        try {
+            await loadSlim(engine);
+        } catch (error) {
+            console.error('Failed to initialize tsParticles engine:', error);
+        }
     }, []);
 
     return (
