@@ -30,7 +30,7 @@ const Subscribe = () => {
             <Corners />
             <div className="scan-beam"></div>
 
-            <MonoTag className="mb-6">TRANSMISSION <span className="text-brand-cyan/40">//</span> SUBSCRIBE</MonoTag>
+            <MonoTag className="mb-6">TRANSMISSION <span className="text-brand-cyan/40">{"//"}</span> SUBSCRIBE</MonoTag>
 
             <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-6 leading-tight uppercase tracking-tight">
               Build With The <br /> <span className="text-gradient text-glow">Sovereignty Stack</span>

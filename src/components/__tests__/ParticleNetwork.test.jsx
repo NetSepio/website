@@ -8,17 +8,18 @@ jest.mock('@tsparticles/slim', () => ({
   loadSlim: (...args) => loadSlimMock(...args),
 }));
 
-// Render a stand-in that also exercises the `init` callback the component
-// passes down, without pulling in the real canvas-based engine.
+// tsParticles v3 initializes the engine via `initParticlesEngine`; the mock
+// runs that callback (as the real one does) without the canvas-based engine.
 jest.mock('@tsparticles/react', () => {
   const React = require('react');
-  const MockParticles = ({ id, className, init }) => {
-    React.useEffect(() => {
-      if (init) init({ engineStub: true });
-    }, [init]);
-    return <div data-testid="particles" id={id} className={className} />;
+  const MockParticles = ({ id, className }) => (
+    <div data-testid="particles" id={id} className={className} />
+  );
+  return {
+    __esModule: true,
+    default: MockParticles,
+    initParticlesEngine: (cb) => Promise.resolve(cb({ engineStub: true })),
   };
-  return { __esModule: true, default: MockParticles };
 });
 
 describe('ParticleNetwork', () => {
@@ -26,15 +27,15 @@ describe('ParticleNetwork', () => {
     loadSlimMock.mockClear();
   });
 
-  it('renders the tsparticles container with the expected id', () => {
+  it('renders the tsparticles container with the expected id once the engine is ready', async () => {
     render(<ParticleNetwork />);
-    const el = screen.getByTestId('particles');
+    const el = await screen.findByTestId('particles');
     expect(el).toHaveAttribute('id', 'tsparticles');
   });
 
-  it('applies the pointer/overlay classes to the container', () => {
+  it('applies the pointer/overlay classes to the container', async () => {
     render(<ParticleNetwork />);
-    expect(screen.getByTestId('particles')).toHaveClass(
+    expect(await screen.findByTestId('particles')).toHaveClass(
       'absolute',
       'inset-0',
       'pointer-events-none'
@@ -43,8 +44,7 @@ describe('ParticleNetwork', () => {
 
   it('loads the slim particles bundle during initialization', async () => {
     render(<ParticleNetwork />);
-    // The init callback runs in an effect; allow the microtask to flush.
-    await Promise.resolve();
+    await screen.findByTestId('particles');
     expect(loadSlimMock).toHaveBeenCalledWith({ engineStub: true });
   });
 });

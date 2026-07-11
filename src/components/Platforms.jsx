@@ -34,7 +34,7 @@ const PlatformTag = ({ icon: Icon, index, children }) => (
   <div className="inline-flex items-center gap-3 px-4 py-2 border border-brand-cyan/25 bg-brand-cyan/5 font-mono text-[11px] uppercase tracking-[0.25em] text-brand-cyan">
     <Icon size={14} />
     <span className="text-brand-cyan/40">SYS.{index}</span>
-    <span className="text-brand-cyan/40">//</span>
+    <span className="text-brand-cyan/40">{"//"}</span>
     {children}
   </div>
 );
@@ -320,7 +320,7 @@ const Platforms = () => {
             <FiShield size={26} />
           </div>
           <div className="flex-grow">
-            <MonoTag className="mb-2">SYS.04 <span className="text-brand-cyan/40">//</span> Security_Tools</MonoTag>
+            <MonoTag className="mb-2">SYS.04 <span className="text-brand-cyan/40">{"//"}</span> Security_Tools</MonoTag>
             <h3 className="text-2xl font-heading font-bold text-white mb-2 uppercase tracking-tight">Defend devices and networks</h3>
             <p className="text-gray-400 leading-relaxed">
               Upcoming firewall and security products will help users resist

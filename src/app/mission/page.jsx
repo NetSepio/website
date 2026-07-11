@@ -62,7 +62,7 @@ export default function MissionPage() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-20"
                 >
-                    <MonoTag className="mb-6">MISSION_BRIEF <span className="text-brand-cyan/40">//</span> NETSEPIO</MonoTag>
+                    <MonoTag className="mb-6">MISSION_BRIEF <span className="text-brand-cyan/40">{"//"}</span> NETSEPIO</MonoTag>
                     <h1 className="font-heading text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight uppercase leading-tight">
                         Sovereignty Is Not A Feature.<br />
                         <span className="text-gradient text-glow"><ScrambleText text="It Is The Foundation." /></span>
@@ -143,7 +143,7 @@ export default function MissionPage() {
                     className="mb-28"
                 >
                     <RuleTag className="mb-10">
-                        01 <span className="text-brand-cyan/40">//</span> WHAT_WE_BUILD
+                        01 <span className="text-brand-cyan/40">{"//"}</span> WHAT_WE_BUILD
                     </RuleTag>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
@@ -166,7 +166,7 @@ export default function MissionPage() {
                     className="mb-28"
                 >
                     <RuleTag className="mb-10">
-                        02 <span className="text-brand-cyan/40">//</span> OPERATING_PRINCIPLES
+                        02 <span className="text-brand-cyan/40">{"//"}</span> OPERATING_PRINCIPLES
                     </RuleTag>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

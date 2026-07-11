@@ -51,7 +51,7 @@ export const SectionHeader = ({ index, code, title, sub, align = "center" }) => 
       className={`${isCenter ? "text-center" : "text-left"} mb-16`}
     >
       <RuleTag align={align} className="mb-6">
-        {index} <span className="text-brand-cyan/40">//</span> {code}
+        {index} <span className="text-brand-cyan/40">{"//"}</span> {code}
       </RuleTag>
       <h2 className="font-heading text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight uppercase">
         {title}

@@ -25,7 +25,7 @@ export default function LegalDocument({
             <main className="max-w-4xl mx-auto px-6 pt-36 pb-24 relative z-10">
                 <div className="text-center mb-16">
                     <MonoTag className="mb-6">
-                        LEGAL <span className="text-brand-cyan/40">//</span> {documentCode}
+                        LEGAL <span className="text-brand-cyan/40">{"//"}</span> {documentCode}
                     </MonoTag>
                     <h1 className="font-heading text-4xl md:text-5xl font-bold text-white uppercase tracking-tight mb-6">
                         {title}
