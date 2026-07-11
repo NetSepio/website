@@ -62,9 +62,6 @@ importers:
         specifier: ^3.5.0
         version: 3.5.0
     devDependencies:
-      '@eslint/eslintrc':
-        specifier: ^3.3.6
-        version: 3.3.6
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.24(postcss@8.5.16)
