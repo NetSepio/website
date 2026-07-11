@@ -16,6 +16,12 @@ import {
   FiZap,
 } from "react-icons/fi";
 import { Corners, MonoTag, SectionHeader } from "./hud";
+import {
+  pressableScale,
+  revealFromLeft,
+  revealFromRight,
+  viewportOnceEarly,
+} from "../lib/motion";
 
 const Feature = ({ children }) => (
   <li className="flex items-start gap-3">
@@ -59,7 +65,7 @@ const Platforms = () => {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={viewportOnceEarly}
           transition={{ duration: 0.6 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-3 font-mono text-xs uppercase tracking-[0.15em] text-gray-300 max-w-4xl mx-auto mb-24"
         >
@@ -74,9 +80,8 @@ const Platforms = () => {
         {/* ── Erebrus VPN ─────────────────────────────── */}
         <div id="erebrus-vpn" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-28 scroll-mt-28">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromLeft}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6 }}
             className="relative"
           >
@@ -96,9 +101,8 @@ const Platforms = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromRight}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="space-y-6"
           >
@@ -123,7 +127,7 @@ const Platforms = () => {
               <Feature>Private by design: your traffic is your business, not a product</Feature>
             </ul>
 
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block pt-2">
+            <motion.div {...pressableScale} className="inline-block pt-2">
               <a href="https://erebrus.io/" target="_blank" rel="noreferrer" className="btn-hud">
                 Explore VPN <FiArrowUpRight />
               </a>
@@ -134,9 +138,8 @@ const Platforms = () => {
         {/* ── Erebrus Drop ────────────────────────────── */}
         <div id="erebrus-drop" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-28 scroll-mt-28">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromLeft}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6 }}
             className="space-y-6 order-2 lg:order-1"
           >
@@ -170,9 +173,8 @@ const Platforms = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromRight}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="order-1 lg:order-2"
           >
@@ -214,9 +216,8 @@ const Platforms = () => {
         {/* ── ClawBrick ───────────────────────────────── */}
         <div id="clawbrick" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-28 scroll-mt-28">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromLeft}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6 }}
           >
             <div className="hud-panel p-8 md:p-10 relative overflow-hidden scanlines">
@@ -273,9 +274,8 @@ const Platforms = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromRight}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="space-y-6"
           >
@@ -299,7 +299,7 @@ const Platforms = () => {
               <Feature>Your knowledge compounds on infrastructure you govern — not a platform&apos;s</Feature>
             </ul>
 
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block pt-2">
+            <motion.div {...pressableScale} className="inline-block pt-2">
               <a href="https://clawbrick.com/" target="_blank" rel="noreferrer" className="btn-hud">
                 Visit ClawBrick <FiArrowUpRight />
               </a>
@@ -311,7 +311,7 @@ const Platforms = () => {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={viewportOnceEarly}
           transition={{ duration: 0.6 }}
           className="hud-panel p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center gap-6 relative"
         >

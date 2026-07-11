@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Corners, SectionHeader } from "./hud";
+import { viewportOnceEarly } from "../lib/motion";
 
 export const technologies = [
   {
@@ -62,7 +63,7 @@ export function Technology() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={viewportOnceEarly}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
         >
           {technologies.map((tech, idx) => (
