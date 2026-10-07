@@ -13,6 +13,23 @@ const links = [
   { name: "Docs", url: "https://docs.netsepio.com/latest", external: true },
 ];
 
+const NavLink = ({ link, mobile = false, onClick }) => (
+  <a
+    href={link.url}
+    target={link.external ? "_blank" : undefined}
+    rel={link.external ? "noreferrer" : undefined}
+    onClick={onClick}
+    className={
+      mobile
+        ? "block px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-gray-300 hover:text-brand-cyan hover:bg-brand-cyan/5 transition-colors"
+        : "font-mono text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-colors"
+    }
+  >
+    {mobile && <span className="text-brand-cyan/40 mr-2">›</span>}
+    {link.name}
+  </a>
+);
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -49,15 +66,7 @@ const NavBar = () => {
         {/* Desktop links */}
         <div className="hidden lg:flex items-center gap-8">
           {links.map((link) => (
-            <a
-              key={link.name}
-              href={link.url}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noreferrer" : undefined}
-              className="font-mono text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-brand-cyan transition-colors"
-            >
-              {link.name}
-            </a>
+            <NavLink key={link.name} link={link} />
           ))}
           <div className="pl-6 border-l border-white/10">
             <StatusDot>Online</StatusDot>
@@ -84,17 +93,12 @@ const NavBar = () => {
               >
                 <div className="py-2">
                   {links.map((link) => (
-                    <a
+                    <NavLink
                       key={link.name}
-                      href={link.url}
-                      target={link.external ? "_blank" : undefined}
-                      rel={link.external ? "noreferrer" : undefined}
+                      link={link}
+                      mobile
                       onClick={() => setIsOpen(false)}
-                      className="block px-6 py-3 font-mono text-xs uppercase tracking-[0.2em] text-gray-300 hover:text-brand-cyan hover:bg-brand-cyan/5 transition-colors"
-                    >
-                      <span className="text-brand-cyan/40 mr-2">›</span>
-                      {link.name}
-                    </a>
+                    />
                   ))}
                 </div>
               </motion.div>

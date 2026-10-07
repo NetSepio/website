@@ -22,7 +22,7 @@ export default function NotFound() {
                     <Corners />
                     <div className="scan-beam"></div>
 
-                    <MonoTag className="mb-6">ERROR <span className="text-brand-cyan/40">//</span> SIGNAL_LOST</MonoTag>
+                    <MonoTag className="mb-6">ERROR <span className="text-brand-cyan/40">{"//"}</span> SIGNAL_LOST</MonoTag>
 
                     <h1 className="font-heading text-8xl md:text-9xl font-bold text-gradient text-glow mb-6">
                         <ScrambleText text="404" />

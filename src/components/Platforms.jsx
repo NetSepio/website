@@ -17,6 +17,12 @@ import {
   FiZap,
 } from "react-icons/fi";
 import { Corners, SectionHeader } from "./hud";
+import {
+  pressableScale,
+  revealFromLeft,
+  revealFromRight,
+  viewportOnceEarly,
+} from "../lib/motion";
 import ErebrusPhone from "./ErebrusPhone";
 
 const Feature = ({ children }) => (
@@ -30,7 +36,7 @@ const PlatformTag = ({ icon: Icon, index, children }) => (
   <div className="inline-flex items-center gap-3 px-4 py-2 border border-brand-cyan/25 bg-brand-cyan/5 font-mono text-[11px] uppercase tracking-[0.25em] text-brand-cyan">
     <Icon size={14} />
     <span className="text-brand-cyan/40">SYS.{index}</span>
-    <span className="text-brand-cyan/40">//</span>
+    <span className="text-brand-cyan/40">{"//"}</span>
     {children}
   </div>
 );
@@ -128,7 +134,7 @@ const Platforms = () => {
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={viewportOnceEarly}
           transition={{ duration: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-5xl mx-auto mb-24"
         >
@@ -154,9 +160,8 @@ const Platforms = () => {
         <div id="erebrus" className="mb-28 scroll-mt-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              {...revealFromLeft}
+              viewport={viewportOnceEarly}
               transition={{ duration: 0.6 }}
               className="relative"
             >
@@ -172,9 +177,8 @@ const Platforms = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              {...revealFromRight}
+              viewport={viewportOnceEarly}
               transition={{ duration: 0.6, delay: 0.15 }}
               className="space-y-6"
             >
@@ -201,10 +205,10 @@ const Platforms = () => {
               </ul>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://erebrus.io/" target="_blank" rel="noreferrer" className="btn-hud">
+                <motion.a {...pressableScale} href="https://erebrus.io/" target="_blank" rel="noreferrer" className="btn-hud">
                   Explore Erebrus <FiArrowUpRight />
                 </motion.a>
-                <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://erebrus.io/#operators" target="_blank" rel="noreferrer" className="btn-hud-outline">
+                <motion.a {...pressableScale} href="https://erebrus.io/#operators" target="_blank" rel="noreferrer" className="btn-hud-outline">
                   Run a Node <FiArrowUpRight />
                 </motion.a>
               </div>
@@ -215,7 +219,7 @@ const Platforms = () => {
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6 }}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
           >
@@ -231,7 +235,7 @@ const Platforms = () => {
                 <Corners size="w-2 h-2" className="border-brand-cyan/25" />
                 <div className="flex items-center justify-between mb-5">
                   <span className="font-mono text-[10px] tracking-[0.25em] text-brand-cyan/60 uppercase">
-                    MOD.{String(idx + 1).padStart(2, "0")} <span className="text-brand-cyan/40">//</span> {code}
+                    MOD.{String(idx + 1).padStart(2, "0")} <span className="text-brand-cyan/40">{"//"}</span> {code}
                   </span>
                   <FiArrowUpRight className="text-gray-500 group-hover:text-brand-cyan transition-colors" />
                 </div>
@@ -248,9 +252,8 @@ const Platforms = () => {
         {/* ── ClawBrick ───────────────────────────────── */}
         <div id="clawbrick" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-28 scroll-mt-28">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromLeft}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6 }}
             className="order-2 lg:order-1"
           >
@@ -302,16 +305,15 @@ const Platforms = () => {
                 </div>
 
                 <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-gray-500 text-center">
-                  Managed from Telegram <span className="text-brand-cyan/40">//</span> Always on
+                  Managed from Telegram <span className="text-brand-cyan/40">{"//"}</span> Always on
                 </p>
               </div>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromRight}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="space-y-6 order-1 lg:order-2"
           >
@@ -340,10 +342,10 @@ const Platforms = () => {
             <Chips items={["6+ business types", "24/7 always on", "5 min to go live"]} />
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://clawbrick.com/agents" target="_blank" rel="noreferrer" className="btn-hud">
+              <motion.a {...pressableScale} href="https://clawbrick.com/agents" target="_blank" rel="noreferrer" className="btn-hud">
                 Deploy an Agent <FiArrowUpRight />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://clawbrick.com/" target="_blank" rel="noreferrer" className="btn-hud-outline">
+              <motion.a {...pressableScale} href="https://clawbrick.com/" target="_blank" rel="noreferrer" className="btn-hud-outline">
                 Visit ClawBrick <FiArrowUpRight />
               </motion.a>
             </div>
@@ -353,9 +355,8 @@ const Platforms = () => {
         {/* ── Sotreus ─────────────────────────────────── */}
         <div id="sotreus" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center scroll-mt-28">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromLeft}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
@@ -385,19 +386,18 @@ const Platforms = () => {
             <Chips items={["V1 // Phone", "V1.1 // Sky context", "V2 // Edge hardware"]} />
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://sotreus.com/#access" target="_blank" rel="noreferrer" className="btn-hud">
+              <motion.a {...pressableScale} href="https://sotreus.com/#access" target="_blank" rel="noreferrer" className="btn-hud">
                 Get Early Access <FiArrowUpRight />
               </motion.a>
-              <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://sotreus.com/#how" target="_blank" rel="noreferrer" className="btn-hud-outline">
+              <motion.a {...pressableScale} href="https://sotreus.com/#how" target="_blank" rel="noreferrer" className="btn-hud-outline">
                 How It Works <FiArrowUpRight />
               </motion.a>
             </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            {...revealFromRight}
+            viewport={viewportOnceEarly}
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             <div className="hud-panel relative overflow-hidden min-h-[400px] flex items-center justify-center p-10 scanlines">

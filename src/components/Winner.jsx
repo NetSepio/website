@@ -4,6 +4,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 import { Corners, SectionHeader } from "./hud";
+import {
+  revealFromLeft,
+  revealFromRight,
+  viewportOnce,
+} from "../lib/motion";
 
 const partners = [
   { img: "radarthack", name: "Radar Hackathon" },
@@ -64,9 +69,8 @@ const Winners = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            {...revealFromLeft}
+            viewport={viewportOnce}
             className="grid grid-cols-2 sm:grid-cols-3 gap-4"
           >
             {partners.map((partner) => (
@@ -86,9 +90,8 @@ const Winners = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            {...revealFromRight}
+            viewport={viewportOnce}
             className="space-y-3"
           >
             {highlights.map((item, index) => (
