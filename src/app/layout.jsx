@@ -4,14 +4,14 @@ import FilmGrain from '../components/FilmGrain';
 export const metadata = {
     metadataBase: new URL('https://netsepio.com'),
     title: 'NetSepio - Sovereignty Stack for the Open Internet',
-    description: 'NetSepio builds privacy-first tools for digital sovereignty: Erebrus VPN for private connectivity, Erebrus Drop for local-first sharing, upcoming security products, and ClawBrick — a second brain for businesses and people.',
+    description: 'NetSepio builds privacy-first tools for digital sovereignty: Erebrus for private connectivity, local file sharing, and private AI; ClawBrick for AI agents in every business; and Sotreus for awareness of the signals around you.',
     icons: {
         icon: '/images/Logo.png',
         apple: '/logo192.png',
     },
     openGraph: {
         title: 'NetSepio - Sovereignty Stack for the Open Internet',
-        description: 'NetSepio builds privacy-first, censorship-resistant tools for private connectivity, local sharing, network defense, and a second brain you own.',
+        description: 'Privacy-first, censorship-resistant tools: Erebrus for private connectivity and AI, ClawBrick for AI agents, and Sotreus for signal awareness.',
         url: 'https://netsepio.com',
         siteName: 'NetSepio',
         locale: 'en_US',
@@ -29,7 +29,7 @@ export const metadata = {
         card: 'summary_large_image',
         site: '@netsepio',
         title: 'NetSepio - Sovereignty Stack for the Open Internet',
-        description: 'Privacy-first, censorship-resistant tools: Erebrus VPN, Erebrus Drop, security tools, and ClawBrick — a second brain you own.',
+        description: 'Privacy-first, censorship-resistant tools: Erebrus, ClawBrick, and Sotreus.',
         images: ['/images/og-banner.png'],
     },
 };

@@ -37,19 +37,24 @@ describe('Footer', () => {
     );
   });
 
-  it('marks external product links with target and rel attributes', () => {
+  it('links every product to its own site in a new tab', () => {
     render(<Footer />);
-    const vpn = screen.getByRole('link', { name: /Erebrus VPN/ });
-    expect(vpn).toHaveAttribute('href', 'https://erebrus.io/');
-    expect(vpn).toHaveAttribute('target', '_blank');
-    expect(vpn).toHaveAttribute('rel', 'noreferrer');
+    const products = {
+      Erebrus: 'https://erebrus.io/',
+      ClawBrick: 'https://clawbrick.com/',
+      Sotreus: 'https://sotreus.com/',
+    };
+    for (const [name, url] of Object.entries(products)) {
+      const link = screen.getByRole('link', { name: new RegExp(`${name}$`) });
+      expect(link).toHaveAttribute('href', url);
+      expect(link).toHaveAttribute('target', '_blank');
+      expect(link).toHaveAttribute('rel', 'noreferrer');
+    }
   });
 
-  it('leaves the internal Erebrus Drop link without a target', () => {
+  it('leaves internal links without a target', () => {
     render(<Footer />);
-    const drop = screen.getByRole('link', { name: /Erebrus Drop/ });
-    expect(drop).toHaveAttribute('href', '/#erebrus-drop');
-    expect(drop).not.toHaveAttribute('target');
+    expect(screen.getByRole('link', { name: /Mission/ })).not.toHaveAttribute('target');
   });
 
   it('renders all five social media links opening in a new tab', () => {

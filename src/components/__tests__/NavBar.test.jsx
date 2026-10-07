@@ -16,9 +16,9 @@ describe('NavBar', () => {
   it('renders every navigation link with the correct href', () => {
     render(<NavBar />);
     const expected = {
-      'Erebrus VPN': 'https://erebrus.io/',
-      'Erebrus Drop': '/#erebrus-drop',
+      Erebrus: 'https://erebrus.io/',
       ClawBrick: 'https://clawbrick.com/',
+      Sotreus: 'https://sotreus.com/',
       Mission: '/mission',
       Docs: 'https://docs.netsepio.com/latest',
     };
@@ -31,9 +31,11 @@ describe('NavBar', () => {
 
   it('opens external links in a new tab with rel=noreferrer', () => {
     render(<NavBar />);
-    const vpn = screen.getAllByRole('link', { name: 'Erebrus VPN' })[0];
-    expect(vpn).toHaveAttribute('target', '_blank');
-    expect(vpn).toHaveAttribute('rel', 'noreferrer');
+    ['Erebrus', 'ClawBrick', 'Sotreus'].forEach((name) => {
+      const link = screen.getAllByRole('link', { name })[0];
+      expect(link).toHaveAttribute('target', '_blank');
+      expect(link).toHaveAttribute('rel', 'noreferrer');
+    });
   });
 
   it('does not open internal links in a new tab', () => {

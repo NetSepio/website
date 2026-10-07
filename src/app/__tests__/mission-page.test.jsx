@@ -39,9 +39,9 @@ describe('MissionPage', () => {
     });
   });
 
-  it('renders the four sovereignty pillars', () => {
+  it('renders a pillar for each platform', () => {
     render(<MissionPage />);
-    ['CONNECT', 'SHARE', 'PROTECT', 'REMEMBER'].forEach((label) => {
+    ['CONNECT', 'AUTOMATE', 'SENSE'].forEach((label) => {
       expect(screen.getByText(label)).toBeInTheDocument();
     });
   });

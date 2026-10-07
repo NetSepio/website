@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { StatusDot } from "./hud";
 
 const links = [
-  { name: "Erebrus VPN", url: "https://erebrus.io/", external: true },
-  { name: "Erebrus Drop", url: "/#erebrus-drop" },
+  { name: "Erebrus", url: "https://erebrus.io/", external: true },
   { name: "ClawBrick", url: "https://clawbrick.com/", external: true },
+  { name: "Sotreus", url: "https://sotreus.com/", external: true },
   { name: "Mission", url: "/mission" },
   { name: "Docs", url: "https://docs.netsepio.com/latest", external: true },
 ];
