@@ -1,6 +1,10 @@
 # NetSepio Website
 
-The official website for **NetSepio**, a sovereignty stack for the open internet. NetSepio builds privacy-first tools for private connectivity (Erebrus VPN), local file sharing (Erebrus Drop), device and network defense (upcoming security products), and a user-owned second brain for businesses and people (ClawBrick).
+The official website for **NetSepio**, a sovereignty stack for the open internet. NetSepio builds three privacy-first platforms, each with its own site:
+
+- **[Erebrus](https://erebrus.io/)** — private connectivity (VPN), local file sharing (Drop), private AI, and DNS/network protection (Firewall).
+- **[ClawBrick](https://clawbrick.com/)** — Agentic as a Service: pre-built AI agents for every kind of business.
+- **[Sotreus](https://sotreus.com/)** — personal electronic situational awareness.
 
 ## 🚀 Tech Stack
 

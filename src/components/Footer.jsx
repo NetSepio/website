@@ -25,8 +25,8 @@ const Footer = () => {
             </Link>
             <p className="text-gray-400 leading-relaxed max-w-sm">
               NetSepio builds privacy-first tools for digital sovereignty:
-              private connectivity, local sharing, network defense, and a
-              second brain you own.
+              Erebrus for private connectivity and AI, ClawBrick for AI agents
+              in every business, and Sotreus for signal awareness.
             </p>
             <StatusDot>All systems nominal</StatusDot>
           </div>
@@ -57,9 +57,9 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4">
               {[
-                { name: "Erebrus VPN", url: "https://erebrus.io/", external: true },
-                { name: "Erebrus Drop", url: "/#erebrus-drop" },
+                { name: "Erebrus", url: "https://erebrus.io/", external: true },
                 { name: "ClawBrick", url: "https://clawbrick.com/", external: true },
+                { name: "Sotreus", url: "https://sotreus.com/", external: true },
                 { name: "Docs", url: "https://docs.netsepio.com/latest", external: true },
               ].map((item, index) => (
                 <li key={index}>

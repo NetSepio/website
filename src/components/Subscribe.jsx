@@ -31,8 +31,8 @@ const Subscribe = () => {
               Build With The <br /> <span className="text-gradient text-glow">Sovereignty Stack</span>
             </h2>
             <p className="text-gray-300 text-lg mb-10 max-w-2xl mx-auto">
-              Follow NetSepio for updates on private connectivity, local-first
-              sharing, security tools, and user-owned AI infrastructure.
+              Follow NetSepio for launches and updates across Erebrus,
+              ClawBrick, and Sotreus.
             </p>
             <motion.a
               whileHover={{ scale: 1.03 }}

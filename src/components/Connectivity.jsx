@@ -9,7 +9,7 @@ const manifesto = [
   { cmd: "cat /etc/netsepio/ethos", out: null },
   {
     cmd: null,
-    out: "NetSepio is the sovereignty stack for digital agency: DePIN-powered where resilience matters, privacy-first everywhere, and built for people who want to own their connection, sharing, defenses, and AI.",
+    out: "NetSepio is the sovereignty stack for digital agency: DePIN-powered where resilience matters, privacy-first everywhere, and local-first wherever your data can stay with you.",
   },
   {
     cmd: null,
@@ -17,7 +17,7 @@ const manifesto = [
   },
   {
     cmd: null,
-    out: "Every platform we ship — from encrypted decentralized connectivity to a sovereign second brain — is built on one principle: you own it.",
+    out: "Every platform we ship — Erebrus, ClawBrick, and Sotreus — is built on one principle: you own it.",
     accent: true,
   },
 ];
@@ -29,7 +29,7 @@ const Connectivity = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <SectionHeader
-          index="00"
+          index="03"
           code="ETHOS"
           title={<>Infrastructure For <span className="text-gradient">Digital Agency</span></>}
         />

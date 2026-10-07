@@ -4,18 +4,20 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   FiArrowUpRight,
+  FiCalendar,
   FiCpu,
-  FiEdit3,
   FiFileText,
+  FiGlobe,
   FiHardDrive,
   FiMessageSquare,
-  FiMonitor,
+  FiRadio,
+  FiServer,
   FiShield,
-  FiSmartphone,
   FiWifi,
   FiZap,
 } from "react-icons/fi";
-import { Corners, MonoTag, SectionHeader } from "./hud";
+import { Corners, SectionHeader } from "./hud";
+import ErebrusPhone from "./ErebrusPhone";
 
 const Feature = ({ children }) => (
   <li className="flex items-start gap-3">
@@ -33,13 +35,79 @@ const PlatformTag = ({ icon: Icon, index, children }) => (
   </div>
 );
 
-const DeviceChip = ({ icon: Icon, label }) => (
-  <div className="hud-panel px-5 py-6 flex flex-col items-center gap-3 min-w-[110px] relative">
-    <Corners size="w-2 h-2" className="border-brand-cyan/40" />
-    <Icon size={28} className="text-brand-cyan" />
-    <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-gray-400">{label}</span>
+const StatusChip = ({ children, tone = "cyan" }) => (
+  <span
+    className={`whitespace-nowrap font-mono text-[10px] uppercase tracking-[0.25em] px-3 py-1.5 border ${
+      tone === "ember" ? "text-ember border-ember/30 bg-ember/5" : "text-brand-cyan border-brand-cyan/30 bg-brand-cyan/5"
+    }`}
+  >
+    {children}
+  </span>
+);
+
+const Chips = ({ items }) => (
+  <div className="flex flex-wrap gap-3 pt-2">
+    {items.map((chip) => (
+      <span key={chip} className="font-mono text-[10px] tracking-[0.2em] text-gray-400 border border-white/15 px-4 py-2 uppercase">
+        {chip}
+      </span>
+    ))}
   </div>
 );
+
+const platforms = [
+  { index: "01", id: "erebrus", name: "Erebrus", domain: "erebrus.io", role: "Connect · Share · Run AI", status: "Available" },
+  { index: "02", id: "clawbrick", name: "ClawBrick", domain: "clawbrick.com", role: "Agentic as a Service", status: "Now open" },
+  { index: "03", id: "sotreus", name: "Sotreus", domain: "sotreus.com", role: "Signal awareness", status: "Early access", tone: "ember" },
+];
+
+const erebrusModules = [
+  {
+    id: "erebrus-vpn",
+    code: "VPN",
+    icon: FiGlobe,
+    title: "Private, resilient connectivity",
+    text: "Encrypted tunnels over a community-run node network, with WireGuard, VLESS REALITY, and Hysteria2.",
+    url: "https://erebrus.io/vpn",
+  },
+  {
+    id: "erebrus-drop",
+    code: "Drop",
+    icon: FiHardDrive,
+    title: "Local-first file transfer",
+    text: "Send files, photos, or text to nearby devices over Wi-Fi or hotspot. No cloud in the middle.",
+    url: "https://erebrus.io/drop",
+  },
+  {
+    id: "erebrus-ai",
+    code: "Private_AI",
+    icon: FiServer,
+    title: "Models on trusted hardware",
+    text: "Run models from 0.5B to 32B parameters on your own computer, server, or private node.",
+    url: "https://erebrus.io/ai",
+  },
+  {
+    id: "erebrus-firewall",
+    code: "Firewall",
+    icon: FiShield,
+    title: "DNS and network protection",
+    text: "Block malware, phishing, and trackers with policies for individuals, families, and teams.",
+    url: "https://erebrus.io/firewall",
+  },
+];
+
+const agents = [
+  { icon: FiFileText, name: "Contract Helper", sector: "Law" },
+  { icon: FiCalendar, name: "Booking Assistant", sector: "Clinics" },
+  { icon: FiMessageSquare, name: "Customer Support", sector: "Hospitality" },
+];
+
+const signals = [
+  { label: "BLE", top: "18%", left: "62%" },
+  { label: "WI-FI", top: "62%", left: "20%" },
+  { label: "AIRCRAFT", top: "28%", left: "16%" },
+  { label: "SATELLITE", top: "70%", left: "64%" },
+];
 
 const Platforms = () => {
   return (
@@ -52,162 +120,128 @@ const Platforms = () => {
         <SectionHeader
           index="01"
           code="PLATFORMS"
-          title={<>Tools to Own Your<br /><span className="text-gradient">Connection, Compute, and AI</span></>}
-          sub="NetSepio brings together Erebrus VPN, Erebrus Drop, upcoming security tools, and ClawBrick into a privacy-first suite for users and organizations that want agency over their digital lives — built with cutting-edge tech: DePIN infrastructure, encrypted peer-to-peer transport, local-first design, and user-owned AI."
+          title={<>Tools to Own Your<br /><span className="text-gradient">Connection, AI, and Surroundings</span></>}
+          sub="The sovereignty stack spans three platforms: Erebrus for private connectivity, local sharing, and private AI; ClawBrick for AI agents that run your business; and Sotreus for awareness of the signals around you. Each has its own home — here's what they do and where to go next."
         />
 
+        {/* Platform index */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-3 font-mono text-xs uppercase tracking-[0.15em] text-gray-300 max-w-4xl mx-auto mb-24"
+          className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-5xl mx-auto mb-24"
         >
-          {["Connect privately", "Share locally", "Protect devices", "Remember everything"].map((item) => (
-            <div key={item} className="hud-panel px-4 py-3 text-center relative">
+          {platforms.map((p) => (
+            <a
+              key={p.id}
+              href={`#${p.id}`}
+              className="hud-panel px-5 py-4 relative group flex flex-col gap-1 hover:border-brand-cyan/40 transition-colors"
+            >
               <Corners size="w-2 h-2" className="border-brand-cyan/30" />
-              {item}
-            </div>
+              <div className="flex items-center justify-between gap-3 mb-2">
+                <p className="font-mono text-[10px] tracking-[0.25em] text-brand-cyan/60 uppercase">SYS.{p.index}</p>
+                <StatusChip tone={p.tone}>{p.status}</StatusChip>
+              </div>
+              <p className="font-heading font-bold text-lg text-white uppercase tracking-tight group-hover:text-brand-cyan transition-colors">{p.name}</p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-gray-400">{p.role}</p>
+              <p className="font-mono text-[10px] tracking-[0.15em] text-gray-500">{p.domain}</p>
+            </a>
           ))}
         </motion.div>
 
-        {/* ── Erebrus VPN ─────────────────────────────── */}
-        <div id="erebrus-vpn" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-28 scroll-mt-28">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="absolute inset-0 bg-brand-cyan/15 blur-[100px] rounded-full -z-10"></div>
-            <div className="hud-panel p-3 relative overflow-hidden">
-              <Corners />
-              <div className="scan-beam"></div>
-              <img
-                src="/images/Erebrus_Mobile.png"
-                alt="Erebrus VPN mobile app"
-                className="w-full h-auto"
-              />
-              <div className="absolute bottom-5 left-5 font-mono text-[10px] uppercase tracking-[0.25em] text-brand-cyan/70 bg-void/70 px-3 py-1.5 border border-brand-cyan/20">
-                erebrus://tunnel_active
+        {/* ── Erebrus ─────────────────────────────────── */}
+        <div id="erebrus" className="mb-28 scroll-mt-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-brand-cyan/15 blur-[100px] rounded-full -z-10"></div>
+              <div className="hud-panel p-3 relative overflow-hidden">
+                <Corners />
+                <div className="scan-beam"></div>
+                <ErebrusPhone />
+                <div className="absolute bottom-5 left-5 font-mono text-[10px] uppercase tracking-[0.25em] text-brand-cyan/70 bg-void/70 px-3 py-1.5 border border-brand-cyan/20">
+                  erebrus://tunnel_active
+                </div>
               </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="space-y-6"
-          >
-            <PlatformTag icon={FiWifi} index="01">Erebrus_VPN</PlatformTag>
-
-            <h3 className="font-heading text-3xl md:text-4xl font-bold text-white leading-tight uppercase tracking-tight">
-              Private, resilient <span className="text-gradient">connectivity</span>
-            </h3>
-
-            <p className="text-gray-300 text-lg leading-relaxed">
-              A decentralized VPN for censorship-resistant access, private
-              routing, and fewer central points of failure. Erebrus runs on a
-              DePIN network of community-operated nodes instead of one
-              company&apos;s servers — so your connection has no single choke
-              point to block, surveil, or switch off.
-            </p>
-
-            <ul className="space-y-3">
-              <Feature>Decentralized node network — no central point of failure or control</Feature>
-              <Feature>Encrypted, censorship-resistant routing that keeps working under pressure</Feature>
-              <Feature>Community-run DePIN infrastructure spanning the globe</Feature>
-              <Feature>Private by design: your traffic is your business, not a product</Feature>
-            </ul>
-
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block pt-2">
-              <a href="https://erebrus.io/" target="_blank" rel="noreferrer" className="btn-hud">
-                Explore VPN <FiArrowUpRight />
-              </a>
             </motion.div>
-          </motion.div>
-        </div>
 
-        {/* ── Erebrus Drop ────────────────────────────── */}
-        <div id="erebrus-drop" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-28 scroll-mt-28">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="space-y-6"
+            >
+              <div className="flex flex-wrap items-center gap-3">
+                <PlatformTag icon={FiWifi} index="01">Erebrus</PlatformTag>
+                <StatusChip>Available</StatusChip>
+              </div>
+
+              <h3 className="font-heading text-3xl md:text-4xl font-bold text-white leading-tight uppercase tracking-tight">
+                Privacy tools you can <span className="text-gradient">actually&nbsp;use</span>
+              </h3>
+
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Erebrus brings private browsing, nearby file sharing, private AI,
+                and network protection into one app — running on a DePIN network
+                of community-operated nodes instead of one company&apos;s servers,
+                so there&apos;s no single choke point to block, surveil, or switch off.
+              </p>
+
+              <ul className="space-y-3">
+                <Feature>Four tools, one private account — start with the one you need today</Feature>
+                <Feature>Android and iOS (TestFlight beta), with Private AI on macOS, Windows, and Linux</Feature>
+                <Feature>Community-run node network — run a node and help power it</Feature>
+              </ul>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://erebrus.io/" target="_blank" rel="noreferrer" className="btn-hud">
+                  Explore Erebrus <FiArrowUpRight />
+                </motion.a>
+                <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://erebrus.io/#operators" target="_blank" rel="noreferrer" className="btn-hud-outline">
+                  Run a Node <FiArrowUpRight />
+                </motion.a>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Erebrus modules */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 order-2 lg:order-1"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
           >
-            <PlatformTag icon={FiHardDrive} index="02">Erebrus_Drop</PlatformTag>
-
-            <h3 className="font-heading text-3xl md:text-4xl font-bold text-white leading-tight uppercase tracking-tight">
-              Local-first <span className="text-gradient">file transfers</span>
-            </h3>
-
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Simple private sharing over WiFi or hotspot, built for direct
-              device-to-device transfer without depending on centralized
-              platforms. When the people are in the same room, your files
-              shouldn&apos;t take a round trip through someone else&apos;s cloud.
-            </p>
-
-            <ul className="space-y-3">
-              <Feature>Direct device-to-device transfer over WiFi or hotspot</Feature>
-              <Feature>No cloud handoff — files never leave your local network</Feature>
-              <Feature>Works where the internet doesn&apos;t: offline, air-gapped, or censored</Feature>
-              <Feature>Private by default, simple enough for anyone</Feature>
-            </ul>
-
-            <div className="flex flex-wrap gap-3 pt-2">
-              {["WIFI", "HOTSPOT", "DEVICE-TO-DEVICE"].map((chip) => (
-                <span key={chip} className="font-mono text-[10px] tracking-[0.2em] text-gray-400 border border-white/15 px-4 py-2">
-                  {chip}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="order-1 lg:order-2"
-          >
-            <div className="hud-panel relative overflow-hidden min-h-[380px] flex items-center justify-center p-10 scanlines">
-              <Corners />
-
-              {/* Radar rings */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="absolute w-[28rem] h-[28rem] rounded-full border border-brand-cyan/10"></div>
-                <div className="absolute w-80 h-80 rounded-full border border-brand-cyan/15"></div>
-                <div className="absolute w-56 h-56 rounded-full border border-brand-cyan/20"></div>
-                {/* Radar sweep */}
-                <div className="absolute w-80 h-80 rounded-full overflow-hidden animate-spin-slow">
-                  <div className="absolute inset-0" style={{ background: "conic-gradient(from 0deg, rgba(0,255,225,0.12), transparent 70deg)" }}></div>
+            {erebrusModules.map(({ id, code, icon: Icon, title, text, url }, idx) => (
+              <a
+                key={id}
+                id={id}
+                href={url}
+                target="_blank"
+                rel="noreferrer"
+                className="hud-panel p-6 group relative overflow-hidden flex flex-col hover:border-brand-cyan/40 transition-colors scroll-mt-28"
+              >
+                <Corners size="w-2 h-2" className="border-brand-cyan/25" />
+                <div className="flex items-center justify-between mb-5">
+                  <span className="font-mono text-[10px] tracking-[0.25em] text-brand-cyan/60 uppercase">
+                    MOD.{String(idx + 1).padStart(2, "0")} <span className="text-brand-cyan/40">//</span> {code}
+                  </span>
+                  <FiArrowUpRight className="text-gray-500 group-hover:text-brand-cyan transition-colors" />
                 </div>
-              </div>
-
-              <div className="relative z-10 flex items-center gap-4 md:gap-6">
-                <DeviceChip icon={FiSmartphone} label="Your phone" />
-                <div className="flex items-center gap-1.5">
-                  {[0, 1, 2, 3].map((i) => (
-                    <span
-                      key={i}
-                      className="w-1.5 h-1.5 bg-brand-cyan animate-pulse"
-                      style={{ animationDelay: `${i * 0.2}s` }}
-                    ></span>
-                  ))}
-                </div>
-                <DeviceChip icon={FiMonitor} label="Their laptop" />
-              </div>
-
-              <div className="absolute bottom-6 inset-x-0 text-center font-mono text-[11px] uppercase tracking-[0.25em] text-gray-500">
-                No cloud in the middle — ever
-              </div>
-            </div>
+                <Icon size={22} className="text-brand-cyan mb-4" />
+                <h4 className="font-heading text-lg font-bold text-white uppercase tracking-tight mb-2 group-hover:text-brand-cyan transition-colors">
+                  {title}
+                </h4>
+                <p className="text-gray-400 text-sm leading-relaxed">{text}</p>
+              </a>
+            ))}
           </motion.div>
         </div>
 
@@ -218,23 +252,21 @@ const Platforms = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
+            className="order-2 lg:order-1"
           >
             <div className="hud-panel p-8 md:p-10 relative overflow-hidden scanlines">
               <Corners />
               <div className="absolute -top-20 -right-20 w-64 h-64 bg-brand-cyan/10 rounded-full blur-[80px] pointer-events-none"></div>
 
               <div className="relative z-10 flex flex-col items-center">
-                {/* Knowledge inputs — deliberately abstract */}
+                {/* Industry agents */}
                 <div className="grid grid-cols-3 gap-3 w-full">
-                  {[
-                    { icon: FiEdit3, name: "Notes" },
-                    { icon: FiFileText, name: "Documents" },
-                    { icon: FiMessageSquare, name: "Conversations" },
-                  ].map(({ icon: Icon, name }) => (
+                  {agents.map(({ icon: Icon, name, sector }) => (
                     <div key={name} className="hud-panel p-4 flex flex-col items-center gap-2 text-center relative">
                       <Corners size="w-2 h-2" className="border-brand-cyan/30" />
                       <Icon size={20} className="text-brand-cyan" />
                       <span className="font-mono text-[10px] uppercase tracking-[0.15em] text-gray-300">{name}</span>
+                      <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-gray-500">{sector}</span>
                     </div>
                   ))}
                 </div>
@@ -248,15 +280,15 @@ const Platforms = () => {
                 <div className="w-2/3 h-px bg-brand-cyan/30"></div>
                 <div className="h-6 w-px bg-gradient-to-b from-brand-cyan/40 to-neon/40"></div>
 
-                {/* Inference layer */}
+                {/* Agent core */}
                 <div className="border border-brand-cyan/30 bg-brand-cyan/5 px-6 py-3 flex items-center gap-3">
                   <FiZap size={14} className="text-brand-cyan" />
-                  <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-white">Inference Core</span>
+                  <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-white">Agent Core</span>
                 </div>
 
                 <div className="h-6 w-px bg-gradient-to-b from-brand-cyan/40 to-neon/40"></div>
 
-                {/* Second brain core */}
+                {/* AI workforce */}
                 <div className="relative">
                   <div className="absolute inset-0 bg-neon/20 blur-2xl rounded-full pointer-events-none"></div>
                   <div className="relative hud-panel-solid px-8 py-6 flex items-center gap-4 border-brand-cyan/40">
@@ -264,10 +296,14 @@ const Platforms = () => {
                     <FiCpu size={28} className="text-neon" />
                     <div>
                       <div className="text-white font-heading font-bold text-lg tracking-wide uppercase">ClawBrick</div>
-                      <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-gray-400">Your second brain</div>
+                      <div className="font-mono text-[10px] uppercase tracking-[0.25em] text-gray-400">Your AI workforce</div>
                     </div>
                   </div>
                 </div>
+
+                <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.25em] text-gray-500 text-center">
+                  Managed from Telegram <span className="text-brand-cyan/40">//</span> Always on
+                </p>
               </div>
             </div>
           </motion.div>
@@ -277,60 +313,130 @@ const Platforms = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="space-y-6"
+            className="space-y-6 order-1 lg:order-2"
           >
-            <PlatformTag icon={FiCpu} index="03">ClawBrick</PlatformTag>
+            <div className="flex flex-wrap items-center gap-3">
+              <PlatformTag icon={FiCpu} index="02">ClawBrick</PlatformTag>
+              <StatusChip>Now open</StatusChip>
+            </div>
 
             <h3 className="font-heading text-3xl md:text-4xl font-bold text-white leading-tight uppercase tracking-tight">
-              A second brain for <span className="text-gradient">businesses and people</span>
+              Agentic as a Service for <span className="text-gradient">every&nbsp;business</span>
             </h3>
 
             <p className="text-gray-300 text-lg leading-relaxed">
-              ClawBrick turns scattered notes, documents, and conversations
-              into a second brain you actually own — one system that captures,
-              connects, and recalls everything you know, powered by an
-              inference layer you control instead of a platform you rent.
+              ClawBrick gives any traditional or SaaS business its own AI-powered
+              team. Pick your industry, answer a few questions, and a pre-built
+              agent goes live — working around the clock, with no tech team required.
             </p>
 
             <ul className="space-y-3">
-              <Feature>All your knowledge — notes, documents, conversations — one connected memory</Feature>
-              <Feature>A unified inference layer — choose the models, keep the control</Feature>
-              <Feature>Organizational memory for businesses, a personal archive for individuals</Feature>
-              <Feature>Your knowledge compounds on infrastructure you govern — not a platform&apos;s</Feature>
+              <Feature>Pre-built agents for law firms, clinics, schools, restaurants and hotels, farms, and factories</Feature>
+              <Feature>Live in minutes — no code, no setup headaches, managed from Telegram</Feature>
+              <Feature>Business data stays yours, with each industry&apos;s privacy and compliance rules built in</Feature>
+              <Feature>Genevieve: on-premises AI hardware that keeps sensitive records inside your building</Feature>
             </ul>
 
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block pt-2">
-              <a href="https://clawbrick.com/" target="_blank" rel="noreferrer" className="btn-hud">
+            <Chips items={["6+ business types", "24/7 always on", "5 min to go live"]} />
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://clawbrick.com/agents" target="_blank" rel="noreferrer" className="btn-hud">
+                Deploy an Agent <FiArrowUpRight />
+              </motion.a>
+              <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://clawbrick.com/" target="_blank" rel="noreferrer" className="btn-hud-outline">
                 Visit ClawBrick <FiArrowUpRight />
-              </a>
-            </motion.div>
+              </motion.a>
+            </div>
           </motion.div>
         </div>
 
-        {/* ── Security tools — coming soon ────────────── */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="hud-panel p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center gap-6 relative"
-        >
-          <Corners />
-          <div className="w-14 h-14 border border-brand-cyan/25 bg-brand-cyan/5 flex items-center justify-center text-brand-cyan shrink-0">
-            <FiShield size={26} />
-          </div>
-          <div className="flex-grow">
-            <MonoTag className="mb-2">SYS.04 <span className="text-brand-cyan/40">//</span> Security_Tools</MonoTag>
-            <h3 className="text-2xl font-heading font-bold text-white mb-2 uppercase tracking-tight">Defend devices and networks</h3>
-            <p className="text-gray-400 leading-relaxed">
-              Upcoming firewall and security products will help users resist
-              unwanted tracking, intrusion, and control.
+        {/* ── Sotreus ─────────────────────────────────── */}
+        <div id="sotreus" className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center scroll-mt-28">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+            className="space-y-6"
+          >
+            <div className="flex flex-wrap items-center gap-3">
+              <PlatformTag icon={FiRadio} index="03">Sotreus</PlatformTag>
+              <StatusChip tone="ember">Early access</StatusChip>
+            </div>
+
+            <h3 className="font-heading text-3xl md:text-4xl font-bold text-white leading-tight uppercase tracking-tight">
+              See the signals. <span className="text-gradient">Remember the encounters.</span>
+            </h3>
+
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Sotreus is a private instrument for the space around you — an
+              Android app, with a pocket Edge companion, that shows what nearby
+              electronics are broadcasting, remembers what you&apos;ve encountered
+              before, and adds airspace and orbital context.
             </p>
-          </div>
-          <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-ember border border-ember/30 bg-ember/5 px-5 py-2.5 shrink-0 animate-blink">
-            Coming soon
-          </span>
-        </motion.div>
+
+            <ul className="space-y-3">
+              <Feature>Observes nearby Bluetooth LE devices and visible Wi-Fi access points</Feature>
+              <Feature>Encounter memory: familiar, new, persistent, and re-encountered — per place</Feature>
+              <Feature>Sky context: aircraft, drone Remote ID, and predicted satellite passes</Feature>
+              <Feature>Local-first and receive-only — no account required, data stays on your device</Feature>
+            </ul>
+
+            <Chips items={["V1 // Phone", "V1.1 // Sky context", "V2 // Edge hardware"]} />
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://sotreus.com/#access" target="_blank" rel="noreferrer" className="btn-hud">
+                Get Early Access <FiArrowUpRight />
+              </motion.a>
+              <motion.a whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} href="https://sotreus.com/#how" target="_blank" rel="noreferrer" className="btn-hud-outline">
+                How It Works <FiArrowUpRight />
+              </motion.a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <div className="hud-panel relative overflow-hidden min-h-[400px] flex items-center justify-center p-10 scanlines">
+              <Corners />
+
+              <div className="absolute top-5 left-6 font-mono text-[10px] uppercase tracking-[0.25em] text-brand-cyan/70">
+                sotreus://observing
+              </div>
+              <div className="absolute top-5 right-6 font-mono text-[10px] uppercase tracking-[0.25em] text-gray-500">
+                Place :: Office
+              </div>
+
+              {/* Radar */}
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80">
+                <div className="absolute inset-0 rounded-full border border-brand-cyan/10"></div>
+                <div className="absolute inset-[16%] rounded-full border border-brand-cyan/15"></div>
+                <div className="absolute inset-[32%] rounded-full border border-brand-cyan/20"></div>
+                <div className="absolute left-1/2 top-0 h-full w-px bg-brand-cyan/10"></div>
+                <div className="absolute top-1/2 left-0 w-full h-px bg-brand-cyan/10"></div>
+                <div className="absolute inset-0 rounded-full overflow-hidden animate-spin-slow">
+                  <div className="absolute inset-0" style={{ background: "conic-gradient(from 0deg, rgba(0,255,225,0.14), transparent 70deg)" }}></div>
+                </div>
+
+                {signals.map((s, i) => (
+                  <div key={s.label} className="absolute flex items-center gap-2" style={{ top: s.top, left: s.left }}>
+                    <span className="w-2 h-2 bg-brand-cyan animate-pulse" style={{ animationDelay: `${i * 0.3}s` }}></span>
+                    <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-gray-400">{s.label}</span>
+                  </div>
+                ))}
+
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-neon shadow-[0_0_16px_rgba(0,255,225,0.8)]"></div>
+              </div>
+
+              <div className="absolute bottom-6 inset-x-0 text-center font-mono text-[11px] uppercase tracking-[0.25em] text-gray-500">
+                Receive-only — never jams, never interrogates
+              </div>
+            </div>
+          </motion.div>
+        </div>
 
       </div>
     </section>

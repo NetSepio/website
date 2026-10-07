@@ -1,6 +1,7 @@
 /**
  * Generates the Open Graph banner (public/images/og-banner.png) in the
- * site's sci-fi HUD theme. Runs automatically as part of `pnpm build`.
+ * site's sci-fi HUD theme, plus the favicon and app icons from the vector
+ * mark (public/images/netsepio-mark.svg). Runs automatically as part of `pnpm build`.
  */
 import og from 'next/og.js';
 import fs from 'node:fs';
@@ -183,7 +184,7 @@ async function main() {
                     padding: '0 76px 56px 76px',
                 },
             },
-            h('div', { style: { display: 'flex', gap: 14 } }, chip('EREBRUS VPN'), chip('EREBRUS DROP'), chip('CLAWBRICK')),
+            h('div', { style: { display: 'flex', gap: 14 } }, chip('EREBRUS'), chip('CLAWBRICK'), chip('SOTREUS')),
             h(
                 'div',
                 { style: { display: 'flex', fontFamily: 'JetBrainsMono', fontSize: 22, letterSpacing: 4, color: CYAN } },
@@ -215,6 +216,47 @@ async function main() {
     const outPath = path.join(root, 'public/images/og-banner.png');
     fs.writeFileSync(outPath, buffer);
     console.log(`✓ OG banner written to ${path.relative(root, outPath)} (${WIDTH}x${HEIGHT}, ${(buffer.length / 1024).toFixed(0)} KB)`);
+
+    await writeIcons();
+}
+
+// App icons (mark on the void surface) and a PNG-in-ICO favicon
+async function writeIcons() {
+    const mark = `data:image/svg+xml;base64,${read('public/images/netsepio-mark.svg').toString('base64')}`;
+    const render = async (tree, size) =>
+        Buffer.from(await new ImageResponse(tree, { width: size, height: size }).arrayBuffer());
+    const centered = (size, background, scale) =>
+        h(
+            'div',
+            { style: { width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: background } },
+            h('img', { src: mark, width: Math.round(size * scale), height: Math.round(size * scale) })
+        );
+
+    for (const size of [192, 512]) {
+        fs.writeFileSync(path.join(root, `public/logo${size}.png`), await render(centered(size, VOID, 0.58), size));
+    }
+
+    const pngs = [];
+    for (const size of [32, 64]) {
+        pngs.push({ size, png: await render(centered(size, 'transparent', 1), size) });
+    }
+    const header = Buffer.alloc(6);
+    header.writeUInt16LE(1, 2);
+    header.writeUInt16LE(pngs.length, 4);
+    let offset = 6 + pngs.length * 16;
+    const entries = pngs.map(({ size, png }) => {
+        const entry = Buffer.alloc(16);
+        entry.writeUInt8(size, 0);
+        entry.writeUInt8(size, 1);
+        entry.writeUInt16LE(1, 4);
+        entry.writeUInt16LE(32, 6);
+        entry.writeUInt32LE(png.length, 8);
+        entry.writeUInt32LE(offset, 12);
+        offset += png.length;
+        return entry;
+    });
+    fs.writeFileSync(path.join(root, 'public/favicon.ico'), Buffer.concat([header, ...entries, ...pngs.map((p) => p.png)]));
+    console.log('✓ App icons and favicon written');
 }
 
 main().catch((err) => {

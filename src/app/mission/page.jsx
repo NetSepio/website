@@ -41,10 +41,9 @@ const principles = [
 ];
 
 const pillars = [
-    { label: 'CONNECT', text: 'Erebrus VPN — private, censorship-resistant connectivity on decentralized DePIN infrastructure.' },
-    { label: 'SHARE', text: 'Erebrus Drop — local-first, device-to-device file sharing that never touches a cloud.' },
-    { label: 'PROTECT', text: 'Security tools — upcoming firewall and defense products against tracking, intrusion, and control.' },
-    { label: 'REMEMBER', text: 'ClawBrick — a second brain for businesses and people, built on inference you control.' },
+    { label: 'CONNECT', text: 'Erebrus — private, censorship-resistant connectivity, DNS protection, local file sharing, and private AI on decentralized DePIN infrastructure.' },
+    { label: 'AUTOMATE', text: 'ClawBrick — Agentic as a Service: pre-built AI agents that give any business an always-on team, on-premises when it matters.' },
+    { label: 'SENSE', text: 'Sotreus — a private instrument that shows what nearby electronics are broadcasting and remembers what you have encountered.' },
 ];
 
 export default function MissionPage() {
@@ -91,25 +90,23 @@ export default function MissionPage() {
                             NetSepio exists to return agency to the people who use the
                             network. We build a sovereignty stack: privacy-first,
                             censorship-resistant tools that put your connection, your
-                            files, your defenses, and your knowledge back under your
-                            control.
+                            data, your business, and your awareness of the world
+                            around you back under your control.
                         </p>
                         <p>
-                            Erebrus VPN delivers private, resilient connectivity through
+                            Erebrus delivers private, resilient connectivity through
                             decentralized DePIN infrastructure — encrypted routes with no
-                            central choke point to block or surveil. Erebrus Drop keeps
-                            file sharing local-first: direct, device-to-device, and
-                            independent of anyone&apos;s cloud. Upcoming firewall and
-                            security tools will extend that defense to your devices and
-                            networks.
+                            central choke point to block or surveil — along with DNS
+                            protection, local-first file sharing with Drop, and private
+                            AI that runs on hardware you trust.
                         </p>
                         <p>
-                            And with ClawBrick, sovereignty reaches into AI: a second
-                            brain for businesses and people that turns your notes,
-                            documents, and conversations into one connected, recallable
-                            memory — powered by an inference layer you control, so your
-                            knowledge compounds for you instead of training someone
-                            else&apos;s platform.
+                            With ClawBrick, sovereignty reaches into how businesses
+                            work: Agentic as a Service that gives any business its own
+                            AI-powered team, with Genevieve keeping sensitive data on
+                            premises. And Sotreus extends it to the physical world — a
+                            private instrument for the signals around you that keeps
+                            what it sees on your device, not in someone else&apos;s cloud.
                         </p>
                     </motion.div>
 
@@ -148,9 +145,9 @@ export default function MissionPage() {
                         <span className="hidden sm:block h-px w-12 bg-brand-cyan/30"></span>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-6xl mx-auto">
                         {pillars.map((pillar) => (
-                            <div key={pillar.label} className="hud-panel p-6 relative flex items-start gap-5 hover:border-brand-cyan/40 transition-colors">
+                            <div key={pillar.label} className="hud-panel p-6 relative flex flex-col items-start gap-5 hover:border-brand-cyan/40 transition-colors">
                                 <Corners size="w-2 h-2" className="border-brand-cyan/25" />
                                 <span className="font-mono text-[11px] tracking-[0.25em] text-brand-cyan border border-brand-cyan/25 bg-brand-cyan/5 px-3 py-1.5 shrink-0">
                                     {pillar.label}
